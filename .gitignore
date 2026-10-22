@@ -25,3 +25,6 @@ next-env.d.ts
 # Python
 __pycache__/
 *.pyc
+
+# Client notes (local only)
+client_check.txt
