@@ -126,6 +126,10 @@ export type Firm = {
   caseTypes: string[];
   footerAbout: string;
   footerDisclaimer: string;
+  /** Home page hero background scrolls slower than the page (parallax). Missing = on. */
+  heroParallax?: boolean;
+  /** Home page banner photo (media library URL). Missing/empty = the built-in beach photo. */
+  heroImage?: string;
 };
 
 export type Stat = { value: string; label: string; verified: boolean };
@@ -160,6 +164,7 @@ export function firmErrors(f: Firm, mediaPrefix: string): string[] {
     if (!imageAllowed(o.img ?? "", mediaPrefix)) out.push(`${name}: photo must be from the media library (or a /images/ file).`);
     if (o.kind !== "Main Office" && o.kind !== "Branch Office") out.push(`${name}: type must be Main Office or Branch Office.`);
   }
+  if (f.heroImage && !imageAllowed(f.heroImage, mediaPrefix)) out.push("Home banner photo must be from the media library.");
   if (!(f.caseTypes ?? []).filter((t) => t.trim()).length) out.push("Add at least one case type for the contact form.");
   if (!f.footerAbout?.trim()) out.push("Footer text is empty.");
   if (!f.footerDisclaimer?.trim()) out.push("Footer disclaimer is empty - attorney advertising needs it.");

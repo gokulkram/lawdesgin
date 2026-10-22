@@ -47,6 +47,8 @@ export async function saveFirmContact(_prev: SettingsState, form: FormData): Pro
       caseTypes: str(form, "caseTypes").split("\n").map((l) => l.trim()).filter(Boolean),
       footerAbout: str(form, "footerAbout"),
       footerDisclaimer: str(form, "footerDisclaimer"),
+      heroParallax: form.get("heroParallax") === "on",
+      heroImage: str(form, "heroImage"),
     };
     const errors = firmErrors(next, MEDIA_PREFIX);
     return errors.length ? errors.join(" ") : next;

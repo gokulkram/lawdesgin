@@ -51,7 +51,7 @@ export default async function WrongfulDeathView({ t }: { t: WrongfulDeathText })
             <aside className="sidebar">
               <h3>{t.sidebar.title}</h3>
               <p>{t.sidebar.text}</p>
-              <Link className="btn btn--gold btn--block" href="/contact">{t.sidebar.button}</Link>
+              <a className="btn btn--gold btn--block" href="#lead-form" aria-haspopup="dialog">{t.sidebar.button}</a>
               <p style={{ marginTop: 18 }}>{t.sidebar.callText}</p>
               <p><a href={content.firm.phoneHref} style={{ color: "var(--gold-300)", fontWeight: 700, fontSize: "1.25rem" }}>{content.firm.phone}</a></p>
             </aside>

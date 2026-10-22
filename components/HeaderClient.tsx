@@ -12,8 +12,8 @@ export default function HeaderClient({ phone, phoneHref, email }: { phone: strin
   const [open, setOpen] = useState(false);
   const [stuck, setStuck] = useState(false);
 
-  // Free-review CTAs jump to the on-page form where there is one.
-  const ctaHref = pathname === "/" ? "#contact" : pathname === "/contact" ? "#contact-form" : "/contact";
+  // Free-review CTAs open the case-review popup (site layout), except on /contact, which has the form on the page.
+  const ctaHref = pathname === "/contact" ? "#contact-form" : "#lead-form";
 
   useEffect(() => {
     const onScroll = () => setStuck(window.scrollY > 8);
@@ -40,7 +40,7 @@ export default function HeaderClient({ phone, phoneHref, email }: { phone: strin
       <header className={`header${stuck ? " is-stuck" : ""}`}>
         <div className="container nav">
           <Link className="nav__logo" href="/" aria-label="California Law home">
-            <Logo />
+            <Logo eager />
           </Link>
           <nav className={`nav__links${open ? " open" : ""}`} aria-label="Primary">
             {NAV.map((item) => (
@@ -50,7 +50,12 @@ export default function HeaderClient({ phone, phoneHref, email }: { phone: strin
             ))}
           </nav>
           <div className="nav__cta">
-            <a className="btn btn--gold" href={ctaHref}>Free Consultation</a>
+            <a className="nav__call" href={phoneHref} aria-label={`Call ${phone}`}>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" />
+              </svg>
+              <span>{phone}</span>
+            </a>
           </div>
           <button
             className={`nav__toggle${open ? " open" : ""}`}

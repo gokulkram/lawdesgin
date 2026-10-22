@@ -33,6 +33,25 @@
 .adm-nav__item.is-soon { color: rgba(255,255,255,.38); cursor: default; }
 .adm-nav__item.is-soon:hover { background: none; }
 .adm-nav__item small { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+/* Pending-navigation spinner: always rendered (no layout shift), shown only while loading. */
+.adm-nav__spin {
+  width: 14px; height: 14px; flex: none; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.25); border-top-color: var(--gold-300);
+  opacity: 0; transition: opacity .15s;
+}
+.adm-nav__spin.is-pending { opacity: 1; animation: adm-spin .7s linear infinite; }
+@keyframes adm-spin { to { transform: rotate(360deg); } }
+@keyframes adm-pulse { 50% { opacity: .45; } }
+
+/* Content-area placeholder while a panel page loads (app/admin/(panel)/loading.tsx). */
+.adm-loading { display: grid; gap: 16px; }
+.adm-loading__status { display: flex; align-items: center; gap: 10px; color: var(--muted, #5b6472); font-weight: 500; }
+.adm-loading__status .adm-nav__spin { opacity: 1; animation: adm-spin .7s linear infinite; border-color: rgba(11,31,56,.15); border-top-color: var(--navy-700); }
+.adm-loading__bar { height: 32px; width: 40%; border-radius: var(--radius-sm); background: rgba(11,31,56,.08); animation: adm-pulse 1.4s ease-in-out infinite; }
+.adm-loading__block { height: 140px; border-radius: var(--radius-sm); background: rgba(11,31,56,.06); animation: adm-pulse 1.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .adm-nav__spin.is-pending, .adm-loading__status .adm-nav__spin, .adm-loading__bar, .adm-loading__block { animation: none; }
+}
 .adm-side__foot { margin-top: auto; padding: 0 6px; }
 .adm-side__link { color: rgba(255,255,255,.7); font-size: 14px; }
 .adm-side__link:hover { color: #fff; }

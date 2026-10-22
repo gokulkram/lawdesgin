@@ -28,6 +28,7 @@ function useSubmit(save: (prev: SettingsState, form: FormData) => Promise<Settin
 
 export function FirmForm({ firm, version }: { firm: Firm; version: string }) {
   const { state, pending, onSubmit } = useSubmit(saveFirmContact);
+  const [heroImage, setHeroImage] = useState(firm.heroImage ?? "");
   return (
     <form onSubmit={onSubmit} className="adm-form adm-form--grid">
       <input type="hidden" name="version" value={version} />
@@ -49,6 +50,18 @@ export function FirmForm({ firm, version }: { firm: Firm; version: string }) {
       <label className="adm-field adm-field--wide">
         <span>Footer disclaimer (attorney advertising)</span>
         <textarea name="footerDisclaimer" rows={3} defaultValue={firm.footerDisclaimer} />
+      </label>
+      <input type="hidden" name="heroImage" value={heroImage} />
+      <div className="adm-field--wide">
+        <MediaPicker
+          label="Home page banner photo"
+          value={heroImage}
+          onChange={setHeroImage}
+          hint="Empty = the built-in California beach photo. Use a landscape photo at least 1920 px wide with calm space on the left for the headline."
+        />
+      </div>
+      <label className="ed-check adm-field--wide">
+        <input type="checkbox" name="heroParallax" defaultChecked={firm.heroParallax !== false} /> Parallax effect on the home page banner (background scrolls slower than the page)
       </label>
       <div className="adm-field--wide"><button className="adm-btn adm-btn--primary" disabled={pending}>{pending ? "Saving…" : "Save firm details"}</button></div>
       <div className="adm-field--wide"><Result state={state} /></div>

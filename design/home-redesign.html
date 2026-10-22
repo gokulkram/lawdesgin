@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>California Law — Home redesign</title>
+<meta name="description" content="Design concept for the California Law home page. Not connected to the live site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!--
+  Design concept for the home page. Standalone: open this file directly in a browser.
+  Images and logos load from ../public, so keep it inside the project's design/ folder.
+
+  Tokens
+    Pacific navy  #0E2A50   logo navy; headings, primary surfaces
+    Night         #081A33   hero overlay, dark bands
+    Sunset gold   #D99A2B   logo gold; the call action and the phone number
+    Ember         #9A5414   gold darkened for text links on light backgrounds (AA contrast)
+    Marine fog    #F2F5F8   alternate section background
+    Ink           #14243A   body text
+  Type: Newsreader (display, phone number, quotes) + Public Sans (body and interface).
+-->
+<style>
+:root {
+  --navy: #0E2A50;
+  --night: #081A33;
+  --gold: #D99A2B;
+  --gold-soft: #F0C774;
+  --ember: #9A5414;
+  --fog: #F2F5F8;
+  --ink: #14243A;
+  --muted: #4B5B70;
+  --line: #D6DEE8;
+  --white: #FFFFFF;
+
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type scale: 1.25 ratio from a 17px base */
+  --t-sm: 0.875rem;
+  --t-base: 1.0625rem;
+  --t-md: 1.25rem;
+  --t-lg: 1.625rem;
+  --t-xl: clamp(1.875rem, 3.2vw, 2.5rem);
+  --t-hero: clamp(2.25rem, 4.2vw, 3.5rem);
+  --t-phone: clamp(2.5rem, 5.6vw, 4.5rem);
+
+  --wrap: 1180px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section: clamp(64px, 9vw, 120px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--t-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.12; margin: 0; color: var(--navy); }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--white); padding: 8px 14px; z-index: 50; }
+.skip:focus { left: 8px; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 48px; padding: 12px 22px; border-radius: 6px;
+  font: 600 var(--t-base)/1.2 var(--sans); text-decoration: none; cursor: pointer;
+  border: 2px solid transparent; transition: background-color .15s, border-color .15s, color .15s;
+}
+.btn--gold { background: var(--gold); color: var(--night); }
+.btn--gold:hover { background: var(--gold-soft); }
+.btn--line { border-color: currentColor; color: var(--white); background: transparent; }
+.btn--line:hover { background: rgba(255,255,255,.1); }
+.btn--navy { background: var(--navy); color: var(--white); }
+.btn--navy:hover { background: var(--night); }
+
+.text-link { color: var(--ember); font-weight: 600; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.text-link:hover { text-decoration-thickness: 2px; }
+
+/* ---------- Header ---------- */
+.site-head { background: var(--white); border-bottom: 1px solid var(--line); position: relative; z-index: 5; }
+.site-head__row { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; }
+.site-head__logo img { width: 148px; }
+.site-nav { display: flex; gap: 28px; }
+.site-nav a { text-decoration: none; font-weight: 500; color: var(--ink); font-size: 0.95rem; }
+.site-nav a:hover { color: var(--ember); }
+.site-head__call { text-decoration: none; text-align: right; line-height: 1.25; }
+.site-head__call small { display: block; font-size: 0.8rem; color: var(--muted); }
+.site-head__call strong { font-family: var(--serif); font-size: 1.375rem; font-weight: 600; color: var(--navy); font-variant-numeric: lining-nums; }
+@media (max-width: 960px) { .site-nav { display: none; } }
+@media (max-width: 520px) {
+  .site-head__logo img { width: 118px; }
+  .site-head__call small { display: none; }
+  .site-head__call strong { font-size: 1.125rem; }
+}
+
+/* ---------- Hero: the phone number is the centerpiece ---------- */
+.hero { position: relative; background: var(--night); color: var(--white); overflow: hidden; isolation: isolate; }
+.hero__photo { position: absolute; inset: 0; z-index: -2; }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 60%; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgba(8,26,51,.94) 0%, rgba(8,26,51,.82) 38%, rgba(8,26,51,.2) 72%, rgba(8,26,51,0) 100%);
+}
+.hero__inner { padding-top: clamp(48px, 6vw, 88px); padding-bottom: clamp(56px, 7vw, 96px); }
+.hero__copy { max-width: 700px; }
+.hero h1 { color: var(--white); font-size: var(--t-hero); font-weight: 400; letter-spacing: -0.015em; }
+.hero__sub { margin-top: 18px; font-size: var(--t-md); line-height: 1.55; color: rgba(255,255,255,.86); max-width: 34em; }
+
+.call { display: block; margin-top: clamp(26px, 3vw, 36px); padding-top: 20px; border-top: 1px solid rgba(240,199,116,.45); text-decoration: none; max-width: 560px; }
+.call__lead { display: block; font-size: var(--t-base); color: rgba(255,255,255,.86); }
+.call__num {
+  display: block; margin-top: 4px;
+  font-family: var(--serif); font-size: var(--t-phone); font-weight: 500; line-height: 1;
+  color: var(--gold-soft); letter-spacing: -0.01em; font-variant-numeric: lining-nums tabular-nums;
+}
+.call:hover .call__num { color: var(--white); }
+.call__num { white-space: nowrap; }
+.closing .call__num { font-size: clamp(2.5rem, 4.4vw, 3.75rem); }
+.hero__alt { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.hero__alt p { color: rgba(255,255,255,.78); font-size: var(--t-sm); }
+
+/* The one load moment: the photo settles while the copy comes up. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__photo img { animation: settle 2.4s cubic-bezier(.2,.7,.2,1) both; }
+  .hero__copy { animation: rise .9s .25s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes settle { from { transform: scale(1.06); } to { transform: none; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+}
+@media (max-width: 700px) {
+  .hero__photo img { object-position: 70% 50%; }
+  .hero::before { background: linear-gradient(180deg, rgba(8,26,51,.72) 0%, rgba(8,26,51,.9) 55%, rgba(8,26,51,.96) 100%); }
+}
+
+/* ---------- Section rhythm ---------- */
+.band { padding: var(--section) 0; }
+.band--fog { background: var(--fog); }
+.band__head { max-width: 720px; margin-bottom: clamp(36px, 5vw, 56px); }
+.band__head h2 { font-size: var(--t-xl); letter-spacing: -0.01em; }
+.band__head p { margin-top: 14px; color: var(--muted); font-size: var(--t-md); max-width: 36em; }
+
+/* ---------- Steps (a real sequence, so numbered) ---------- */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: step; }
+.steps li { position: relative; padding: 0 28px 0 0; counter-increment: step; }
+.steps li::before {
+  content: counter(step);
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--white); border: 1.5px solid var(--navy); color: var(--navy);
+  font: 500 1.25rem/1 var(--serif); position: relative; z-index: 1;
+}
+.steps li:first-child::before { background: var(--navy); color: var(--white); }
+.steps li::after { content: ""; position: absolute; top: 22px; left: 44px; right: 0; height: 1.5px; background: var(--line); }
+.steps li:last-child::after { display: none; }
+.steps h3 { font-size: var(--t-lg); margin: 22px 0 10px; }
+.steps p { color: var(--muted); max-width: 22em; }
+@media (max-width: 860px) {
+  .steps { grid-template-columns: 1fr; gap: 0; }
+  .steps li { padding: 0 0 32px 64px; }
+  .steps li::before { position: absolute; left: 0; top: 0; }
+  .steps li::after { top: 44px; bottom: 0; left: 21px; right: auto; width: 1.5px; height: auto; display: block; }
+  .steps li:last-child { padding-bottom: 0; }
+  .steps li:last-child::after { display: none; }
+  .steps h3 { margin-top: 6px; }
+}
+
+/* ---------- Cases: wrongful death leads, injury list supports ---------- */
+.cases { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
+.focus { background: var(--navy); color: var(--white); border-radius: 10px; padding: clamp(28px, 4vw, 52px); }
+.focus h2 { color: var(--white); font-size: var(--t-xl); }
+.focus > p { margin-top: 14px; color: rgba(255,255,255,.84); font-size: var(--t-md); max-width: 30em; }
+.focus ul { list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 18px; }
+.focus li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; color: rgba(255,255,255,.86); }
+.focus li svg { margin-top: 3px; color: var(--gold-soft); }
+.focus li strong { color: var(--white); font-weight: 600; }
+.focus__promise { margin-top: 30px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.18); font-family: var(--serif); font-size: var(--t-lg); line-height: 1.3; color: var(--white); }
+.focus .btn { margin-top: 26px; }
+
+.injury h2 { font-size: var(--t-lg); }
+.injury > p { margin-top: 10px; color: var(--muted); }
+.injury ul { list-style: none; margin: 22px 0 24px; padding: 0; border-top: 1px solid var(--line); }
+.injury li { border-bottom: 1px solid var(--line); }
+.injury li a { display: block; padding: 16px 0; text-decoration: none; }
+.injury li strong { display: block; font-weight: 600; color: var(--navy); }
+.injury li span { display: block; font-size: var(--t-sm); color: var(--muted); margin-top: 2px; }
+.injury li a:hover strong { color: var(--ember); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 900px) { .cases { grid-template-columns: 1fr; } }
+
+/* ---------- Questions ---------- */
+.faq { display: grid; grid-template-columns: 4fr 7fr; gap: clamp(28px, 5vw, 72px); }
+.faq .band__head { margin-bottom: 0; }
+.faq__list { border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  list-style: none; cursor: pointer; padding: 22px 44px 22px 0; position: relative;
+  font-family: var(--serif); font-size: var(--t-md); font-weight: 500; color: var(--navy);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; position: absolute; right: 6px; top: 50%; width: 12px; height: 12px; margin-top: -9px;
+  border-right: 2px solid var(--navy); border-bottom: 2px solid var(--navy); transform: rotate(45deg);
+  transition: transform .2s;
+}
+.faq details[open] summary::after { transform: rotate(225deg); margin-top: -3px; }
+.faq details p { padding: 0 0 22px; color: var(--muted); max-width: 38em; }
+.faq__note { margin-top: 18px; font-size: var(--t-sm); color: var(--muted); }
+@media (max-width: 860px) { .faq { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .faq summary::after { transition: none; } }
+
+/* ---------- Review ---------- */
+.review { max-width: 860px; }
+.review blockquote { margin: 0; font-family: var(--serif); font-size: clamp(1.5rem, 2.8vw, 2.125rem); line-height: 1.35; color: var(--navy); font-weight: 400; }
+.review figcaption { margin-top: 22px; color: var(--muted); }
+.review figcaption strong { color: var(--ink); font-weight: 600; }
+.sample-tag { display: inline-block; margin-left: 10px; padding: 2px 8px; border: 1px dashed var(--ember); color: var(--ember); border-radius: 4px; font-size: 0.75rem; vertical-align: 2px; }
+
+/* ---------- Offices ---------- */
+.offices { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+.offices li { padding: 22px 24px 22px 0; border-bottom: 1px solid var(--line); }
+.offices h3 { font-size: var(--t-md); }
+.offices p { color: var(--muted); font-size: var(--t-sm); margin-top: 2px; }
+.offices a { display: inline-block; margin-top: 8px; font-weight: 600; color: var(--navy); text-underline-offset: 4px; font-variant-numeric: tabular-nums; }
+.offices__visit { margin-top: 24px; color: var(--muted); }
+@media (max-width: 860px) { .offices { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .offices { grid-template-columns: 1fr; } }
+
+/* ---------- Final call + form ---------- */
+.closing { background: var(--night); color: var(--white); }
+.closing__grid { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
+.closing h2 { color: var(--white); font-size: var(--t-xl); }
+.closing__text { margin-top: 16px; color: rgba(255,255,255,.82); font-size: var(--t-md); max-width: 30em; }
+.closing .call { border-top-color: rgba(240,199,116,.35); }
+
+.form { background: var(--white); color: var(--ink); border-radius: 10px; padding: clamp(24px, 3.5vw, 40px); }
+.form h3 { font-size: var(--t-lg); }
+.form > p { margin-top: 6px; color: var(--muted); font-size: var(--t-sm); }
+.form__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+.field { display: grid; gap: 6px; }
+.field--full { grid-column: 1 / -1; }
+.field label { font-weight: 600; font-size: var(--t-sm); color: var(--navy); }
+.field input, .field select, .field textarea {
+  width: 100%; font: inherit; font-size: 1rem; color: var(--ink);
+  padding: 12px 14px; border: 1.5px solid #B9C5D3; border-radius: 6px; background: var(--white);
+}
+.field textarea { min-height: 112px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(217,154,43,.45); }
+.form .btn { margin-top: 20px; width: 100%; }
+.form__fine { margin-top: 12px; font-size: 0.8rem; color: var(--muted); }
+.form__done { margin-top: 14px; padding: 12px 14px; border-radius: 6px; background: var(--fog); color: var(--navy); font-weight: 500; }
+@media (max-width: 900px) { .closing__grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .form__grid { grid-template-columns: 1fr; } }
+
+/* ---------- Footer ---------- */
+.site-foot { background: var(--night); color: rgba(255,255,255,.7); border-top: 1px solid rgba(255,255,255,.1); padding: 48px 0 40px; font-size: var(--t-sm); }
+.site-foot__row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: center; }
+.site-foot img { width: 130px; }
+.site-foot nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.site-foot nav a { text-decoration: none; }
+.site-foot nav a:hover { color: var(--white); text-decoration: underline; }
+.site-foot__legal { margin-top: 28px; max-width: 70em; line-height: 1.6; color: rgba(255,255,255,.58); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__row">
+    <a class="site-head__logo" href="#" aria-label="California Law home">
+      <img src="../public/assets/brand/logo-on-light.svg" alt="California Law" width="760" height="320">
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#">Wrongful death</a>
+      <a href="#">Practice areas</a>
+      <a href="#offices">Offices</a>
+      <a href="#">About</a>
+      <a href="#">Resources</a>
+    </nav>
+    <a class="site-head__call" href="tel:+18005550100">
+      <small>Free consultation, 24/7</small>
+      <strong>(800) 555-0100</strong>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <picture class="hero__photo">
+      <source media="(max-width: 700px)" srcset="../public/images/hero-beach-mobile.webp">
+      <source media="(max-width: 1300px)" srcset="../public/images/hero-beach-1280.webp">
+      <img src="../public/images/hero-beach.webp" alt="" width="1920" height="920" fetchpriority="high">
+    </picture>
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <h1 id="hero-title">When the worst happens, you deserve answers and justice.</h1>
+        <p class="hero__sub">We stand with California families after a wrongful death, and with people living with a serious injury. You pay nothing unless we win.</p>
+
+        <a class="call" href="tel:+18005550100">
+          <span class="call__lead">Call now. A person answers, day or night.</span>
+          <span class="call__num">(800) 555-0100</span>
+        </a>
+
+        <div class="hero__alt">
+          <a class="btn btn--line" href="#review">Request a free case review</a>
+          <p>Prefer to write? We reply within one hour.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="steps-title">
+    <div class="wrap">
+      <div class="band__head">
+        <h2 id="steps-title">What happens after you call</h2>
+        <p>You won’t be handed a form and left to wait. Here is how a case moves, from the first conversation to the end.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>We listen</h3>
+          <p>Tell us what happened. We answer your questions and explain your options. The consultation is free.</p>
+        </li>
+        <li>
+          <h3>We investigate</h3>
+          <p>We preserve evidence before it disappears, consult experts, and build the case on your behalf.</p>
+        </li>
+        <li>
+          <h3>We negotiate</h3>
+          <p>We demand full compensation from the insurer, and we turn down offers that fall short.</p>
+        </li>
+        <li>
+          <h3>We go to trial if needed</h3>
+          <p>If the other side won’t be fair, our trial attorneys take your case to a jury.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band band--fog" aria-label="Cases we handle">
+    <div class="wrap cases">
+      <article class="focus" aria-labelledby="focus-title">
+        <h2 id="focus-title">Wrongful death is the center of our practice</h2>
+        <p>When negligence takes someone you love, we protect your family’s rights from the first day.</p>
+        <ul>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>We investigate fully,</strong> preserving evidence before it is lost.</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>We value the whole loss:</strong> income, support, guidance and companionship.</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>We handle everything,</strong> so your family can focus on each other.</span>
+          </li>
+        </ul>
+        <p class="focus__promise">You don’t pay unless we win your case.</p>
+        <a class="btn btn--gold" href="#">Understand your family’s rights</a>
+      </article>
+
+      <div class="injury">
+        <h2>Serious injury cases</h2>
+        <p>We take on insurers and corporations to recover everything you’re owed.</p>
+        <ul>
+          <li><a href="#"><strong>Car and truck accidents</strong><span>Collisions, rideshare, commercial trucks</span></a></li>
+          <li><a href="#"><strong>Medical malpractice</strong><span>Surgical errors, misdiagnosis, birth injuries</span></a></li>
+          <li><a href="#"><strong>Workplace injuries</strong><span>Construction sites and third-party claims</span></a></li>
+          <li><a href="#"><strong>Slip and fall</strong><span>Unsafe stores, rentals and public property</span></a></li>
+          <li><a href="#"><strong>Catastrophic injury</strong><span>Brain, spinal cord and burn injuries</span></a></li>
+        </ul>
+        <a class="text-link" href="#">See all practice areas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="faq-title">
+    <div class="wrap faq">
+      <div class="band__head">
+        <h2 id="faq-title">Questions families ask first</h2>
+        <p>Short answers to what most people want to know before they call.</p>
+      </div>
+      <div>
+        <div class="faq__list">
+          <details open>
+            <summary>What does it cost to hire you?</summary>
+            <p>Nothing up front. We work on contingency: our fee comes out of what we recover for you. If we don’t win, you owe us no fee.</p>
+          </details>
+          <details>
+            <summary>How long do I have to file a claim?</summary>
+            <p>In California, most personal injury and wrongful death claims must be filed within two years. Claims against a city, county or state agency usually need a written claim within six months. Medical malpractice has its own shorter rules. Call us early so no deadline is missed.</p>
+          </details>
+          <details>
+            <summary>Who can bring a wrongful death claim?</summary>
+            <p>Usually a spouse or registered domestic partner and the children of the person who died. In some families, parents, stepchildren or others who depended on them can also file. We’ll tell you where your family stands.</p>
+          </details>
+          <details>
+            <summary>Do I have to come to an office?</summary>
+            <p>No. We make home and hospital visits, and much of the work can happen by phone. Just ask when you call.</p>
+          </details>
+        </div>
+        <p class="faq__note">This is general information, not legal advice for your situation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--fog" aria-label="Client review">
+    <div class="wrap">
+      <figure class="review">
+        <blockquote>“After we lost my husband, I couldn’t think straight. They handled everything with such kindness and fought harder than I ever expected. They gave my children a future.”</blockquote>
+        <figcaption><strong>Maria T.</strong>, wrongful death, trucking collision <span class="sample-tag">Sample: replace with an approved review</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" id="offices" aria-labelledby="offices-title">
+    <div class="wrap">
+      <div class="band__head">
+        <h2 id="offices-title">Six offices across California</h2>
+        <p>Talk to an attorney who knows your local courts.</p>
+      </div>
+      <ul class="offices">
+        <li><h3>Los Angeles</h3><p>Main office</p><a href="tel:+18005550100">(800) 555-0100</a></li>
+        <li><h3>Orange County</h3><p>Irvine</p><a href="tel:+18005550120">(800) 555-0120</a></li>
+        <li><h3>San Diego</h3><p>San Diego</p><a href="tel:+18005550140">(800) 555-0140</a></li>
+        <li><h3>Bay Area</h3><p>San Francisco</p><a href="tel:+18005550160">(800) 555-0160</a></li>
+        <li><h3>Sacramento</h3><p>Sacramento</p><a href="tel:+18005550180">(800) 555-0180</a></li>
+        <li><h3>Inland Empire</h3><p>Riverside</p><a href="tel:+18005550200">(800) 555-0200</a></li>
+      </ul>
+      <p class="offices__visit">Can’t travel? We come to your home or hospital.</p>
+    </div>
+  </section>
+
+  <section class="band closing" id="review" aria-labelledby="closing-title">
+    <div class="wrap closing__grid">
+      <div>
+        <h2 id="closing-title">Talk to a California injury attorney today</h2>
+        <p class="closing__text">The consultation is free and confidential, and there’s no obligation. The sooner you reach out, the sooner we can protect your rights.</p>
+        <a class="call" href="tel:+18005550100">
+          <span class="call__lead">Call now. A person answers, day or night.</span>
+          <span class="call__num">(800) 555-0100</span>
+        </a>
+      </div>
+
+      <form class="form" id="lead-form" novalidate>
+        <h3>Request a free case review</h3>
+        <p>Tell us what happened. We reply within one hour, 24/7.</p>
+        <div class="form__grid">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="field field--full">
+            <label for="f-type">Type of case</label>
+            <select id="f-type" name="type">
+              <option>Wrongful death</option>
+              <option>Car or truck accident</option>
+              <option>Medical malpractice</option>
+              <option>Workplace injury</option>
+              <option>Slip and fall</option>
+              <option>Other personal injury</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="f-what">What happened?</label>
+            <textarea id="f-what" name="details"></textarea>
+          </div>
+        </div>
+        <button class="btn btn--navy" type="submit">Send for review</button>
+        <p class="form__fine">Sending this form doesn’t create an attorney-client relationship.</p>
+        <p class="form__done" id="form-done" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="site-foot__row">
+      <img src="../public/assets/logo-footer.png" alt="California Law" width="141" height="59">
+      <nav aria-label="Footer">
+        <a href="#">Wrongful death</a>
+        <a href="#">Practice areas</a>
+        <a href="#offices">Offices</a>
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+      </nav>
+    </div>
+    <p class="site-foot__legal">Attorney Advertising. The information on this website is for general informational purposes only and is not legal advice. Viewing this site or contacting the firm does not create an attorney-client relationship. Prior results do not guarantee a similar outcome.</p>
+  </div>
+</footer>
+
+<script>
+  // Design preview only: the form isn't connected to anything.
+  document.getElementById("lead-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var done = document.getElementById("form-done");
+    done.textContent = "Design preview: this form isn’t connected yet. On the live site it will send your details to the intake team.";
+    done.hidden = false;
+  });
+</script>
+</body>
+</html>

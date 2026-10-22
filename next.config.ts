@@ -6,6 +6,9 @@ const SUPABASE_HOST = process.env.NEXT_PUBLIC_SUPABASE_URL ? new URL(process.env
 const OLD_PAGES = ["about", "contact", "practice-areas", "wrongful-death", "thank-you"];
 
 const nextConfig: NextConfig = {
+  // Dev server only: allow opening the site from phones/other computers on the local network
+  // (http://192.168.x.x:3000). Without this Next blocks the page's scripts there, so nothing interactive works.
+  allowedDevOrigins: ["192.168.*.*"],
   // Versions the cached site content (lib/content-store.ts) per build. Next keeps its data cache in
   // .next/cache, which Vercel restores on every deploy - without this, a new deployment could serve
   // content cached by the previous one instead of what is in the database now.

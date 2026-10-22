@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ContactForm from "@/components/ContactForm";
+import HeroParallax from "@/components/HeroParallax";
 import { Inline } from "@/components/RichText";
 import { CtaBand, Locations } from "@/components/Sections";
 import Testimonials from "@/components/Testimonials";
@@ -33,49 +33,64 @@ const STEP_ICONS = [
   <><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8" /><path d="m16 16 6-6" /><path d="m8 8 6-6" /><path d="m9 7 8 8" /><path d="m21 11-8-8" /></>,
 ];
 
+// Two-part heading: splits after its first " - " (the text is edited in the admin panel). The first
+// part is the plain sans; the second is set in the serif italic accent, offset to the right and
+// tucked up under the first so the two overlap a little (.split-head in globals.css).
+function TwoLines({ text }: { text: string }) {
+  const m = text.match(/^(.+?)\s[-–—]\s+(.+)$/); // the dash is drawn as the gold rule before part two
+  if (!m) return <>{text}</>;
+  return (
+    <>
+      <span className="split-head__a">{m[1]}</span>{" "}
+      <span className="split-head__b">{m[2]}</span>
+    </>
+  );
+}
+
+// Hero background photo. Default: California beach at sunset (Unsplash, free licence), cropped per
+// screen size so the sun stays in view. A banner picked under Site settings replaces it.
+const HERO_ALT = "Palm trees on a California beach at sunset";
+function HeroPhoto({ src }: { src?: string }) {
+  /* eslint-disable @next/next/no-img-element -- plain <img>/<picture>: art-directed crops, loaded first */
+  if (src) return <img className="hero__photo" src={src} alt={HERO_ALT} fetchPriority="high" />;
+  return (
+    <picture>
+      <source media="(max-width: 700px)" srcSet="/images/hero-beach-mobile.webp" />
+      <source media="(max-width: 1300px)" srcSet="/images/hero-beach-1280.webp" />
+      <img className="hero__photo" src="/images/hero-beach.webp" alt={HERO_ALT} width={1920} height={920} fetchPriority="high" />
+    </picture>
+  );
+  /* eslint-enable @next/next/no-img-element */
+}
+
 export default async function HomeView({ t }: { t: HomeText }) {
-  const { firm, credibility } = await getContent();
+  const { firm } = await getContent();
   return (
     <main>
-      {/* HERO + CONTACT FORM */}
+      {/* HERO (centered, full width) - the case-review form opens in a popup */}
       <section className="hero" id="contact">
-        <div className="hero__bg" role="img" aria-label="Diverse group of people"></div>
+        {firm.heroParallax === false
+          ? <div className="hero__bg"><HeroPhoto src={firm.heroImage} /></div>
+          : <HeroParallax><HeroPhoto src={firm.heroImage} /></HeroParallax>}
         <div className="container hero__inner">
           <div className="hero__copy">
             <span className="hero__badge">{t.hero.badge}</span>
             <h1>{t.hero.titleStart}<span className="accent">{t.hero.titleAccent}</span>{t.hero.titleEnd}</h1>
             <p className="hero__sub">{t.hero.text}</p>
             <div className="hero__actions">
-              <a className="btn btn--gold" href="#lead-form">{t.hero.button}</a>
+              <a className="btn btn--gold" href="#lead-form" aria-haspopup="dialog">{t.hero.button}</a>
               <a className="btn btn--ghost" href={firm.phoneHref}>&#9742; Call {firm.phone}</a>
             </div>
-          </div>
-
-          <div className="lead-card" id="lead-form">
-            <h2>{t.hero.formTitle}</h2>
-            <p className="muted">{t.hero.formText}</p>
-            <ContactForm variant="lead" />
           </div>
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      {credibility.homeStats.length > 0 && (
-        <div className="trustbar">
-          <div className="container">
-            {credibility.homeStats.map((s) => (
-              <div className="item" key={s.label}><strong>{s.value}</strong><span>{s.label}</span></div>
-            ))}
-          </div>
-        </div>
-      )}
-
       {/* WHAT WE DO */}
       <section className="section">
         <div className="container">
-          <div className="section-head center reveal">
+          <div className="section-head section-head--wide center reveal">
             <span className="eyebrow">{t.intro.eyebrow}</span>
-            <h2>{t.intro.title}</h2>
+            <h2 className="split-head"><TwoLines text={t.intro.title} /></h2>
             <p className="lead" style={{ margin: "14px auto 0" }}>{t.intro.text}</p>
           </div>
           <div className="pillars">
@@ -129,21 +144,23 @@ export default async function HomeView({ t }: { t: HomeText }) {
       </section>
 
       {/* PROCESS */}
-      <section className="section">
+      <section className="section process">
         <div className="container">
           <div className="section-head center reveal">
             <span className="eyebrow">{t.process.eyebrow}</span>
             <h2>{t.process.title}</h2>
           </div>
           <div className="steps">
+            <div className="steps__track reveal" aria-hidden="true"></div>
             {t.process.steps.map((s, idx) => (
-              <div className="step reveal" key={idx}>
-                <div className="n">
-                  <svg {...STEP_SVG}>{STEP_ICONS[idx]}</svg>
-                  <span className="step-num">{idx + 1}</span>
+              <div className="step reveal" key={idx} style={{ "--i": idx } as React.CSSProperties}>
+                <div className="step__node" aria-hidden="true">{String(idx + 1).padStart(2, "0")}</div>
+                <div className="step__card">
+                  <div className="step__icon"><svg {...STEP_SVG}>{STEP_ICONS[idx]}</svg></div>
+                  <span className="step__label">Step {idx + 1}</span>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
                 </div>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
               </div>
             ))}
           </div>

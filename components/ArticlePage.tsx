@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Byline from "@/components/Byline";
-import ContactForm from "@/components/ContactForm";
+import ReviewCard from "@/components/ReviewCard";
 import JsonLd from "@/components/JsonLd";
 import { Blocks, Inline } from "@/components/RichText";
 import { CtaBand, PageHero } from "@/components/Sections";
@@ -84,11 +84,7 @@ export default async function ArticlePage({ a, seo: draftSeo }: { a: ArticleCont
           </article>
 
           <div className="aside-stack">
-            <div className="lead-card lead-card--aside" id="lead-form">
-              <h3>Free case review</h3>
-              <p className="muted">Tell us what happened. We respond within one hour, 24/7.</p>
-              <ContactForm variant="lead" />
-            </div>
+            <ReviewCard />
             <aside className="sidebar">
               <h3>Prefer to talk?</h3>
               <p>Speak with our team now - free, confidential, and available 24/7.</p>

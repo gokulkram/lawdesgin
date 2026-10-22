@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link, { useLinkStatus } from "next/link";
 import { usePathname } from "next/navigation";
 import type { StaffRole } from "@/lib/admin/auth";
 
@@ -34,9 +34,17 @@ export default function AdminNav({ role }: { role: StaffRole }) {
             className={`adm-nav__item${(i.href === "/admin" ? pathname === "/admin" : pathname.startsWith(i.href)) ? " is-active" : ""}`}
           >
             {i.label}
+            <PendingSpinner />
           </Link>
         )
       )}
     </nav>
   );
+}
+
+// Shows a small spinner on the clicked item until the new page is ready, so a slow page load
+// (e.g. first visit in dev while the page compiles) doesn't look like a dead click.
+function PendingSpinner() {
+  const { pending } = useLinkStatus();
+  return <span aria-hidden className={`adm-nav__spin${pending ? " is-pending" : ""}`} />;
 }

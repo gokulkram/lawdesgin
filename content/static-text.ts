@@ -61,7 +61,7 @@ const HOME: HomeText = {
     titleStart: "When the worst happens, ",
     titleAccent: "you deserve answers",
     titleEnd: " - and justice.",
-    text: "California Law stands with Californian families and the injured after life-changing harm. We pursue full accountability for wrongful death and serious injury - with compassion, and without compromise.",
+    text: "We stand with California families after a wrongful death or serious injury. No fee unless we win.",
     button: "Get a Free Case Review",
     formTitle: "Free, confidential case review",
     formText: "Tell us what happened. We respond within one hour, 24/7.",

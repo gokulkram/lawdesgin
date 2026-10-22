@@ -26,7 +26,7 @@ export function PageHero({ trail, title, children }: { trail: [string, string][]
   );
 }
 
-export async function CtaBand({ eyebrow, title, text, cta, ctaHref = "/contact" }: { eyebrow: string; title: string; text: string; cta: string; ctaHref?: string }) {
+export async function CtaBand({ eyebrow, title, text, cta, ctaHref = "#lead-form" }: { eyebrow: string; title: string; text: string; cta: string; ctaHref?: string }) {
   const { firm } = await getContent();
   return (
     <section className="section ctaband">
@@ -35,7 +35,7 @@ export async function CtaBand({ eyebrow, title, text, cta, ctaHref = "/contact" 
         <h2>{title}</h2>
         <p>{text}</p>
         <div className="actions">
-          <a className="btn btn--gold" href={ctaHref}>{cta}</a>
+          <a className="btn btn--gold" href={ctaHref} aria-haspopup={ctaHref === "#lead-form" ? "dialog" : undefined}>{cta}</a>
           <a className="btn btn--ghost" href={firm.phoneHref}>&#9742; {firm.phone}</a>
         </div>
       </div>

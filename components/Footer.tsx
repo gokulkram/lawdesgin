@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import CookiePrefsLink from "@/components/CookiePrefsLink";
 import { getContent } from "@/lib/content-store";
 
 export default async function Footer() {
@@ -54,7 +55,7 @@ export default async function Footer() {
         </div>
         <div className="footer__bottom">
           <span>&copy; {new Date().getFullYear()} California Law. All rights reserved.</span>
-          <span><Link href="/privacy">Privacy Policy</Link> &nbsp;&middot;&nbsp; <Link href="/disclaimer">Disclaimer</Link> &nbsp;&middot;&nbsp; <Link href="/site-map">Site Map</Link></span>
+          <span><Link href="/privacy">Privacy Policy</Link> &nbsp;&middot;&nbsp; <Link href="/disclaimer">Disclaimer</Link> &nbsp;&middot;&nbsp; <CookiePrefsLink /> &nbsp;&middot;&nbsp; <Link href="/site-map">Site Map</Link></span>
         </div>
       </div>
     </footer>
