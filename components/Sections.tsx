@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BrandMark from "@/components/BrandMark";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { getContent } from "@/lib/content-store";
@@ -28,15 +29,24 @@ export function PageHero({ trail, title, children }: { trail: [string, string][]
 
 export async function CtaBand({ eyebrow, title, text, cta, ctaHref = "#lead-form" }: { eyebrow: string; title: string; text: string; cta: string; ctaHref?: string }) {
   const { firm } = await getContent();
+  // Full-width dark band (beach photo behind a navy wash); a notch cut into its top edge holds the
+  // brand mark, and the content lines up with the page container.
   return (
-    <section className="section ctaband">
-      <div className="container reveal">
-        <span className="eyebrow eyebrow--light">{eyebrow}</span>
-        <h2>{title}</h2>
-        <p>{text}</p>
-        <div className="actions">
-          <a className="btn btn--gold" href={ctaHref} aria-haspopup={ctaHref === "#lead-form" ? "dialog" : undefined}>{cta}</a>
-          <a className="btn btn--ghost" href={firm.phoneHref}>&#9742; {firm.phone}</a>
+    <section className="ctaband">
+      <div className="ctaband__card">
+        <span className="ctaband__notch"><BrandMark size={34} /></span>
+        <div className="container ctaband__inner reveal">
+          <div className="ctaband__lead">
+            <span className="eyebrow eyebrow--light">{eyebrow}</span>
+            <h2>{title}</h2>
+          </div>
+          <div className="ctaband__side">
+            <p>{text}</p>
+            <div className="actions">
+              <a className="btn btn--gold" href={ctaHref} aria-haspopup={ctaHref === "#lead-form" ? "dialog" : undefined}>{cta}</a>
+              <a className="btn btn--ghost" href={firm.phoneHref}>&#9742; {firm.phone}</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -50,8 +60,41 @@ const PhoneIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" /></svg>
 );
 
-export async function Locations({ tight = false }: { tight?: boolean }) {
+// Short city code shown large on each office tile; falls back to the label's initials.
+const OFFICE_CODES: Record<string, string> = { "los-angeles": "LA", "orange-county": "OC", "san-diego": "SD", "bay-area": "SF", sacramento: "SAC", "inland-empire": "IE" };
+const officeCode = (id: string, label: string) => OFFICE_CODES[id] ?? label.split(/\s+/).map((w) => w[0]).join("").slice(0, 3).toUpperCase();
+
+// variant "tiles": dark band with a strip of photo tiles (home page).
+// variant "cards" (default): cards with address and phone (contact page).
+export async function Locations({ tight = false, variant = "cards" }: { tight?: boolean; variant?: "cards" | "tiles" }) {
   const { firm } = await getContent();
+  if (variant === "tiles") {
+    return (
+      <section className="offices" id="offices" aria-labelledby="offices-title">
+        <div className="container">
+          <div className="offices-head reveal">
+            <div>
+              <span className="eyebrow">Visit Us</span>
+              <h2 id="offices-title">Six California offices, one standard of care</h2>
+            </div>
+            <p>Meet us at the office nearest you, or we&rsquo;ll come to your home or hospital room anywhere in California.</p>
+          </div>
+          <div className="office-row">
+            {firm.offices.map((o) => (
+              <Link className="office reveal" href={`/${o.id}`} key={o.id} aria-label={`${o.label} office`}>
+                <Image src={o.img} alt="" fill sizes="(max-width: 600px) 50vw, (max-width: 1240px) 33vw, 320px" />
+                <span className="office__code" aria-hidden="true">{officeCode(o.id, o.label)}</span>
+                <div>
+                  <strong>{o.label}</strong>
+                  <span>{/main/i.test(o.kind) ? "Main office" : o.locality}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
   return (
     <section className={`section bg-paper2${tight ? " section--tight" : ""}`}>
       <div className="container">
