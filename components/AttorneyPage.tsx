@@ -39,7 +39,7 @@ export default async function AttorneyPage({ a, seo: draftSeo }: { a: Attorney; 
             <h3>{a.name}</h3>
             <p>{a.title}</p>
             <p>State Bar of California <a href={barProfileUrl(a.barNumber)} target="_blank" rel="noopener" style={{ color: "var(--gold-300)" }}>#{a.barNumber}</a> &middot; admitted {a.admitted}</p>
-            {offices.length > 0 && <p>{offices.map((o) => <Link key={o.id} href={`/${o.id}`} style={{ color: "#fff", display: "block" }}>{o.label} office</Link>)}</p>}
+            {offices.length > 0 && <p>{offices.map((o) => <Link key={o.id} href={c.officeHref(o.id)} style={{ color: "#fff", display: "block" }}>{o.label} office</Link>)}</p>}
             {a.languages?.length ? <p>Languages: {a.languages.join(", ")}</p> : null}
           </aside>
         </div>

@@ -37,7 +37,7 @@ export const STATIC_PAGES: StaticPageSeed[] = [
     name: "Contact & Locations",
     group: "Firm",
     title: "Contact & Locations",
-    description: "Contact California Law for a free consultation. Six offices across California, available 24/7. Call (800) 555-0100 or request a free case review online.",
+    description: "Contact California Law for a free consultation. Six offices across California, available 24/7. Call (800) 400-5050 or request a free case review online.",
   },
   {
     path: "/practice-areas",

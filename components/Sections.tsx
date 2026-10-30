@@ -64,10 +64,14 @@ const PhoneIcon = () => (
 const OFFICE_CODES: Record<string, string> = { "los-angeles": "LA", "orange-county": "OC", "san-diego": "SD", "bay-area": "SF", sacramento: "SAC", "inland-empire": "IE" };
 const officeCode = (id: string, label: string) => OFFICE_CODES[id] ?? label.split(/\s+/).map((w) => w[0]).join("").slice(0, 3).toUpperCase();
 
+const COUNT_WORDS = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"];
+const countWord = (n: number) => COUNT_WORDS[n] ?? String(n);
+
 // variant "tiles": dark band with a strip of photo tiles (home page).
 // variant "cards" (default): cards with address and phone (contact page).
 export async function Locations({ tight = false, variant = "cards" }: { tight?: boolean; variant?: "cards" | "tiles" }) {
-  const { firm } = await getContent();
+  const { firm, officeHref } = await getContent();
+  const heading = `${countWord(firm.offices.length)} California office${firm.offices.length === 1 ? "" : "s"}, one standard of care`;
   if (variant === "tiles") {
     return (
       <section className="offices" id="offices" aria-labelledby="offices-title">
@@ -75,14 +79,14 @@ export async function Locations({ tight = false, variant = "cards" }: { tight?: 
           <div className="offices-head reveal">
             <div>
               <span className="eyebrow">Visit Us</span>
-              <h2 id="offices-title">Six California offices, one standard of care</h2>
+              <h2 id="offices-title">{heading}</h2>
             </div>
             <p>Meet us at the office nearest you, or we&rsquo;ll come to your home or hospital room anywhere in California.</p>
           </div>
           <div className="office-row">
             {firm.offices.map((o) => (
-              <Link className="office reveal" href={`/${o.id}`} key={o.id} aria-label={`${o.label} office`}>
-                <Image src={o.img} alt="" fill sizes="(max-width: 600px) 50vw, (max-width: 1240px) 33vw, 320px" />
+              <Link className="office reveal" href={officeHref(o.id)} key={o.id} aria-label={`${o.label} office`}>
+                <Image src={o.img} alt="" fill quality={90} sizes="(max-width: 600px) 50vw, (max-width: 1240px) 33vw, 320px" />
                 <span className="office__code" aria-hidden="true">{officeCode(o.id, o.label)}</span>
                 <div>
                   <strong>{o.label}</strong>
@@ -100,21 +104,21 @@ export async function Locations({ tight = false, variant = "cards" }: { tight?: 
       <div className="container">
         <div className="section-head center reveal">
           <span className="eyebrow">{tight ? "Our Offices" : "Visit Us"}</span>
-          <h2>Six California offices, one standard of care</h2>
+          <h2>{heading}</h2>
           <p className="lead" style={{ margin: "14px auto 0" }}>From San Diego to Sacramento - and if you can&rsquo;t come to us, we make home and hospital visits anywhere in California.</p>
         </div>
         <div className="locations">
           {firm.offices.map((o) => (
             <div className="loc reveal" key={o.label}>
               <div className="loc__media">
-                <Image src={o.img} alt="" width={800} height={500} sizes="(max-width: 620px) 100vw, (max-width: 920px) 50vw, 360px" />
+                <Image src={o.img} alt="" width={800} height={500} quality={90} sizes="(max-width: 620px) 100vw, (max-width: 920px) 50vw, 360px" />
                 <span className="loc__label">{o.label}</span>
               </div>
               <div className="loc__body">
                 <span className="loc__eyebrow">{o.kind}</span>
                 <p><PinIcon /> {o.street ? `${o.street}, ` : ""}{o.locality}, CA{o.postalCode ? ` ${o.postalCode}` : ""}</p>
                 <p><PhoneIcon /> <a href={`tel:${o.tel}`}>{o.phone}</a></p>
-                <p><Link className="loc__more" href={`/${o.id}`}>{o.label} office &rarr;</Link></p>
+                <p><Link className="loc__more" href={officeHref(o.id)}>{o.label} office &rarr;</Link></p>
               </div>
             </div>
           ))}

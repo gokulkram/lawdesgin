@@ -97,7 +97,7 @@ const page: ServiceContent = {
       heading: "How California Law handles government claims",
       blocks: [
         { p: "A senior attorney leads every case. We identify every public and private party that may be responsible, prepare and file the government claim correctly and on time, request the agency’s maintenance and complaint records, and track every deadline through the claim and the lawsuit. If the agency won’t pay a fair amount, we take the case to court." },
-        { p: "We work on a contingency fee - no attorney’s fee unless we win. Consultations are free, confidential, and available 24/7. Call **(800) 555-0100** or visit one of our six offices across California." },
+        { p: "We work on a contingency fee - no attorney’s fee unless we win. Consultations are free, confidential, and available 24/7. Call **(800) 400-5050** or visit one of our six offices across California." },
       ],
     },
   ],

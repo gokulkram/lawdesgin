@@ -39,7 +39,8 @@ export default async function Footer() {
           <div>
             <h4>Get Help Now</h4>
             <p>Available 24/7 for new matters.</p>
-            <p style={{ margin: "6px 0" }}><a href={firm.phoneHref} style={{ color: "var(--gold-300)", fontWeight: 700, fontSize: "1.1rem" }}>{firm.phone}</a></p>
+            {firm.tollFree && <p style={{ margin: "6px 0" }}>Toll free: <a href={firm.tollFreeHref} style={{ color: "var(--gold-300)", fontWeight: 700, fontSize: "1.1rem" }}>{firm.tollFree}</a></p>}
+            <p style={{ margin: "6px 0" }}>{firm.tollFree && "California: "}<a href={firm.phoneHref} style={{ color: "var(--gold-300)", fontWeight: 700, fontSize: "1.1rem" }}>{firm.phone}</a></p>
             <p><a href={`mailto:${firm.email}`}>{firm.email}</a></p>
             {social.length > 0 && (
               <div className="footer__social" style={{ marginTop: 16 }}>

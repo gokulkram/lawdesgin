@@ -106,6 +106,7 @@ export default async function HomeView({ t }: { t: HomeText }) {
               <a className="btn btn--gold" href="#lead-form" aria-haspopup="dialog">{t.hero.button}</a>
               <a className="btn btn--ghost" href={firm.phoneHref}>&#9742; Call {firm.phone}</a>
             </div>
+            <p className="hero__note">Free Case Review - 24/7</p>
           </div>
         </div>
       </section>
@@ -140,7 +141,7 @@ export default async function HomeView({ t }: { t: HomeText }) {
             <figure className="wwd-death__photo reveal">
               <div className="wwd-death__frame">
                 <SlowScroll className="wwd-death__img">
-                  <Image src="/images/about-attorney.webp" alt="An attorney listening to a client across a table" fill sizes="(max-width: 920px) 100vw, 42vw" />
+                  <Image src="/images/about-attorney.webp" alt="An attorney listening to a client across a table" fill quality={90} sizes="(max-width: 920px) 100vw, 42vw" />
                 </SlowScroll>
               </div>
               <figcaption><strong>We come to you</strong>Home and hospital visits when you can&rsquo;t travel.</figcaption>

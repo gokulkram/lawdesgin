@@ -9,9 +9,10 @@ import type { Credibility, Firm } from "@/lib/admin/settings-model";
 
 export const FIRM: Firm = {
   description: "California personal injury law firm focused on wrongful death, with six offices statewide. Free consultation, no fee unless we win.",
-  phone: "(800) 555-0100",
-  phoneTel: "+18005550100",
-  phoneSchema: "+1-800-555-0100",
+  phone: "(800) 400-5050",
+  phoneTel: "+18004005050",
+  phoneSchema: "+1-800-400-5050",
+  tollFree: "(310) 920-9000",
   email: "intake@californialaw.com",
   social: [
     { label: "Facebook", short: "f", url: "" },
@@ -19,12 +20,12 @@ export const FIRM: Firm = {
     { label: "X", short: "x", url: "" },
   ],
   offices: [
-    { id: "los-angeles", label: "Los Angeles", kind: "Main Office", street: "", locality: "Los Angeles", postalCode: "", phone: "(800) 555-0100", tel: "+18005550100", img: "/images/office-los-angeles.webp" },
-    { id: "orange-county", label: "Orange County", kind: "Branch Office", street: "", locality: "Irvine", postalCode: "", phone: "(800) 555-0120", tel: "+18005550120", img: "/images/office-orange-county.webp" },
-    { id: "san-diego", label: "San Diego", kind: "Branch Office", street: "", locality: "San Diego", postalCode: "", phone: "(800) 555-0140", tel: "+18005550140", img: "/images/office-san-diego.webp" },
-    { id: "bay-area", label: "Bay Area", kind: "Branch Office", street: "", locality: "San Francisco", postalCode: "", phone: "(800) 555-0160", tel: "+18005550160", img: "/images/office-bay-area.webp" },
-    { id: "sacramento", label: "Sacramento", kind: "Branch Office", street: "", locality: "Sacramento", postalCode: "", phone: "(800) 555-0180", tel: "+18005550180", img: "/images/office-sacramento.webp" },
-    { id: "inland-empire", label: "Inland Empire", kind: "Branch Office", street: "", locality: "Riverside", postalCode: "", phone: "(800) 555-0200", tel: "+18005550200", img: "/images/office-inland-empire.webp" },
+    { id: "los-angeles", label: "Los Angeles", kind: "Main Office", street: "", locality: "Los Angeles", postalCode: "", phone: "(800) 400-5050", tel: "+18004005050", img: "/images/office-los-angeles.webp" },
+    { id: "orange-county", label: "Orange County", kind: "Branch Office", street: "", locality: "Irvine", postalCode: "", phone: "(800) 400-5050", tel: "+18004005050", img: "/images/office-orange-county.webp" },
+    { id: "san-diego", label: "San Diego", kind: "Branch Office", street: "", locality: "San Diego", postalCode: "", phone: "(800) 400-5050", tel: "+18004005050", img: "/images/office-san-diego.webp" },
+    { id: "bay-area", label: "Bay Area", kind: "Branch Office", street: "", locality: "San Francisco", postalCode: "", phone: "(800) 400-5050", tel: "+18004005050", img: "/images/office-bay-area.webp" },
+    { id: "sacramento", label: "Sacramento", kind: "Branch Office", street: "", locality: "Sacramento", postalCode: "", phone: "(800) 400-5050", tel: "+18004005050", img: "/images/office-sacramento.webp" },
+    { id: "inland-empire", label: "Inland Empire", kind: "Branch Office", street: "", locality: "Riverside", postalCode: "", phone: "(800) 400-5050", tel: "+18004005050", img: "/images/office-inland-empire.webp" },
   ],
   caseTypes: ["Wrongful death", "Car / truck accident", "Medical malpractice", "Workplace injury", "Slip & fall", "Other personal injury"],
   footerAbout: "A California personal injury law firm dedicated to families and the seriously injured - with a focus on wrongful death claims. Compassionate counsel, relentless advocacy.",

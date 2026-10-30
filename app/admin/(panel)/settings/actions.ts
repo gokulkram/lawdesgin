@@ -4,6 +4,7 @@ import { revalidatePath, updateTag } from "next/cache";
 import { staffFor } from "@/lib/admin/auth";
 import { credibilityErrors, firmErrors, phoneParts, type Credibility, type Firm, type Office } from "@/lib/admin/settings-model";
 import { CONTENT_TAG } from "@/lib/content-store";
+import { OFFICE_IDS } from "@/lib/firm";
 import { MEDIA_PREFIX } from "@/lib/supabase/env";
 import { createClient } from "@/lib/supabase/server";
 
@@ -42,6 +43,7 @@ export async function saveFirmContact(_prev: SettingsState, form: FormData): Pro
       phone: str(form, "phone"),
       phoneTel: phone?.tel ?? "",
       phoneSchema: phone?.schema ?? "",
+      tollFree: str(form, "tollFree"),
       email: str(form, "email"),
       social: firm.social.map((s) => ({ ...s, url: str(form, `social-${s.label}`) })),
       caseTypes: str(form, "caseTypes").split("\n").map((l) => l.trim()).filter(Boolean),
@@ -74,6 +76,45 @@ export async function saveOffice(_prev: SettingsState, form: FormData): Promise<
     const next = { ...firm, offices };
     const errors = firmErrors(next, MEDIA_PREFIX).filter((e) => e.includes(str(form, "label") || id) || e.startsWith(`Office ${id}`));
     return errors.length ? errors.join(" ") : next;
+  });
+}
+
+const slugify = (s: string) => s.toLowerCase().normalize("NFKD").replace(/[^\w\s-]/g, "").trim().replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
+
+/** Adds an office. It has no page of its own, so the site links it to /contact. */
+export async function addOffice(_prev: SettingsState, form: FormData): Promise<SettingsState> {
+  return update<Firm>("firm", str(form, "version"), (firm) => {
+    const label = str(form, "label");
+    const base = slugify(label) || "office";
+    const taken = new Set([...firm.offices.map((o) => o.id), ...OFFICE_IDS]);
+    let id = base;
+    for (let n = 2; taken.has(id); n++) id = `${base}-${n}`;
+    const phone = phoneParts(str(form, "phone"));
+    const office: Office = {
+      id,
+      label,
+      kind: str(form, "kind") === "Main Office" ? "Main Office" : "Branch Office",
+      street: str(form, "street"),
+      locality: str(form, "locality"),
+      postalCode: str(form, "postalCode"),
+      phone: str(form, "phone"),
+      tel: phone?.tel ?? "",
+      img: str(form, "img"),
+    };
+    const next = { ...firm, offices: [...firm.offices, office] };
+    const errors = firmErrors(next, MEDIA_PREFIX);
+    return errors.length ? errors.join(" ") : next;
+  });
+}
+
+/** Removes an office added here. The original offices have their own pages, so they can't be removed. */
+export async function removeOffice(_prev: SettingsState, form: FormData): Promise<SettingsState> {
+  const id = str(form, "id");
+  if (OFFICE_IDS.includes(id)) return { error: "This office has its own page on the website, so it can't be removed here." };
+  return update<Firm>("firm", str(form, "version"), (firm) => {
+    if (!firm.offices.some((o) => o.id === id)) return "Unknown office.";
+    if (firm.offices[0]?.id === id) return "The first office is the firm's main address and can't be removed.";
+    return { ...firm, offices: firm.offices.filter((o) => o.id !== id) };
   });
 }
 

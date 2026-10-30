@@ -74,7 +74,7 @@ const page: ServiceContent = {
     { q: "Can inspection records from Otay Mesa, San Onofre or Rainbow help my case?", a: "They can. CHP inspects commercial vehicles at these facilities, and a truck’s or carrier’s inspection history can help show poor maintenance or rule violations. A lawyer can request those records along with the carrier’s own logs." },
     { q: "How quickly do I need to act after a truck crash?", a: "Right away. ELD and engine data can be overwritten, and the carrier will start its own investigation quickly. Your lawsuit deadline is generally two years, but six months if a public agency is involved." },
     { q: "Where would my truck accident case be filed?", a: "In San Diego Superior Court - at the Hall of Justice downtown for central, East County and South County cases, or at the North County Regional Center in Vista for North County cases." },
-    { q: "Do you come to San Diego hospitals?", a: "Yes. We offer home and hospital visits anywhere in California, including throughout San Diego County. Call (800) 555-0100 any time." },
+    { q: "Do you come to San Diego hospitals?", a: "Yes. We offer home and hospital visits anywhere in California, including throughout San Diego County. Call (800) 400-5050 any time." },
   ],
   related: ["/truck-accident-lawyer", "/san-diego", "/san-diego/car-accident-lawyer", "/wrongful-death/truck-accident"],
   updated: "2026-10-02",

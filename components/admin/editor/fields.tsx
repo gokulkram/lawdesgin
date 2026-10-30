@@ -2,6 +2,7 @@
 
 // Form controls for the page editor. Each is controlled: value in, new value out via onChange.
 import { useId } from "react";
+import RichBlocksEditor from "@/components/admin/editor/RichBlocksEditor";
 
 type Block = { p: string } | { ul: string[] } | { ol: string[] } | { callout: string };
 export type Section = { heading: string; blocks: Block[] };
@@ -91,50 +92,11 @@ export const cleanLines = (v: string[]) => v.map((s) => s.trim()).filter(Boolean
 
 // ---------------------------------------------------------------- rich content blocks
 
-const BLOCK_KINDS = [
-  { value: "p", label: "Paragraph" },
-  { value: "ul", label: "Bulleted list" },
-  { value: "ol", label: "Numbered list" },
-  { value: "callout", label: "Callout (deadline / warning)" },
-] as const;
-type Kind = (typeof BLOCK_KINDS)[number]["value"];
-const kindOf = (b: Block): Kind => (Object.keys(b)[0] as Kind);
-const textOf = (b: Block) => ("p" in b ? b.p : "callout" in b ? b.callout : ("ul" in b ? b.ul : b.ol).join("\n"));
-const makeBlock = (kind: Kind, text: string): Block =>
-  kind === "p" ? { p: text } : kind === "callout" ? { callout: text } : kind === "ul" ? { ul: text.split("\n") } : { ol: text.split("\n") };
-
+// Section text: a rich text editor (components/admin/editor/RichBlocksEditor.tsx) that saves blocks.
 export function BlocksEditor({ value, onChange }: { value: Block[]; onChange: (v: Block[]) => void }) {
-  return (
-    <div className="ed-blocks">
-      {value.map((b, i) => {
-        const kind = kindOf(b);
-        const isList = kind === "ul" || kind === "ol";
-        return (
-          <div className={`ed-block ed-block--${kind}`} key={i}>
-            <div className="ed-row">
-              <select value={kind} onChange={(e) => onChange(replace(value, i, makeBlock(e.target.value as Kind, textOf(b))))} aria-label="Block type">
-                {BLOCK_KINDS.map((k) => <option key={k.value} value={k.value}>{k.label}</option>)}
-              </select>
-              <RowTools i={i} count={value.length} label="block" onMove={(by) => onChange(move(value, i, by))} onRemove={() => onChange(remove(value, i))} />
-            </div>
-            <textarea
-              rows={isList ? Math.max(3, textOf(b).split("\n").length + 1) : Math.max(3, Math.ceil(textOf(b).length / 110) + 1)}
-              value={textOf(b)}
-              onChange={(e) => onChange(replace(value, i, makeBlock(kind, e.target.value)))}
-              aria-label={BLOCK_KINDS.find((k) => k.value === kind)!.label}
-            />
-            {isList && <small className="ed-hint">One list item per line.</small>}
-          </div>
-        );
-      })}
-      <div className="ed-add">
-        {BLOCK_KINDS.map((k) => (
-          <button type="button" key={k.value} className="adm-btn adm-btn--sm adm-btn--ghost" onClick={() => onChange([...value, makeBlock(k.value, "")])}>+ {k.label}</button>
-        ))}
-      </div>
-    </div>
-  );
+  return <RichBlocksEditor value={value} onChange={onChange} />;
 }
+
 /** Drop blank list items (call before saving). */
 export const cleanBlocks = (blocks: Block[]): Block[] =>
   blocks.map((b) => ("ul" in b ? { ul: cleanLines(b.ul) } : "ol" in b ? { ol: cleanLines(b.ol) } : b));

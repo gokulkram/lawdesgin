@@ -117,9 +117,10 @@ export default function ContactFormClient({ variant, caseTypes, offices, phone: 
       </div>
 
       <div className="mad">
-        <p className="mad__line">My name is {name}, and I need help with {caseType}.</p>
-        <p className="mad__line">You can call me at {phone} or email me at {email}.</p>
-        {variant === "page" && <p className="mad__line">The office nearest me is {office}.</p>}
+        <p className="mad__line">
+          My name is {name}, and I need help with {caseType}. You can call me at {phone} or email me at {email}.
+          {variant === "page" && <> The office nearest me is {office}.</>}
+        </p>
       </div>
 
       {variant === "page" && (

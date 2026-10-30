@@ -100,7 +100,7 @@ const page: LocationContent = {
     { q: "I was hurt on the trolley or an MTS bus. Is the deadline different?", a: "Yes. MTS is a public agency, so you generally must present a written claim within six months of the injury before you can sue. MTS’s claims policy says claims go to its Claims Administrator on a form from its Office of General Counsel." },
     { q: "How do I file a claim against the City of San Diego?", a: "Through the City’s Risk Management Department - online through its Public Liability Claims Portal, or on the paper RM-9 claim form. Most injury claims are due within six months of the incident." },
     { q: "Who handles crashes on San Diego freeways?", a: "The California Highway Patrol. In San Diego County, CHP’s San Diego, Oceanside and El Cajon area offices cover the freeways and unincorporated county roads. Crashes on city streets are usually handled by the city’s police department." },
-    { q: "Do I have to come to your San Diego office?", a: "No. We offer home and hospital visits anywhere in California, and we are available 24/7 at (800) 555-0100." },
+    { q: "Do I have to come to your San Diego office?", a: "No. We offer home and hospital visits anywhere in California, and we are available 24/7 at (800) 400-5050." },
     { q: "How much does it cost?", a: "Nothing upfront. We work on a contingency fee, so there is no attorney’s fee unless we win. The first consultation is free and confidential." },
   ],
   updated: "2026-10-02",

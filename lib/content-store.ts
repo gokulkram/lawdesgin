@@ -4,7 +4,7 @@ import { cache } from "react";
 import type { PageGroup } from "@/content/groups";
 import type { ArticleContent, Attorney, LocationContent, ServiceContent, ServiceGroup } from "@/content/types";
 import type { Seo } from "@/lib/admin/page-model";
-import { safeSiteSeo, unverifiedCount, type Credibility, type Firm, type Redirect, type SiteSeo } from "@/lib/admin/settings-model";
+import { phoneParts, safeSiteSeo, unverifiedCount, type Credibility, type Firm, type Redirect, type SiteSeo } from "@/lib/admin/settings-model";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 // The site's content, read from the Supabase `pages` table (published copies only). Every public
@@ -103,8 +103,10 @@ export class Content {
   readonly statics: StaticPage[];
   readonly siteSeo: SiteSeo;
   /** Firm details (phone, email, offices, ...) and trust signals, edited under Site settings. */
-  readonly firm: Firm & { phoneHref: string };
+  readonly firm: Firm & { phoneHref: string; tollFreeHref: string };
   readonly credibility: Credibility;
+  /** Link for an office: its own page (/los-angeles) if it has one, otherwise /contact (offices added in Site settings). */
+  readonly officeHref: (id: string) => string;
   private readonly byPath = new Map<string, unknown>();
   private readonly cards = new Map<string, PageCard>();
   private readonly seoByPath: Map<string, Seo>;
@@ -112,7 +114,8 @@ export class Content {
 
   constructor({ rows, siteSeo, redirects, firm, credibility }: Data) {
     this.siteSeo = siteSeo;
-    this.firm = { ...firm, phoneHref: `tel:${firm.phoneTel}` };
+    const toll = firm.tollFree ? phoneParts(firm.tollFree) : null;
+    this.firm = { ...firm, tollFree: toll ? firm.tollFree : "", phoneHref: `tel:${firm.phoneTel}`, tollFreeHref: toll ? `tel:${toll.tel}` : "" };
     this.credibility = credibility;
     this.seoByPath = new Map(rows.map((r) => [r.path, r.published_seo ?? {}]));
     this.redirectBySource = new Map(redirects.map((r) => [r.source, r]));
@@ -120,6 +123,8 @@ export class Content {
     this.services = of<ServiceContent>("service");
     this.local = of<ServiceContent>("local");
     this.locations = of<LocationContent>("location");
+    const withPage = new Set(this.locations.map((l) => l.officeId));
+    this.officeHref = (id: string) => (withPage.has(id) ? `/${id}` : "/contact");
     this.articles = of<ArticleContent>("article");
     this.attorneys = of<Attorney>("attorney");
     this.statics = rows.filter((r) => r.type === "static").map((r) => ({ path: r.path, ...toPage<Omit<StaticPage, "path">>(r) }));

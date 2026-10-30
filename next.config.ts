@@ -15,7 +15,8 @@ const nextConfig: NextConfig = {
   env: { CONTENT_CACHE_VERSION: process.env.VERCEL_DEPLOYMENT_ID || String(Date.now()) },
   // The page editor checks § citations against the verified fact sheet, read from disk at runtime.
   outputFileTracingIncludes: { "/admin/**": ["./content/FACTS.md"] },
-  images: SUPABASE_HOST ? { remotePatterns: [{ protocol: "https", hostname: SUPABASE_HOST, pathname: "/storage/v1/object/public/media/**" }] } : undefined,
+  // 75 is the default; 90 is used for the office photos so they stay crisp.
+  images: { qualities: [75, 90], ...(SUPABASE_HOST ? { remotePatterns: [{ protocol: "https", hostname: SUPABASE_HOST, pathname: "/storage/v1/object/public/media/**" }] } : {}) },
   // Keep links to the old static-site URLs (/about.html etc.) working.
   async redirects() {
     return [

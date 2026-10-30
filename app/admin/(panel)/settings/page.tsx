@@ -1,7 +1,8 @@
 import { requireStaff } from "@/lib/admin/auth";
 import type { Credibility, Firm } from "@/lib/admin/settings-model";
 import { createClient } from "@/lib/supabase/server";
-import { CredibilityForm, FirmForm, OfficeForm } from "./SettingsForms";
+import { OFFICE_IDS } from "@/lib/firm";
+import { AddOfficeForm, CredibilityForm, FirmForm, OfficeForm } from "./SettingsForms";
 
 export const metadata = { title: "Site settings" };
 
@@ -30,15 +31,20 @@ export default async function SettingsPage() {
         <h2 className="adm-h2">Offices</h2>
         <p className="adm-muted">
           Each address and phone number should match that office&rsquo;s Google Business Profile exactly. The address appears on the office
-          page (with a map) and in the information search engines read once a street address is filled in. Adding or removing an office
-          needs a new office page and is done by your developer.
+          page (with a map) and in the information search engines read once a street address is filled in. The original six offices have
+          their own pages and can&rsquo;t be removed. Offices you add show on the office cards, in the contact form and on attorney
+          profiles, and link to the contact page (they don&rsquo;t get a page of their own).
         </p>
         {f.offices.map((o) => (
           <details className="st-office" key={o.id}>
             <summary><strong>{o.label}</strong> <span className="adm-muted">- {o.kind}{o.street ? `, ${o.street}` : ", no street address yet"}</span></summary>
-            <OfficeForm office={o} version={firm.updated_at} />
+            <OfficeForm office={o} version={firm.updated_at} removable={!OFFICE_IDS.includes(o.id) && f.offices[0]?.id !== o.id} />
           </details>
         ))}
+        <details className="st-office">
+          <summary><strong>+ Add office</strong></summary>
+          <AddOfficeForm version={firm.updated_at} phone={f.phone} />
+        </details>
       </section>
 
       <section className="adm-card">

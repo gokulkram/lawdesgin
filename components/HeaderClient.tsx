@@ -7,7 +7,7 @@ import { NAV } from "@/lib/firm";
 import Logo from "@/components/Logo";
 
 // Firm phone/email come from the server wrapper (components/Header.tsx).
-export default function HeaderClient({ phone, phoneHref, email }: { phone: string; phoneHref: string; email: string }) {
+export default function HeaderClient({ phone, phoneHref, tollFree, tollFreeHref, email }: { phone: string; phoneHref: string; tollFree: string; tollFreeHref: string; email: string }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [stuck, setStuck] = useState(false);
@@ -30,7 +30,8 @@ export default function HeaderClient({ phone, phoneHref, email }: { phone: strin
       <div className="topbar">
         <div className="container">
           <div className="topbar__left">
-            <span>&#9742; <a href={phoneHref}>{phone}</a></span>
+            {tollFree && <span>&#9742; Toll free <a href={tollFreeHref}>{tollFree}</a></span>}
+            <span>&#9742; {tollFree && "California "}<a href={phoneHref}>{phone}</a></span>
             <span>&#9993; <a href={`mailto:${email}`}>{email}</a></span>
           </div>
           <a className="topbar__cta" href={ctaHref}>Free Case Review - 24/7</a>

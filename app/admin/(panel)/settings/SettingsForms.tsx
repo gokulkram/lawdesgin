@@ -6,7 +6,8 @@ import { RowTools } from "@/components/admin/editor/fields";
 import type { Credibility, Firm, Office, Stat, Testimonial } from "@/lib/admin/settings-model";
 import { unverifiedCount } from "@/lib/admin/settings-model";
 import { wordingWarnings } from "@/lib/admin/validate";
-import { saveCredibility, saveFirmContact, saveOffice, type SettingsState } from "./actions";
+import { OFFICE_IDS } from "@/lib/firm";
+import { addOffice, removeOffice, saveCredibility, saveFirmContact, saveOffice, type SettingsState } from "./actions";
 
 function Result({ state }: { state: SettingsState }) {
   if (state?.error) return <p className="adm-alert adm-alert--error" role="alert">{state.error}</p>;
@@ -33,6 +34,7 @@ export function FirmForm({ firm, version }: { firm: Firm; version: string }) {
     <form onSubmit={onSubmit} className="adm-form adm-form--grid">
       <input type="hidden" name="version" value={version} />
       <label className="adm-field"><span>Main phone</span><input name="phone" defaultValue={firm.phone} placeholder="(800) 555-0100" required /></label>
+      <label className="adm-field"><span>Toll-free phone (optional)</span><input name="tollFree" defaultValue={firm.tollFree ?? ""} placeholder="(310) 920-9000" /></label>
       <label className="adm-field"><span>Email</span><input name="email" type="email" defaultValue={firm.email} required /></label>
       <label className="adm-field adm-field--wide">
         <span>Firm description (structured data for search engines)</span>
@@ -69,9 +71,12 @@ export function FirmForm({ firm, version }: { firm: Firm; version: string }) {
   );
 }
 
-export function OfficeForm({ office, version }: { office: Office; version: string }) {
+export function OfficeForm({ office, version, removable }: { office: Office; version: string; removable: boolean }) {
   const { state, pending, onSubmit } = useSubmit(saveOffice);
+  const [removeState, setRemoveState] = useState<SettingsState>(undefined);
+  const [removing, startRemove] = useTransition();
   const [img, setImg] = useState(office.img);
+  const original = OFFICE_IDS.includes(office.id) ? `/images/office-${office.id}.webp` : "";
   return (
     <form onSubmit={onSubmit} className="adm-form adm-form--grid">
       <input type="hidden" name="version" value={version} />
@@ -88,11 +93,56 @@ export function OfficeForm({ office, version }: { office: Office; version: strin
       <label className="adm-field"><span>Phone</span><input name="phone" defaultValue={office.phone} required /></label>
       <div className="adm-field--wide">
         <MediaPicker label="Photo" value={img} onChange={setImg} hint="Shown on the office cards. Landscape, about 800×500." />
-        {img !== `/images/office-${office.id}.webp` && (
-          <button type="button" className="adm-btn adm-btn--sm adm-btn--ghost" onClick={() => setImg(`/images/office-${office.id}.webp`)}>Use the original photo</button>
+        {original && img !== original && (
+          <button type="button" className="adm-btn adm-btn--sm adm-btn--ghost" onClick={() => setImg(original)}>Use the original photo</button>
         )}
       </div>
-      <div className="adm-field--wide"><button className="adm-btn adm-btn--primary" disabled={pending}>{pending ? "Saving…" : `Save ${office.label}`}</button></div>
+      <div className="adm-field--wide">
+        <button className="adm-btn adm-btn--primary" disabled={pending}>{pending ? "Saving…" : `Save ${office.label}`}</button>{" "}
+        {removable && (
+          <button
+            type="button"
+            className="adm-btn adm-btn--ghost"
+            disabled={removing}
+            onClick={() => {
+              if (!window.confirm(`Remove the ${office.label} office from the website?`)) return;
+              const form = new FormData();
+              form.set("id", office.id);
+              form.set("version", version);
+              startRemove(async () => setRemoveState(await removeOffice(undefined, form)));
+            }}
+          >
+            {removing ? "Removing…" : "Remove office"}
+          </button>
+        )}
+      </div>
+      <div className="adm-field--wide"><Result state={state} /><Result state={removeState} /></div>
+    </form>
+  );
+}
+
+const OFFICE_PHOTOS = OFFICE_IDS.map((id) => `/images/office-${id}.webp`);
+
+export function AddOfficeForm({ version, phone }: { version: string; phone: string }) {
+  const { state, pending, onSubmit } = useSubmit(addOffice);
+  const [img, setImg] = useState(OFFICE_PHOTOS[0]);
+  return (
+    <form onSubmit={onSubmit} className="adm-form adm-form--grid">
+      <input type="hidden" name="version" value={version} />
+      <input type="hidden" name="img" value={img} />
+      <label className="adm-field"><span>Name</span><input name="label" placeholder="e.g. Fresno" required /></label>
+      <label className="adm-field">
+        <span>Type</span>
+        <select name="kind" defaultValue="Branch Office"><option>Main Office</option><option>Branch Office</option></select>
+      </label>
+      <label className="adm-field adm-field--wide"><span>Street address (must match the Google Business Profile exactly)</span><input name="street" /></label>
+      <label className="adm-field"><span>City</span><input name="locality" required /></label>
+      <label className="adm-field"><span>ZIP code</span><input name="postalCode" /></label>
+      <label className="adm-field"><span>Phone</span><input name="phone" defaultValue={phone} required /></label>
+      <div className="adm-field--wide">
+        <MediaPicker label="Photo" value={img} onChange={setImg} hint="Shown on the office cards. Landscape, at least 1600 px wide." />
+      </div>
+      <div className="adm-field--wide"><button className="adm-btn adm-btn--primary" disabled={pending}>{pending ? "Adding…" : "Add office"}</button></div>
       <div className="adm-field--wide"><Result state={state} /></div>
     </form>
   );

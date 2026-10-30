@@ -104,7 +104,7 @@ const page: LocationContent = {
       heading: "Home and hospital visits across Los Angeles County",
       blocks: [
         { p: "Getting across Los Angeles County can take hours, and after a serious injury it may not be possible at all. We come to you - at home, in the hospital, or in a rehabilitation facility - anywhere from Santa Clarita and the Antelope Valley to Long Beach, the San Gabriel Valley and the Westside. Consultations are free, confidential and available 24/7, and we work on a contingency fee: no attorney’s fee unless we win." },
-        { p: "Los Angeles is our main office, and we also have offices in Orange County, San Diego, the Bay Area, Sacramento and the Inland Empire. Call (800) 555-0100 to talk with us." },
+        { p: "Los Angeles is our main office, and we also have offices in Orange County, San Diego, the Bay Area, Sacramento and the Inland Empire. Call (800) 400-5050 to talk with us." },
       ],
     },
   ],

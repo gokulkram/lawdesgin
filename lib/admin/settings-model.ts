@@ -90,7 +90,8 @@ export function redirectErrors(r: Redirect, others: Redirect[], publishedPaths: 
 
 // ---------------------------------------------------------------- firm details + credibility
 
-/** An office. Its id is part of the office page's URL, so offices can be edited but not added or removed here. */
+/** An office. The original six (OFFICE_IDS) have their own pages (/<id>) and can't be removed; offices
+ *  added in Site settings have no page of their own and link to /contact. */
 export type Office = {
   id: string;
   label: string;
@@ -118,6 +119,8 @@ export type Firm = {
   phoneTel: string;
   /** Derived on save: "+1-800-555-0100" (structured data). */
   phoneSchema: string;
+  /** Second number, shown as "Toll free" next to the main one. Missing/empty = not shown. */
+  tollFree?: string;
   email: string;
   /** Social profiles; links show in the footer (and structured data) only when a URL is set. */
   social: SocialLink[];
@@ -153,6 +156,7 @@ export function firmErrors(f: Firm, mediaPrefix: string): string[] {
   const out: string[] = [];
   if (!f.description?.trim()) out.push("Firm description is empty.");
   if (!phoneParts(f.phone ?? "")) out.push("Main phone must be a 10-digit US number, e.g. (800) 555-0100.");
+  if (f.tollFree && !phoneParts(f.tollFree)) out.push("Toll-free phone must be a 10-digit US number, e.g. (310) 920-9000.");
   if (!EMAIL_RE.test(f.email ?? "")) out.push("Email address looks wrong.");
   for (const s of f.social ?? []) if (s.url && !/^https:\/\/[^\s"<>]+$/.test(s.url)) out.push(`${s.label} link must start with https://`);
   for (const o of f.offices ?? []) {

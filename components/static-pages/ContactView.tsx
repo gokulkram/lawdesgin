@@ -27,7 +27,8 @@ export default async function ContactView({ t }: { t: ContactText }) {
           <aside className="sidebar reveal">
             <h3>{t.sidebar.title}</h3>
             <p>{t.sidebar.text}</p>
-            <p><a href={firm.phoneHref} style={{ color: "var(--gold-300)", fontWeight: 700, fontSize: "1.5rem" }}>{firm.phone}</a></p>
+            {firm.tollFree && <p>Toll free<br /><a href={firm.tollFreeHref} style={{ color: "var(--gold-300)", fontWeight: 700, fontSize: "1.5rem" }}>{firm.tollFree}</a></p>}
+            <p>{firm.tollFree && <>California<br /></>}<a href={firm.phoneHref} style={{ color: "var(--gold-300)", fontWeight: 700, fontSize: "1.5rem" }}>{firm.phone}</a></p>
             <p style={{ marginTop: 16 }}>{t.sidebar.emailLabel}</p>
             <p><a href={`mailto:${firm.email}`} style={{ color: "#fff", fontWeight: 600 }}>{firm.email}</a></p>
             <hr style={{ border: 0, borderTop: "1px solid rgba(255,255,255,.15)", margin: "22px 0" }} />
@@ -36,7 +37,7 @@ export default async function ContactView({ t }: { t: ContactText }) {
         </div>
       </section>
 
-      <Locations tight />
+      <Locations variant="tiles" />
     </main>
   );
 }
