@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { Blocks, Inline } from "@/components/RichText";
-import { CtaBand, PageHero } from "@/components/Sections";
+import { CtaBand, HeroLinks, PageHero } from "@/components/Sections";
 import type { WrongfulDeathText } from "@/content/static-text";
 import { getContent } from "@/lib/content-store";
 
@@ -16,7 +16,19 @@ export default async function WrongfulDeathView({ t }: { t: WrongfulDeathText })
   const GUIDES = GUIDE_PATHS.map((s) => content.service(s)!);
   return (
     <main>
-      <PageHero trail={[["Wrongful Death", "/wrongful-death"]]} title={t.hero.title}>
+      <PageHero
+        trail={[["Wrongful Death", "/wrongful-death"]]}
+        title={t.hero.title}
+        eyebrow="For families"
+        panel={
+          <HeroLinks
+            title="Wrongful death claims"
+            label="Wrongful death claims"
+            items={CASES.map((s) => ({ name: s.name, href: s.slug }))}
+            note="Free, confidential case review - 24/7"
+          />
+        }
+      >
         {t.hero.text}
       </PageHero>
 

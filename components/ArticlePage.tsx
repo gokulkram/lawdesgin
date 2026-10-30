@@ -21,7 +21,7 @@ export default async function ArticlePage({ a, seo: draftSeo }: { a: ArticleCont
     <main>
       <JsonLd data={applySchemaSettings(articleSchema(a, c), seo)} />
       <JsonLd data={customJsonLd(seo)} />
-      <PageHero trail={[["Resources", "/resources"], [a.name, a.slug]]} title={a.h1}>{a.heroText}</PageHero>
+      <PageHero trail={[["Resources", "/resources"], [a.name, a.slug]]} title={a.h1} variant="compact">{a.heroText}</PageHero>
 
       <section className="section">
         <div className="container layout-2col">

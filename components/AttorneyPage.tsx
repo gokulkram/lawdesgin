@@ -19,7 +19,7 @@ export default async function AttorneyPage({ a, seo: draftSeo }: { a: Attorney; 
     <main>
       <JsonLd data={attorneySchema(a)} />
       <JsonLd data={customJsonLd(seo)} />
-      <PageHero trail={[["Our Attorneys", "/attorneys"], [a.name, `/attorneys/${a.slug}`]]} title={a.name}>{a.title}</PageHero>
+      <PageHero trail={[["Our Attorneys", "/attorneys"], [a.name, `/attorneys/${a.slug}`]]} title={a.name} eyebrow="Attorney profile">{a.title}</PageHero>
       <section className="section">
         <div className="container layout-2col">
           <article className="prose service">

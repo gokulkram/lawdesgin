@@ -12,6 +12,14 @@ export const SERVICE_GROUPS: { group: ServiceGroup }[] = [
 
 export const ARTICLE_CATEGORIES: ArticleCategory[] = ["After an Accident", "Insurance & Money", "Your Case", "Wrongful Death"];
 
+/** One-line introductions for the guide topics on the resources page. */
+export const ARTICLE_CATEGORY_INTROS: Record<ArticleCategory, string> = {
+  "After an Accident": "The first days matter. What to do at the scene, which reports to get, and how to protect your claim.",
+  "Insurance & Money": "Who pays, how much, and how to deal with insurance companies - yours and theirs.",
+  "Your Case": "How a California injury claim works, from the first call to settlement or trial.",
+  "Wrongful Death": "Answers for families: who can file, what the claim covers, and the deadlines that apply.",
+};
+
 /** Groups on the HTML site map (/site-map) and sitemap priorities. */
 export type PageGroup = "Firm" | "Legal" | "Locations" | "Resources" | ServiceGroup;
 

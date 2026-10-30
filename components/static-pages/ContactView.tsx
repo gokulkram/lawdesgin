@@ -1,6 +1,6 @@
 import ContactForm from "@/components/ContactForm";
 import { Inline } from "@/components/RichText";
-import { Locations, PageHero } from "@/components/Sections";
+import { HeroContactCard, Locations, PageHero } from "@/components/Sections";
 import type { ContactText } from "@/content/static-text";
 import { getContent } from "@/lib/content-store";
 
@@ -9,7 +9,7 @@ export default async function ContactView({ t }: { t: ContactText }) {
   const { firm } = await getContent();
   return (
     <main>
-      <PageHero trail={[["Contact", "/contact"]]} title={t.hero.title}>
+      <PageHero trail={[["Contact", "/contact"]]} title={t.hero.title} eyebrow="Get in touch" actions={false} panel={<HeroContactCard />}>
         {t.hero.text}
       </PageHero>
 

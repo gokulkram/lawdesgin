@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Inline } from "@/components/RichText";
-import { CtaBand, PageHero } from "@/components/Sections";
+import { CtaBand, HeroContactCard, PageHero } from "@/components/Sections";
 import type { AboutText } from "@/content/static-text";
 
 // About page. Text comes from the database; layout and value icons are here.
@@ -14,7 +14,7 @@ const VALUE_ICONS = [
 export default function AboutView({ t, hasAttorneys }: { t: AboutText; hasAttorneys: boolean }) {
   return (
     <main>
-      <PageHero trail={[["About", "/about"]]} title={t.hero.title}>
+      <PageHero trail={[["About", "/about"]]} title={t.hero.title} eyebrow="About the firm" panel={<HeroContactCard />}>
         {t.hero.text}
       </PageHero>
 

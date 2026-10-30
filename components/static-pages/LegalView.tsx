@@ -13,7 +13,7 @@ export default async function LegalView({ t, path, crumb, contactSection = false
   const { firm } = await getContent();
   return (
     <main>
-      <PageHero trail={[[crumb, path]]} title={t.hero.title}>
+      <PageHero trail={[[crumb, path]]} title={t.hero.title} variant="compact">
         {t.hero.text}
       </PageHero>
 

@@ -3,7 +3,7 @@ import Byline from "@/components/Byline";
 import ReviewCard from "@/components/ReviewCard";
 import JsonLd from "@/components/JsonLd";
 import { Blocks, Inline } from "@/components/RichText";
-import { CtaBand, PageHero } from "@/components/Sections";
+import { CtaBand, HeroCaseCard, PageHero } from "@/components/Sections";
 import type { ServiceContent } from "@/content/types";
 import { getContent } from "@/lib/content-store";
 import type { Seo } from "@/lib/admin/page-model";
@@ -34,7 +34,15 @@ export default async function ServicePage({ s, seo: draftSeo }: { s: ServiceCont
     <main>
       <JsonLd data={applySchemaSettings(servicePageSchema(s, c), seo)} />
       <JsonLd data={customJsonLd(seo)} />
-      <PageHero trail={trailFor(s, c.firm.offices)} title={s.h1}>{s.heroText}</PageHero>
+      <PageHero
+        trail={trailFor(s, c.firm.offices)}
+        title={s.h1}
+        eyebrow={office ? `${office.label} - ${s.group}` : s.group}
+        actions={false}
+        panel={<HeroCaseCard phone={phone} />}
+      >
+        {s.heroText}
+      </PageHero>
 
       <section className="section">
         <div className="container layout-2col">

@@ -5,25 +5,140 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { getContent } from "@/lib/content-store";
 
-// Interior-page header with a visible breadcrumb and matching BreadcrumbList structured data.
+const HeroArrow = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+);
+const HeroCheck = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+);
+
+/** Splits a title so its last two words can take the gold serif accent (short titles stay plain). */
+function splitTitle(title: string): [string, string] {
+  const words = title.trim().split(/\s+/);
+  if (words.length < 4) return [title, ""];
+  // Don't start the accent on a small word ("After *an Accident*" -> "After an *Accident*").
+  const n = /^(a|an|the|and|or|for|of|to|in|on|at|after|with)$/i.test(words[words.length - 2]) ? 1 : 2;
+  return [words.slice(0, -n).join(" "), words.slice(-n).join(" ")];
+}
+
+// Interior-page header: photo + navy wash, breadcrumb (with matching BreadcrumbList structured data),
+// title with a gold accent and a curved bottom edge - the same look on every page.
 // `trail` lists the pages after Home, ending with the current page: [["Wrongful Death", "/wrongful-death"], ...].
-export function PageHero({ trail, title, children }: { trail: [string, string][]; title: string; children: React.ReactNode }) {
+// "full" adds the case review buttons and an optional side `panel`; "compact" is a shorter header
+// for reading pages (articles, legal pages, site map).
+export async function PageHero({ trail, title, children, variant = "full", eyebrow, panel, actions = true }: {
+  trail: [string, string][];
+  title: string;
+  children: React.ReactNode;
+  variant?: "full" | "compact";
+  eyebrow?: string;
+  panel?: React.ReactNode;
+  actions?: boolean;
+}) {
+  const { firm } = await getContent();
   const current = trail[trail.length - 1];
+  const [start, accent] = splitTitle(title);
+  const full = variant === "full";
   return (
-    <section className="page-hero">
+    <section className={`page-hero${full ? "" : " page-hero--compact"}${full && panel ? " page-hero--split" : ""}`}>
       <JsonLd data={breadcrumbSchema([["Home", "/"], ...trail])} />
-      <div className="container">
-        <nav className="breadcrumb" aria-label="Breadcrumb">
-          <Link href="/">Home</Link>
-          {trail.slice(0, -1).map(([label, path]) => (
-            <span key={path}> &nbsp;/&nbsp; <Link href={path}>{label}</Link></span>
-          ))}
-          {" "}&nbsp;/&nbsp; <span aria-current="page">{current[0]}</span>
-        </nav>
-        <h1>{title}</h1>
-        <p>{children}</p>
+      <div className="container page-hero__inner">
+        <div className="page-hero__copy">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link>
+            {trail.slice(0, -1).map(([label, path]) => (
+              <span key={path}> &nbsp;/&nbsp; <Link href={path}>{label}</Link></span>
+            ))}
+            {" "}&nbsp;/&nbsp; <span aria-current="page">{current[0]}</span>
+          </nav>
+          {eyebrow && <span className="eyebrow eyebrow--light page-hero__eyebrow">{eyebrow}</span>}
+          <h1>{start}{accent && <> <span className="accent">{accent}</span></>}</h1>
+          <p className="page-hero__sub">{children}</p>
+          {full && actions && (
+            <div className="page-hero__actions">
+              <a className="btn btn--gold" href="#lead-form" aria-haspopup="dialog">Free Case Review</a>
+              <a className="btn btn--ghost" href={firm.phoneHref}>&#9742; Call {firm.phone}</a>
+            </div>
+          )}
+        </div>
+        {full && panel}
       </div>
     </section>
+  );
+}
+
+/** Hero side panel: numbered quick links (to sections on the page or to other pages). */
+export function HeroLinks({ title, label, items, note }: { title: string; label: string; items: { name: string; href: string }[]; note?: string }) {
+  return (
+    <nav className="hero-panel" aria-label={label}>
+      <span className="hero-panel__title">{title}</span>
+      <ul className="hero-links">
+        {items.map(({ name, href }, i) => (
+          <li key={href}>
+            <a href={href}>
+              <span className="hero-links__num">{String(i + 1).padStart(2, "0")}</span>
+              <span className="hero-links__name">{name}</span>
+              <HeroArrow />
+            </a>
+          </li>
+        ))}
+      </ul>
+      {note && <span className="hero-panel__note">{note}</span>}
+    </nav>
+  );
+}
+
+const TRUST_POINTS = ["No fee unless we win", "Free, confidential case review", "Answering calls 24/7"];
+
+/** Hero side panel for practice-area pages: call / case review card with short trust points. */
+export async function HeroCaseCard({ title = "Talk to a lawyer today", phone }: { title?: string; phone?: { text: string; href: string } }) {
+  const { firm } = await getContent();
+  const call = phone ?? { text: firm.phone, href: firm.phoneHref };
+  return (
+    <aside className="hero-panel hero-case">
+      <span className="hero-panel__title">{title}</span>
+      <a className="hero-case__phone" href={call.href}>{call.text}</a>
+      <ul className="hero-case__points">
+        {TRUST_POINTS.map((p) => <li key={p}><HeroCheck />{p}</li>)}
+      </ul>
+      <a className="btn btn--gold btn--block" href="#lead-form" aria-haspopup="dialog">Free Case Review</a>
+    </aside>
+  );
+}
+
+/** Hero side panel for an office page: photo, city and phone. */
+export function HeroOfficeCard({ office, address }: { office: { label: string; kind: string; phone: string; tel: string; img: string }; address: string }) {
+  return (
+    <aside className="hero-panel hero-office">
+      {office.img && (
+        <div className="hero-office__img">
+          <Image src={office.img} alt={`California Law ${office.label} office`} fill sizes="(max-width: 900px) 100vw, 420px" priority />
+        </div>
+      )}
+      <div className="hero-office__body">
+        <span className="hero-panel__title">{office.kind}</span>
+        <strong className="hero-office__name">California Law - {office.label}</strong>
+        <span className="hero-office__addr">{address}</span>
+        <a className="hero-case__phone" href={`tel:${office.tel}`}>{office.phone}</a>
+        <a className="btn btn--gold btn--block" href="#lead-form" aria-haspopup="dialog">Free Case Review</a>
+      </div>
+    </aside>
+  );
+}
+
+/** Hero side panel for About / Contact: phone numbers, email and hours. */
+export async function HeroContactCard({ title = "Reach us anytime" }: { title?: string }) {
+  const { firm } = await getContent();
+  return (
+    <aside className="hero-panel hero-contact">
+      <span className="hero-panel__title">{title}</span>
+      <dl>
+        <div><dt>Call</dt><dd><a className="hero-case__phone" href={firm.phoneHref}>{firm.phone}</a></dd></div>
+        {firm.tollFree && <div><dt>Toll free</dt><dd><a href={firm.tollFreeHref}>{firm.tollFree}</a></dd></div>}
+        <div><dt>Email</dt><dd><a href={`mailto:${firm.email}`}>{firm.email}</a></dd></div>
+        <div><dt>Hours</dt><dd>Open 24/7 - free case review</dd></div>
+      </dl>
+    </aside>
   );
 }
 

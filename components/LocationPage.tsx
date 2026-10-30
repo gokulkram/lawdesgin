@@ -3,7 +3,7 @@ import Byline from "@/components/Byline";
 import ReviewCard from "@/components/ReviewCard";
 import JsonLd from "@/components/JsonLd";
 import { Blocks, Inline } from "@/components/RichText";
-import { CtaBand, PageHero } from "@/components/Sections";
+import { CtaBand, HeroOfficeCard, PageHero } from "@/components/Sections";
 import type { LocationContent } from "@/content/types";
 import { getContent, type PageCard } from "@/lib/content-store";
 import type { Seo } from "@/lib/admin/page-model";
@@ -25,7 +25,15 @@ export default async function LocationPage({ l, seo: draftSeo }: { l: LocationCo
     <main>
       <JsonLd data={applySchemaSettings(locationPageSchema(l, c), seo)} />
       <JsonLd data={customJsonLd(seo)} />
-      <PageHero trail={[[l.name, l.slug]]} title={l.h1}>{l.heroText}</PageHero>
+      <PageHero
+        trail={[[l.name, l.slug]]}
+        title={l.h1}
+        eyebrow={`${office.label} ${office.kind}`}
+        actions={false}
+        panel={<HeroOfficeCard office={office} address={addressLine} />}
+      >
+        {l.heroText}
+      </PageHero>
 
       <section className="section">
         <div className="container layout-2col">
