@@ -187,11 +187,13 @@ p { color: var(--muted); }
 }
 /* parallax: taller than the hero (extends above it) so no gap shows while it moves down */
 .hero__bg--parallax { top: -50%; will-change: transform; }
-/* navy wash for centered text: a soft dark pool behind the headline, lighter at the edges so the
-   sunset shows, darker top and bottom */
+/* light blue wash instead of black: a soft mid-blue pool keeps the centred text readable while
+   the photo stays bright; only the very bottom deepens toward the navy of the next section */
 .hero__bg::after {
   content: ""; position: absolute; inset: 0;
-  background: radial-gradient(55% 60% at 50% 55%, #00000070, #0c182600 100%), linear-gradient(#0000008f 0%, #0c0c0c47 40%, #0000005c 70%, #141b24ad 100%);
+  background:
+    radial-gradient(50% 55% at 50% 52%, rgba(30,77,128,.38), rgba(30,77,128,0) 100%),
+    linear-gradient(rgba(46,104,166,.38) 0%, rgba(58,120,186,.16) 30%, rgba(58,120,186,.16) 65%, rgba(22,58,99,.5) 100%);
 }
 /* phones: keep the sun in view */
 @media (max-width: 700px){
@@ -1380,30 +1382,43 @@ html:not(.js) .hiw__steps::after { transform: none; }
 .pis__sticky { position: sticky; top: 132px; padding-bottom: 24px; }
 .pis__title { color: #fff; font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 300; letter-spacing: -0.03em; }
 .pis__intro { margin-top: 14px; color: rgba(255,255,255,.7); max-width: 52ch; font-size: 1.05rem; }
-.pis__active { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; margin-top: 44px; min-height: 150px; animation: pis-in .6s var(--ease) both; }
+.pis__active { display: grid; margin-top: 44px; min-height: 150px; }
+.pis__panel {
+  --soft: cubic-bezier(.16,1,.3,1);
+  grid-area: 1 / 1; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; align-content: start;
+  opacity: 0; visibility: hidden;
+  transition: opacity .5s var(--soft), transform .9s var(--soft), visibility 0s .9s;
+}
+/* earlier panels wait above, later ones below, so the text moves with the scroll direction */
+.pis__panel.is-past { transform: translate3d(0, -22px, 0); }
+.pis__panel.is-next { transform: translate3d(0, 22px, 0); }
+.pis__panel.is-active { opacity: 1; transform: none; visibility: visible; transition: opacity .7s .12s var(--soft), transform 1s .12s var(--soft), visibility 0s; }
+.pis__progress { position: relative; height: 2px; margin-top: 28px; max-width: 220px; background: rgba(255,255,255,.14); overflow: hidden; }
+.pis__progress span { position: absolute; inset: 0; background: var(--gold-300); transform: scaleX(0); transform-origin: left; will-change: transform; }
 .pis__num { font-size: .8rem; font-weight: 600; letter-spacing: .14em; color: var(--gold-300); font-variant-numeric: tabular-nums; padding-top: 8px; }
 .pis__active strong, .pis__cap strong { display: block; font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 400; letter-spacing: -0.02em; color: #fff; }
 .pis__active p, .pis__cap p { margin-top: 10px; color: rgba(255,255,255,.7); max-width: 48ch; }
 .pis__link { display: inline-block; margin-top: 14px; color: var(--gold-300); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(224,201,136,.4); padding-bottom: 2px; transition: border-color .2s, color .2s; }
 .pis__link:hover { color: #fff; border-color: #fff; }
-@keyframes pis-in { from { opacity: 0; filter: blur(8px); transform: translateY(14px); } to { opacity: 1; filter: none; transform: none; } }
-.pis__index { list-style: none; margin: 28px 0 0; padding: 0; border-top: 1px solid rgba(255,255,255,.14); }
-.pis__index a { display: flex; gap: 14px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.5); text-decoration: none; font-size: .95rem; transition: color .25s, padding .3s var(--ease); }
-.pis__index a span { font-size: .72rem; letter-spacing: .12em; font-variant-numeric: tabular-nums; }
-.pis__index a:hover { color: #fff; }
-.pis__index a[aria-current] { color: var(--gold-300); padding-left: 10px; }
-.pis__index a:focus-visible, .pis__link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.pis__link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 /* photos run off the right edge of the page */
 .pis__media { display: grid; gap: 16px; margin-right: calc(-1 * (max(0px, (100vw - var(--maxw)) / 2) + 24px)); }
 .pis__shot { position: relative; margin: 0; }
-.pis__img { position: relative; height: min(42vh, 380px); min-height: 280px; overflow: hidden; background: var(--navy-800); }
-.pis__img img { object-fit: cover; filter: saturate(.7) brightness(.85); transform: scale(1.05); transition: filter .8s var(--ease), transform 1.2s var(--ease); }
-.pis__shot.is-active .pis__img img { filter: saturate(.95) brightness(.95); transform: none; }
+.pis__img { display: block; position: relative; height: min(42vh, 380px); min-height: 280px; overflow: hidden; background: var(--navy-800); cursor: pointer; }
+.pis__img::before { content: ""; position: absolute; inset: 0; z-index: 1; box-shadow: inset 0 0 0 0 var(--gold-300); transition: box-shadow .35s var(--ease); pointer-events: none; }
+.pis__img:hover::before { box-shadow: inset 0 0 0 3px var(--gold-300); }
+.pis__hit { display: block; color: inherit; text-decoration: none; cursor: pointer; }
+.pis__hit strong { transition: color .25s var(--ease); }
+.pis__hit:hover strong { color: var(--gold-300); }
+/* parallax, zoom and dim are driven every frame from the scroll position (--y, --s, --dim set in
+   WhatWeDoFx), so they glide instead of switching between two states; the dim is an overlay, not a filter */
+.pis__img img { object-fit: cover; filter: saturate(.85); transform: translate3d(0, var(--y, 0%), 0) scale(var(--s, 1.14)); will-change: transform; }
+.pis__img::after { content: ""; position: absolute; inset: 0; background: rgba(10,22,40,.5); opacity: var(--dim, 0); pointer-events: none; }
 .pis__cap { display: none; }
 @media (max-width: 920px){
   .pis { grid-template-columns: 1fr; gap: 32px; }
   .pis__sticky { position: static; padding-bottom: 0; }
-  .pis__active, .pis__index { display: none; }
+  .pis__active, .pis__progress { display: none; }
   .pis__media { margin: 0 -24px; gap: 40px; }
   .pis__img { height: 300px; min-height: 0; }
   .pis__img img { transform: none; }
