@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-inter", display: "swap" });
 // Serif italic for accent words (hero headline, two-part section headings) - gives the type an
 // editorial, law-firm voice next to the plain sans.
-const serif = Playfair_Display({ subsets: ["latin"], weight: ["600", "700"], style: ["italic"], variable: "--font-serif", display: "swap" });
+const serif = Playfair_Display({ subsets: ["latin"], weight: ["600", "700"], style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: SITE_URL ? new URL(SITE_URL) : undefined,

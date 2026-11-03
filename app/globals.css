@@ -1188,7 +1188,7 @@ fieldset.field { border: 0; padding: 0; min-width: 0; }
 .mad__line { font-size: 1.2rem; line-height: 2.25; color: var(--navy-800); margin: 0 0 4px; }
 .mad__slot { display: inline-block; vertical-align: baseline; }
 .mad__slot input, .mad__slot select {
-  font-family: var(--font-accent); font-style: italic; font-weight: 600; font-size: 1.15rem;
+  font-family: var(--font-accent); font-style: normal; font-weight: 600; font-size: 1.15rem;
   color: #8C6420; background: transparent; border: 0; border-bottom: 2px solid #C7CFD9; border-radius: 0;
   padding: 0 4px 2px; margin: 0 2px; width: 10.5em; max-width: 100%;
   transition: border-color .15s, background-color .15s;
