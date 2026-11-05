@@ -12,7 +12,7 @@ export default async function NotFound() {
     <>
       <Header />
       <main>
-        <section className="page-hero" style={{ padding: "96px 0" }}>
+        <section className="page-hero" style={{ paddingBottom: 96 }}>
           <div className="container center">
             <h1 style={{ margin: "0 auto" }}>We couldn&rsquo;t find that page</h1>
             <p style={{ margin: "16px auto 0" }}>

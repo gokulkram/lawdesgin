@@ -9,11 +9,11 @@ export type Area = { label: string; desc: string; href: string; img: string };
 const noMotion = () =>
   matchMedia("(prefers-reduced-motion: reduce)").matches || document.documentElement.classList.contains("a11y-no-motion");
 
-// Personal-injury scroll story: the heading and the current practice area stay pinned on the left
-// while photos scroll up on the right. Each photo's parallax, zoom and dimming follow the scroll
-// continuously (eased toward the target every frame), and the text slides in the direction of travel
-// as each photo reaches the middle of the screen. On phones nothing is pinned - each photo carries
-// its own text underneath.
+// Personal-injury scroll story (like octicase.com's "Wherever you work" section). On desktop the text
+// column stays pinned on the left while a column of full-height photos scrolls up naturally on the
+// right; when a photo's top passes the middle of the screen, the text slides to that practice area.
+// Each photo drifts slightly inside its frame (parallax) and darkens a little toward the screen edges.
+// On phones nothing is pinned - each photo is listed with its own text underneath.
 export function AreaStory({ title, text, areas, moreLabel }: { title: string; text: string; areas: Area[]; moreLabel: string }) {
   const [active, setActive] = useState(0);
   const mediaRef = useRef<HTMLDivElement>(null);
@@ -22,40 +22,29 @@ export function AreaStory({ title, text, areas, moreLabel }: { title: string; te
     const media = mediaRef.current;
     if (!media) return;
     const shots = Array.from(media.querySelectorAll<HTMLElement>(":scope > figure"));
-    // eased values that chase the scroll-derived targets, so motion never steps
-    const cur = shots.map(() => 1);
-    let bar = 0;
-    let frame = 0;
     const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
+    let frame = 0;
+    let shown = -1;
     const tick = () => {
       frame = 0;
-      const mid = innerHeight * 0.5;
+      const mid = innerHeight / 2;
       const still = noMotion();
       let a = 0;
-      let moving = false;
       shots.forEach((f, i) => {
         const r = f.getBoundingClientRect();
-        if (r.top < mid) a = i;
-        // -1 (below centre) .. 0 (centred) .. 1 (above centre)
-        const target = clamp((mid - (r.top + r.height / 2)) / (mid + r.height / 2), -1, 1);
-        const p = still ? target : cur[i] + (target - cur[i]) * 0.14;
-        if (Math.abs(target - p) > 0.0005) moving = true;
-        cur[i] = p;
-        const d = Math.abs(p);
-        f.style.setProperty("--y", still ? "0%" : `${(p * 6).toFixed(3)}%`);
-        f.style.setProperty("--s", still ? "1" : (1.14 + d * 0.06).toFixed(4));
-        f.style.setProperty("--dim", Math.min(1, d * 1.6).toFixed(3));
+        if (r.top <= mid) a = i;
+        if (r.bottom < -50 || r.top > innerHeight + 50) return; // off screen: leave as is
+        // -1 (photo below the middle) .. 0 (centred) .. 1 (above)
+        const p = clamp((mid - (r.top + r.height / 2)) / (innerHeight / 2 + r.height / 2), -1, 1);
+        f.style.setProperty("--y", still ? "0%" : `${(p * 7).toFixed(3)}%`);
+        f.style.setProperty("--dim", (Math.abs(p) * 0.55).toFixed(3));
       });
-      // overall progress through the photos, for the thin bar on the left
-      const first = shots[0].getBoundingClientRect();
-      const last = shots[shots.length - 1].getBoundingClientRect();
-      const span = last.top + last.height / 2 - (first.top + first.height / 2);
-      const goal = span > 0 ? clamp((mid - (first.top + first.height / 2)) / span, 0, 1) : 0;
-      bar = still ? goal : bar + (goal - bar) * 0.14;
-      if (Math.abs(goal - bar) > 0.0005) moving = true;
-      barRef.current?.style.setProperty("transform", `scaleX(${bar.toFixed(4)})`);
-      setActive(a);
-      if (moving) frame = requestAnimationFrame(tick);
+      // progress through the photos, for the thin bar on the left
+      const first = shots[0].getBoundingClientRect(), last = shots[shots.length - 1].getBoundingClientRect();
+      const span = last.bottom - first.top - innerHeight;
+      const prog = span > 0 ? clamp((mid - first.top - innerHeight / 2) / span, 0, 1) : 0;
+      barRef.current?.style.setProperty("transform", `scaleX(${prog.toFixed(4)})`);
+      if (a !== shown) { shown = a; setActive(a); }
     };
     const wake = () => { if (!frame) frame = requestAnimationFrame(tick); };
     tick();
@@ -63,7 +52,6 @@ export function AreaStory({ title, text, areas, moreLabel }: { title: string; te
     addEventListener("resize", wake);
     return () => { removeEventListener("scroll", wake); removeEventListener("resize", wake); cancelAnimationFrame(frame); };
   }, []);
-  const pad = (n: number) => String(n).padStart(2, "0");
   return (
     <div className="pis">
       <div className="pis__side">
@@ -75,7 +63,6 @@ export function AreaStory({ title, text, areas, moreLabel }: { title: string; te
           <div className="pis__active">
             {areas.map((a, i) => (
               <div className={`pis__panel ${i === active ? "is-active" : i < active ? "is-past" : "is-next"}`} key={a.href} aria-hidden={i !== active} inert={i !== active}>
-                <span className="pis__num">{pad(i + 1)}</span>
                 <div>
                   {/* heading + description are a mouse shortcut to the page; keyboard and screen
                       readers use the single "lawyers" link below instead of a duplicate */}
@@ -92,6 +79,7 @@ export function AreaStory({ title, text, areas, moreLabel }: { title: string; te
           <Link className="wwd-more" href="/practice-areas">{moreLabel}</Link>
         </div>
       </div>
+      {/* desktop: full-height photos that scroll past; phones: a plain list with captions */}
       <div className="pis__media" ref={mediaRef}>
         {areas.map((a, i) => (
           <figure className={`pis__shot${i === active ? " is-active" : ""}`} key={a.href}>
@@ -99,7 +87,6 @@ export function AreaStory({ title, text, areas, moreLabel }: { title: string; te
               <Image src={a.img} alt="" fill sizes="(max-width: 920px) 100vw, 55vw" />
             </Link>
             <figcaption className="pis__cap">
-              <span className="pis__num">{pad(i + 1)}</span>
               <div>
                 <Link href={a.href} className="pis__hit" tabIndex={-1} aria-hidden="true">
                   <strong>{a.label}</strong>

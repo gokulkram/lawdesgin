@@ -10,7 +10,7 @@ export default function PracticeGroupNav({ groups, label = "Jump to a practice a
   const listRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    // Sit directly under the sticky site header, whatever its height on this screen.
+    // Sit directly under the fixed site header, whatever its height (it shrinks as the page scrolls).
     const header = document.querySelector<HTMLElement>(".header");
     const measure = () => setTop(header ? Math.round(header.getBoundingClientRect().height) : 0);
     measure();
@@ -18,6 +18,7 @@ export default function PracticeGroupNav({ groups, label = "Jump to a practice a
 
     const sections = groups.map((g) => document.getElementById(g.id)).filter((el): el is HTMLElement => !!el);
     const onScroll = () => {
+      measure();
       const line = (header?.getBoundingClientRect().height ?? 0) + 120;
       let current = groups[0]?.id;
       for (const s of sections) if (s.getBoundingClientRect().top <= line) current = s.id;

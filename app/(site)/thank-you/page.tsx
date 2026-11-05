@@ -11,7 +11,7 @@ export default async function ThankYou() {
   const { firm } = await getContent();
   return (
     <main>
-      <section className="page-hero" style={{ padding: "96px 0" }}>
+      <section className="page-hero" style={{ paddingBottom: 96 }}>
         <div className="container center">
           <div style={{ width: 74, height: 74, borderRadius: "50%", background: "var(--gold)", display: "inline-grid", placeItems: "center", marginBottom: 22 }}>
             <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#0B1F38" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>

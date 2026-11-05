@@ -2,24 +2,42 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NAV } from "@/lib/firm";
 import Logo from "@/components/Logo";
 
-// Firm phone/email come from the server wrapper (components/Header.tsx).
-export default function HeaderClient({ phone, phoneHref, tollFree, tollFreeHref, email }: { phone: string; phoneHref: string; tollFree: string; tollFreeHref: string; email: string }) {
+// Scroll distance (px) over which the header fades from see-through to frosted navy.
+const FADE_DISTANCE = 300;
+
+// Firm phone comes from the server wrapper (components/Header.tsx).
+// The header floats over the page hero: see-through at the top, then a navy frosted-glass
+// background fades in and the bar shrinks as you scroll (driven by the --p CSS variable, 0 to 1).
+export default function HeaderClient({ phone, phoneHref }: { phone: string; phoneHref: string }) {
   const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
   const [open, setOpen] = useState(false);
-  const [stuck, setStuck] = useState(false);
+  // false on pages that don't start with a dark hero: the header is then solid and reserves its own space
+  const [overHero, setOverHero] = useState(true);
 
   // Free-review CTAs open the case-review popup (site layout), except on /contact, which has the form on the page.
   const ctaHref = pathname === "/contact" ? "#contact-form" : "#lead-form";
 
   useEffect(() => {
-    const onScroll = () => setStuck(window.scrollY > 8);
+    const hero = document.querySelector(".hero, .page-hero");
+    setOverHero(!!hero && hero.getBoundingClientRect().top + window.scrollY < 10);
+  }, [pathname]);
+
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const p = Math.min(Math.max(window.scrollY / FADE_DISTANCE, 0), 1);
+      headerRef.current?.style.setProperty("--p", p.toFixed(3));
+    };
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    update();
+    return () => { window.removeEventListener("scroll", onScroll); cancelAnimationFrame(frame); };
   }, []);
 
   // close the mobile menu on navigation
@@ -27,18 +45,7 @@ export default function HeaderClient({ phone, phoneHref, tollFree, tollFreeHref,
 
   return (
     <>
-      <div className="topbar">
-        <div className="container">
-          <div className="topbar__left">
-            {tollFree && <span>&#9742; Toll free <a href={tollFreeHref}>{tollFree}</a></span>}
-            <span>&#9742; {tollFree && "California "}<a href={phoneHref}>{phone}</a></span>
-            <span>&#9993; <a href={`mailto:${email}`}>{email}</a></span>
-          </div>
-          <a className="topbar__cta" href={ctaHref}>Free Case Review - 24/7</a>
-        </div>
-      </div>
-
-      <header className={`header${stuck ? " is-stuck" : ""}`}>
+      <header ref={headerRef} className={`header${overHero && !open ? "" : " is-solid"}`}>
         <div className="container nav">
           <Link className="nav__logo" href="/" aria-label="California Law home">
             <Logo eager />
@@ -57,6 +64,7 @@ export default function HeaderClient({ phone, phoneHref, tollFree, tollFreeHref,
               </svg>
               <span>{phone}</span>
             </a>
+            <a className="nav__review" href={ctaHref}>Free Case Review - 24/7</a>
           </div>
           <button
             className={`nav__toggle${open ? " open" : ""}`}
@@ -68,6 +76,8 @@ export default function HeaderClient({ phone, phoneHref, tollFree, tollFreeHref,
           </button>
         </div>
       </header>
+      {/* pages without a hero: keep content from sliding under the fixed header */}
+      {!overHero && <div className="header-spacer" aria-hidden="true" />}
     </>
   );
 }

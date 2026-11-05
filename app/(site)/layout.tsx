@@ -38,8 +38,8 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       <Header />
       {children}
       <Footer />
-      {/* case-review popup for every page ("#lead-form" links open it); opens by itself on the home page */}
-      <LeadDialog title={home.hero.formTitle} text={home.hero.formText} autoOpenOn={["/"]} autoOpenAfter={5000}>
+      {/* case-review popup for every page ("#lead-form" links open it); opens by itself on the home page ~32s after load */}
+      <LeadDialog title={home.hero.formTitle} text={home.hero.formText} autoOpenOn={["/"]} autoOpenAfter={32000}>
         <ContactForm variant="lead" />
       </LeadDialog>
       <ReviewNudge />
