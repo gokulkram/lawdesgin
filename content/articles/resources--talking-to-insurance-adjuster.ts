@@ -32,7 +32,7 @@ const page: ArticleContent = {
         {
           ul: [
             "**Your own insurance company.** You have a contract with it. Your policy usually requires you to report the accident promptly and cooperate with the investigation. You may be making claims on your own coverage - MedPay, collision, or [uninsured motorist coverage](/resources/uninsured-motorist-claims-california) - so honest, prompt cooperation matters. Even so, when you make an uninsured or underinsured motorist claim, your insurer is on the other side of that claim, so the same caution about statements and offers applies.",
-            "**The other driver’s insurance company.** You have no contract with it. Its adjuster represents the at-fault driver and the company, not you. You generally don’t have to give it a recorded statement, sign its forms, or accept its offer.",
+            "**The other driver’s insurance company.** You have no contract with it. Its adjuster represents the at fault driver and the company, not you. You generally don’t have to give it a recorded statement, sign its forms, or accept its offer.",
           ],
         },
         { p: "If you were a passenger in an Uber or Lyft, hit by a commercial truck, or injured by a driver who was working, you may hear from several insurers at once, each trying to shift responsibility to the others. See our pages on [rideshare accidents](/rideshare-accident-lawyer) and [truck accidents](/truck-accident-lawyer) for how those claims work." },
@@ -50,7 +50,7 @@ const page: ArticleContent = {
       heading: "Broad medical authorizations",
       blocks: [
         { p: "Insurers often send a medical authorization form early in the claim. Many are worded to allow access to **all** of your medical records - from any provider, for any time period - not just treatment for the crash." },
-        { p: "That access lets an insurer search your history for a prior injury or condition it can blame for your pain. Records related to the accident will need to be shared to prove your claim, but that can be done in a controlled way: limited to the injuries at issue and a reasonable time period, or by providing the records directly rather than giving open-ended access. Don’t sign a blanket authorization without advice." },
+        { p: "That access lets an insurer search your history for a prior injury or condition it can blame for your pain. Records related to the accident will need to be shared to prove your claim, but that can be done in a controlled way: limited to the injuries at issue and a reasonable time period, or by providing the records directly rather than giving open ended access. Don’t sign a blanket authorization without advice." },
       ],
     },
     {
@@ -94,7 +94,7 @@ const page: ArticleContent = {
             "Daily pain levels, symptoms, sleep problems, and activities you can’t do",
             "Medical appointments, prescriptions, and mileage to treatment",
             "Missed work days and lost income",
-            "Out-of-pocket costs, with receipts",
+            "Out of pocket costs, with receipts",
           ],
         },
         { p: "Notes made at the time are more convincing than memories months later, and they show how the injuries affect daily life - which matters for [pain and suffering](/resources/pain-and-suffering-california)." },
@@ -103,7 +103,7 @@ const page: ArticleContent = {
     {
       heading: "When to get a lawyer",
       blocks: [
-        { p: "A minor property-damage claim may not need a lawyer. Consider legal advice if you were hurt and are still treating, fault is disputed, you received an offer you don’t understand, the other driver has little or no insurance, or a commercial, rideshare, or government vehicle was involved." },
+        { p: "A minor property damage claim may not need a lawyer. Consider legal advice if you were hurt and are still treating, fault is disputed, you received an offer you don’t understand, the other driver has little or no insurance, or a commercial, rideshare, or government vehicle was involved." },
         { p: "Once you have a lawyer, insurers deal with the law firm instead of you. California Law offers a free, confidential consultation and works on a contingency fee - no attorney’s fee unless we win. See [how contingency fees work in California](/resources/contingency-fees-california)." },
         { p: "If you believe your own insurer is mishandling a claim, the California Department of Insurance accepts consumer complaints - see its [consumer help page](https://www.insurance.ca.gov/01-consumers/101-help/)." },
       ],

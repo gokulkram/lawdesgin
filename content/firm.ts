@@ -29,7 +29,7 @@ export const FIRM: Firm = {
   ],
   caseTypes: ["Wrongful death", "Car / truck accident", "Medical malpractice", "Workplace injury", "Slip & fall", "Other personal injury"],
   footerAbout: "A California personal injury law firm dedicated to families and the seriously injured - with a focus on wrongful death claims. Compassionate counsel, relentless advocacy.",
-  footerDisclaimer: "Attorney Advertising. The information on this website is for general informational purposes only and is not legal advice. Viewing this site or contacting the firm does not create an attorney-client relationship. Prior results do not guarantee a similar outcome. Figures shown are illustrative.",
+  footerDisclaimer: "Attorney Advertising. The information on this website is for general informational purposes only and is not legal advice. Viewing this site or contacting the firm does not create an attorney client relationship. Prior results do not guarantee a similar outcome. Figures shown are illustrative.",
 };
 
 export const CREDIBILITY: Credibility = {

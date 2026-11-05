@@ -33,17 +33,17 @@ const page: ServiceContent = {
       heading: "Why the full impact isn’t known right away",
       blocks: [
         { p: "In the first days and weeks after a spinal cord injury, swelling can make the damage look better or worse than it will turn out to be. Doctors often can’t say how much function will return until months of rehabilitation have passed." },
-        { p: "That uncertainty is one reason early settlement offers are dangerous. A claim settled too soon may not account for future surgeries, complications, long-term care, or the need for a different home. Once you sign a release, you usually can’t go back and ask for more." },
+        { p: "That uncertainty is one reason early settlement offers are dangerous. A claim settled too soon may not account for future surgeries, complications, long term care, or the need for a different home. Once you sign a release, you usually can’t go back and ask for more." },
       ],
     },
     {
       heading: "Living with a spinal cord injury: what care can involve",
       blocks: [
-        { p: "Every injury is different, but long-term needs can include:" },
+        { p: "Every injury is different, but long term needs can include:" },
         {
           ul: [
             "**Rehabilitation** - inpatient and outpatient physical and occupational therapy",
-            "**Ongoing medical care** - follow-up visits, medication, and treatment of complications such as infections, pressure sores, and breathing problems",
+            "**Ongoing medical care** - follow up visits, medication, and treatment of complications such as infections, pressure sores, and breathing problems",
             "**Equipment** - wheelchairs, lifts, hospital beds, and other adaptive equipment, which wear out and must be replaced over time",
             "**Personal care** - help with bathing, dressing, and daily tasks, sometimes around the clock",
             "**Home modifications** - ramps, widened doorways, accessible bathrooms and kitchens, or a move to a different home",
@@ -79,7 +79,7 @@ const page: ServiceContent = {
             "**Treating doctors and therapists**, who explain the diagnosis, the outlook, and the care that will be needed",
             "**A life care plan** listing future medical care, equipment, home care, and modifications, with how often each will be needed and replaced",
             "**Vocational evidence** about what work, if any, the person can still do",
-            "**An economist** who calculates lost earning capacity and the present-day value of future care",
+            "**An economist** who calculates lost earning capacity and the present day value of future care",
           ],
         },
         { p: "Our [catastrophic injury page](/catastrophic-injury-lawyer) explains in more detail how lifetime damages are documented." },
@@ -89,7 +89,7 @@ const page: ServiceContent = {
       heading: "What compensation can cover",
       blocks: [
         { p: "A spinal cord injury claim in California can include past and future medical care, rehabilitation, equipment, attendant care, home and vehicle modifications, lost wages and lost earning capacity, and pain and suffering - including emotional distress and loss of enjoyment of life." },
-        { p: "California uses **pure comparative fault**, so you can recover even if you were partly to blame; your compensation is reduced by your share of fault. When several parties share responsibility, economic damages such as medical costs can be collected in full from any responsible defendant, while each defendant pays non-economic damages only in proportion to its own fault (Civil Code §1431.2)." },
+        { p: "California uses **pure comparative fault**, so you can recover even if you were partly to blame; your compensation is reduced by your share of fault. When several parties share responsibility, economic damages such as medical costs can be collected in full from any responsible defendant, while each defendant pays non economic damages only in proportion to its own fault (Civil Code §1431.2)." },
         { p: "Because a spinal cord injury often far exceeds a single insurance policy, identifying every responsible party - a driver, an employer, a property owner, a manufacturer - can make a major difference." },
       ],
     },
@@ -109,10 +109,10 @@ const page: ServiceContent = {
     },
   ],
   faqs: [
-    { q: "What is the difference between a complete and an incomplete spinal cord injury?", a: "A complete injury means no movement or feeling below the level of the injury. An incomplete injury means some movement or feeling remains. Both can be life-changing, and both can support a claim for lifetime damages." },
+    { q: "What is the difference between a complete and an incomplete spinal cord injury?", a: "A complete injury means no movement or feeling below the level of the injury. An incomplete injury means some movement or feeling remains. Both can be life changing, and both can support a claim for lifetime damages." },
     { q: "How long do I have to file a spinal cord injury lawsuit in California?", a: "Generally two years from the date of injury. If a government entity may be responsible, a written claim is usually due within six months." },
     { q: "Can compensation pay for changes to my home and car?", a: "Yes. Home modifications like ramps and accessible bathrooms, and vehicle modifications like hand controls or an accessible van, can be part of the damages when the injury makes them necessary." },
-    { q: "Should I settle before I know how much function will return?", a: "Usually not. The full effect of a spinal cord injury may not be clear for months. Once you sign a release, you generally can’t reopen the claim, so it is important to understand your long-term needs first." },
+    { q: "Should I settle before I know how much function will return?", a: "Usually not. The full effect of a spinal cord injury may not be clear for months. Once you sign a release, you generally can’t reopen the claim, so it is important to understand your long term needs first." },
     { q: "I was hurt at work. Can I sue?", a: "Workers’ compensation is generally the only remedy against your employer, but you may have a separate claim against a third party - such as a contractor, equipment manufacturer, property owner, or another driver." },
     { q: "How much does it cost to hire California Law?", a: "Nothing upfront. We work on a contingency fee, so there is no attorney’s fee unless we win. How case costs are handled is explained in writing before we begin." },
   ],

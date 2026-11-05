@@ -33,7 +33,7 @@ const page: ServiceContent = {
           ul: [
             "**Reports are available only after the case closes.** That can take months, and longer in some cases. The office does not issue preliminary or draft reports.",
             "**Reports are public records**, generally available to any interested party unless law enforcement has sealed the case.",
-            "**To request a report**, email the Medical Examiner’s records unit with the decedent’s name, date of death, date of birth and, if you have it, the Medical Examiner case number. Emailed copies are free; paper copies carry a per-page fee. See the [Medical Examiner’s report request page](https://www.sandiegocounty.gov/content/sdc/me/copies.html).",
+            "**To request a report**, email the Medical Examiner’s records unit with the decedent’s name, date of death, date of birth and, if you have it, the Medical Examiner case number. Emailed copies are free; paper copies carry a per page fee. See the [Medical Examiner’s report request page](https://www.sandiegocounty.gov/content/sdc/me/copies.html).",
             "**The Medical Examiner does not issue death certificates** - those come from the county’s vital records offices.",
           ],
         },

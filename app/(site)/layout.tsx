@@ -8,6 +8,7 @@ import ConsentBar from "@/components/ConsentBar";
 import ContactForm from "@/components/ContactForm";
 import LeadDialog from "@/components/LeadDialog";
 import ReviewNudge from "@/components/ReviewNudge";
+import SmoothScroll from "@/components/SmoothScroll";
 import type { HomeText } from "@/content/static-text";
 import JsonLd from "@/components/JsonLd";
 import { getContent } from "@/lib/content-store";
@@ -43,6 +44,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
         <ContactForm variant="lead" />
       </LeadDialog>
       <ReviewNudge />
+      <SmoothScroll />
       <Reveal />
       <A11yMenu />
       <ConsentBar />

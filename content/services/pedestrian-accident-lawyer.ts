@@ -6,11 +6,11 @@ const page: ServiceContent = {
   name: "Pedestrian Accidents",
   title: "California Pedestrian Accident Lawyer",
   description:
-    "Hit by a car while walking in California? Learn your right of way, the Freedom to Walk Act, hit-and-run coverage, and deadlines. Free consultation.",
+    "Hit by a car while walking in California? Learn your right of way, the Freedom to Walk Act, hit and run coverage, and deadlines. Free consultation.",
   h1: "California Pedestrian Accident Lawyer",
   heroText:
     "A person on foot has no protection when a car hits them. We help injured pedestrians and their families pursue compensation from drivers, insurers, and - where a dangerous crossing played a part - public agencies. No fee unless we win.",
-  summary: "Pedestrians hit by cars - right of way, the Freedom to Walk Act, hit-and-run and uninsured driver coverage, and dangerous crossings.",
+  summary: "Pedestrians hit by cars - right of way, the Freedom to Walk Act, hit and run and uninsured driver coverage, and dangerous crossings.",
   intro:
     "If you were hit by a vehicle while walking in California, you can claim compensation from the driver who caused it - and, depending on what happened, from your own insurance, an employer, or a public agency responsible for a dangerous crossing. Drivers must use due care around pedestrians, and pedestrians have the right of way in marked and unmarked crosswalks at intersections. Crossing outside a crosswalk does not automatically end your claim. You generally have **two years** to file a lawsuit - but if a government entity may share the blame, a written government claim is usually due within **six months**.",
   steps: {
@@ -30,7 +30,7 @@ const page: ServiceContent = {
       blocks: [
         { p: "In California, pedestrians have the right of way in **marked and unmarked crosswalks at intersections**. Drivers must also exercise due care for pedestrians, whether or not they are in a crosswalk." },
         { p: "Common driver mistakes in pedestrian crashes include failing to yield while turning, rolling through stop signs or right-on-red turns without looking, speeding, backing up without checking, distracted driving, and driving under the influence." },
-        { p: "Insurers often argue that the pedestrian was partly at fault - for example, by crossing mid-block or against a signal. Under California’s pure comparative fault rule, that reduces your compensation by your share of fault but does not eliminate it. Our [car accident page](/car-accident-lawyer) explains how comparative fault works." },
+        { p: "Insurers often argue that the pedestrian was partly at fault - for example, by crossing mid block or against a signal. Under California’s pure comparative fault rule, that reduces your compensation by your share of fault but does not eliminate it. Our [car accident page](/car-accident-lawyer) explains how comparative fault works." },
       ],
     },
     {
@@ -41,7 +41,7 @@ const page: ServiceContent = {
       ],
     },
     {
-      heading: "Hit-and-run and uninsured drivers",
+      heading: "Hit and run and uninsured drivers",
       blocks: [
         { p: "Some drivers who hit pedestrians leave the scene, and some have no insurance or only the minimum. That doesn’t necessarily leave you without options:" },
         {
@@ -52,7 +52,7 @@ const page: ServiceContent = {
             "**Rideshare insurance**, if an Uber or Lyft driver hit you. The amount depends on the app status; see our [rideshare accident page](/rideshare-accident-lawyer).",
           ],
         },
-        { callout: "**After a hit-and-run, report it to police quickly.** Your own insurer will usually need to know about the crash promptly, and police may be able to find the driver through cameras, witnesses, or vehicle damage." },
+        { callout: "**After a hit and run, report it to police quickly.** Your own insurer will usually need to know about the crash promptly, and police may be able to find the driver through cameras, witnesses, or vehicle damage." },
       ],
     },
     {
@@ -60,7 +60,7 @@ const page: ServiceContent = {
       blocks: [
         { p: "Sometimes the road itself is part of the problem - a crosswalk with no signal on a fast street, a broken walk signal, missing or faded markings, poor lighting, or overgrown landscaping that blocks drivers’ view. When a public entity owns the road, it may be responsible." },
         { p: "Under Government Code §835, a public entity can be liable for a dangerous condition of its property if the condition created a foreseeable risk of the kind of injury that happened, the condition caused the injury, and either a public employee created the condition or the entity knew about it in time to fix it." },
-        { callout: "**Six-month deadline.** A claim against a city, county, or state agency for personal injury generally must be filed in writing within **six months** (Government Code §911.2). Missing it can end the claim. See [claims against government entities](/government-claims-lawyer) for how the process works." },
+        { callout: "**Six month deadline.** A claim against a city, county, or state agency for personal injury generally must be filed in writing within **six months** (Government Code §911.2). Missing it can end the claim. See [claims against government entities](/government-claims-lawyer) for how the process works." },
       ],
     },
     {
@@ -73,7 +73,7 @@ const page: ServiceContent = {
     {
       heading: "Deadlines",
       blocks: [
-        { p: "Most personal injury lawsuits in California must be filed within **two years** of the injury (Code of Civil Procedure §335.1). If a public entity may be responsible, the six-month government claim deadline applies first. Evidence like video and signal timing data can disappear quickly, so it is wise to act early." },
+        { p: "Most personal injury lawsuits in California must be filed within **two years** of the injury (Code of Civil Procedure §335.1). If a public entity may be responsible, the six month government claim deadline applies first. Evidence like video and signal timing data can disappear quickly, so it is wise to act early." },
       ],
     },
     {

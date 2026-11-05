@@ -21,7 +21,7 @@ const PI_AREAS: Area[] = [
   { label: "Medical Malpractice", desc: "Surgical, diagnosis and birth injury", href: "/medical-malpractice-lawyer", img: "/images/office-bay-area.webp" },
   { label: "Workplace Injuries", desc: "Beyond workers’ comp", href: "/workplace-injury-lawyer", img: "/images/office-los-angeles.webp" },
   { label: "Slip & Fall", desc: "Unsafe property and premises liability", href: "/premises-liability-lawyer", img: "/images/office-orange-county.webp" },
-  { label: "Catastrophic Injury", desc: "Brain, spinal cord and life-changing harm", href: "/catastrophic-injury-lawyer", img: "/images/office-san-diego.webp" },
+  { label: "Catastrophic Injury", desc: "Brain, spinal cord and life changing harm", href: "/catastrophic-injury-lawyer", img: "/images/office-san-diego.webp" },
 ];
 
 const STEP_SVG = { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true };

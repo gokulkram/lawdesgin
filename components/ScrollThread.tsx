@@ -14,12 +14,15 @@ export default function ScrollThread() {
     if (!el || !host) return;
     const noMotion = () =>
       matchMedia("(prefers-reduced-motion: reduce)").matches || document.documentElement.classList.contains("a11y-no-motion");
+    // Follows the scroll position exactly; the page itself scrolls smoothly (components/SmoothScroll.tsx),
+    // so the line and mark glide with it. The mark moves by transform (--y) to stay smooth.
     let frame = 0;
     const update = () => {
       frame = 0;
       const r = host.getBoundingClientRect();
       const p = noMotion() ? 1 : Math.min(1, Math.max(0, (innerHeight * 0.5 - r.top) / r.height));
-      el.style.setProperty("--p", p.toFixed(4));
+      el.style.setProperty("--p", p.toFixed(5));
+      el.style.setProperty("--y", `${(p * el.offsetHeight).toFixed(2)}px`);
     };
     const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
     update();

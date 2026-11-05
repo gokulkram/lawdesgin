@@ -6,13 +6,13 @@ const page: ServiceContent = {
   name: "Car Accidents",
   title: "California Car Accident Lawyer",
   description:
-    "Hurt in a California car accident? Learn what to do after a crash, who pays, the 2-year deadline, and what your claim may be worth. Free consultation.",
+    "Hurt in a California car accident? Learn what to do after a crash, who pays, the 2 year deadline, and what your claim may be worth. Free consultation.",
   h1: "California Car Accident Lawyer",
   heroText:
     "After a crash, the insurance company starts building its case right away. We help injured Californians and their families recover what they’re owed - with no fee unless we win.",
   summary: "Collisions on California roads - insurance claims, comparative fault, and full compensation for medical bills, lost income, and pain.",
   intro:
-    "If you were hurt in a car accident in California that was someone else’s fault, you can claim compensation from the at-fault driver - and often from others, such as an employer or a vehicle manufacturer. You generally have **two years** from the date of the crash to file a lawsuit, but the evidence that proves your case starts disappearing within days. Here is what to do, how fault and insurance work in California, and what your claim can include.",
+    "If you were hurt in a car accident in California that was someone else’s fault, you can claim compensation from the at fault driver - and often from others, such as an employer or a vehicle manufacturer. You generally have **two years** from the date of the crash to file a lawsuit, but the evidence that proves your case starts disappearing within days. Here is what to do, how fault and insurance work in California, and what your claim can include.",
   steps: {
     heading: "What to do after a car accident in California",
     items: [
@@ -32,7 +32,7 @@ const page: ServiceContent = {
         { p: "Responsibility doesn’t always stop with the other driver. Depending on what happened, a claim may also involve:" },
         {
           ul: [
-            "**An employer**, if the driver was working at the time - for example, a delivery or company-car driver",
+            "**An employer**, if the driver was working at the time - for example, a delivery or company car driver",
             "**A rideshare company’s insurance**, if an Uber or Lyft driver was involved (see our [rideshare accident page](/rideshare-accident-lawyer))",
             "**A vehicle or parts manufacturer**, if a defect such as faulty brakes, tires, or airbags caused or worsened the injuries (see [product liability](/product-liability-lawyer))",
             "**A city, county, or the state**, if a dangerous road condition - a missing sign, broken signal, or poor design - contributed to the crash (see [claims against government entities](/government-claims-lawyer))",
@@ -46,7 +46,7 @@ const page: ServiceContent = {
       blocks: [
         { p: "Insurance companies often argue that you were partly to blame. In California, that does not end your claim. Under **pure comparative fault**, you can recover damages even if you were partly at fault - your award is reduced by your share of the blame. If your damages are $100,000 and you were found 20% at fault, you can still recover $80,000." },
         { p: "Because fault percentages directly change what you receive, how the crash is investigated matters. Witness statements, video, vehicle damage, and the police report can all shift the numbers." },
-        { p: "When several parties share fault, each defendant pays its share of non-economic damages (such as pain and suffering) only in proportion to its own fault, under Civil Code §1431.2 (Proposition 51). Economic damages, like medical bills, can be collected in full from any responsible defendant." },
+        { p: "When several parties share fault, each defendant pays its share of non economic damages (such as pain and suffering) only in proportion to its own fault, under Civil Code §1431.2 (Proposition 51). Economic damages, like medical bills, can be collected in full from any responsible defendant." },
       ],
     },
     {
@@ -56,13 +56,13 @@ const page: ServiceContent = {
         { p: "Other coverage that may apply:" },
         {
           ul: [
-            "**Uninsured/underinsured motorist (UM/UIM) coverage** on your own policy, if the at-fault driver has no insurance or too little",
+            "**Uninsured/underinsured motorist (UM/UIM) coverage** on your own policy, if the at fault driver has no insurance or too little",
             "**Medical payments (MedPay) coverage** on your own policy, which can help with medical bills regardless of fault",
             "**Commercial or employer policies**, if the driver was working",
             "**Umbrella policies** and the personal assets of the responsible party",
           ],
         },
-        { callout: "**If you were uninsured:** California’s Proposition 213 (Civil Code §3333.4) generally bars an uninsured vehicle owner from recovering non-economic damages such as pain and suffering - though you can still recover medical bills and lost wages. An exception applies if the other driver was driving under the influence. Talk to a lawyer before assuming you have no claim." },
+        { callout: "**If you were uninsured:** California’s Proposition 213 (Civil Code §3333.4) generally bars an uninsured vehicle owner from recovering non economic damages such as pain and suffering - though you can still recover medical bills and lost wages. An exception applies if the other driver was driving under the influence. Talk to a lawyer before assuming you have no claim." },
       ],
     },
     {
@@ -85,7 +85,7 @@ const page: ServiceContent = {
       heading: "Deadlines you can’t miss",
       blocks: [
         { p: "In California, most personal injury lawsuits must be filed within **two years** of the injury (Code of Civil Procedure §335.1). Property damage claims generally have longer, but don’t wait." },
-        { callout: "**Six months for government claims.** If a city, county, state agency, or public employee (for example, a bus or public-works driver) may be responsible, you generally must file a written government claim within **six months** of the crash (Government Code §911.2). Missing this deadline can end the case." },
+        { callout: "**Six months for government claims.** If a city, county, state agency, or public employee (for example, a bus or public works driver) may be responsible, you generally must file a written government claim within **six months** of the crash (Government Code §911.2). Missing this deadline can end the case." },
         { p: "Different rules can apply to children and to other special situations. See our guide to [California statute of limitations for wrongful death](/wrongful-death/statute-of-limitations) for more on how deadlines work." },
       ],
     },

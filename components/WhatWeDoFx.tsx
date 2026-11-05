@@ -37,7 +37,10 @@ export function AreaStory({ title, text, areas, moreLabel }: { title: string; te
         // -1 (photo below the middle) .. 0 (centred) .. 1 (above)
         const p = clamp((mid - (r.top + r.height / 2)) / (innerHeight / 2 + r.height / 2), -1, 1);
         f.style.setProperty("--y", still ? "0%" : `${(p * 7).toFixed(3)}%`);
-        f.style.setProperty("--dim", (Math.abs(p) * 0.55).toFixed(3));
+        // The photo crossing the middle of the screen (the active topic) is fully bright; the others
+        // fade darker the further their nearest edge is from the middle, so the change is gradual.
+        const gap = r.top > mid ? r.top - mid : mid > r.bottom ? mid - r.bottom : 0;
+        f.style.setProperty("--dim", clamp(gap / (innerHeight * 0.15), 0, 1).toFixed(3));
       });
       // progress through the photos, for the thin bar on the left
       const first = shots[0].getBoundingClientRect(), last = shots[shots.length - 1].getBoundingClientRect();

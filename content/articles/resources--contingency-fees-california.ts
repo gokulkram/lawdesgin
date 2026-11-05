@@ -19,7 +19,7 @@ const page: ArticleContent = {
       blocks: [
         { p: "Under a contingency fee, the attorney’s fee “depends on” the outcome. Instead of paying an hourly rate or a retainer upfront, you agree that the lawyer will receive an agreed share of any settlement or court award. If the case ends without a recovery, you owe no attorney’s fee." },
         { p: "This arrangement lets people who were hurt - often while out of work and facing medical bills - hire a lawyer without paying out of pocket. It also gives the lawyer a direct stake in the result: the more the case is worth, and the better it is documented, the more both of you receive." },
-        { p: "A contingency fee is not the same as “free.” Two different kinds of money come out of a case: the **attorney’s fee** (payment for the lawyer’s work) and **case costs** (the out-of-pocket expenses of building the case). Understanding the difference is the single most important part of reading a fee agreement." },
+        { p: "A contingency fee is not the same as “free.” Two different kinds of money come out of a case: the **attorney’s fee** (payment for the lawyer’s work) and **case costs** (the out of pocket expenses of building the case). Understanding the difference is the single most important part of reading a fee agreement." },
       ],
     },
     {
@@ -48,11 +48,11 @@ const page: ArticleContent = {
             "Fees for medical records, police reports, and other documents",
             "Deposition and court reporter charges",
             "Fees for consultants such as accident reconstruction or medical professionals who review and explain the evidence",
-            "Mediation fees and trial-related expenses such as exhibits",
+            "Mediation fees and trial related expenses such as exhibits",
           ],
         },
         { p: "In a straightforward claim that settles early, costs may be modest. In a case that is litigated through discovery and toward trial, they can be significant - which is why the contract must explain how they are handled." },
-        { p: "Costs affect your take-home amount in two main ways:" },
+        { p: "Costs affect your take home amount in two main ways:" },
         {
           ul: [
             "**When costs are deducted.** Some agreements subtract costs from the total recovery before the lawyer’s percentage is calculated; others calculate the fee on the full amount and subtract costs afterward. The same settlement can leave you with a different net amount depending on which method the contract uses.",

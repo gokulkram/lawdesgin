@@ -6,11 +6,11 @@ const page: ServiceContent = {
   name: "Bicycle Accidents",
   title: "California Bicycle Accident Lawyer",
   description:
-    "Hit while riding a bike in California? Learn the 3-foot passing law, dooring, road hazard claims, and insurance that may cover you. Free consultation.",
+    "Hit while riding a bike in California? Learn the 3 foot passing law, dooring, road hazard claims, and insurance that may cover you. Free consultation.",
   h1: "California Bicycle Accident Lawyer",
   heroText:
     "Cyclists are hurt by drivers who pass too close, turn without looking, or open a door without checking. We help injured riders and their families pursue full compensation - with no fee unless we win.",
-  summary: "Bike crashes - the 3-foot passing law, dooring, right hooks, road hazards, and insurance that can cover cyclists, including your own policy.",
+  summary: "Bike crashes - the 3 foot passing law, dooring, right hooks, road hazards, and insurance that can cover cyclists, including your own policy.",
   intro:
     "If you were hurt riding a bicycle in California because of a careless driver, a dangerous road, or a defective bike part, you may be able to claim compensation. California requires drivers to give cyclists at least **three feet** when passing, and drivers must look before turning, merging, or opening a door. Your own auto insurance may also help, even though you were on a bike. You generally have **two years** to file a lawsuit - or **six months** for a claim against a city or other public agency.",
   steps: {
@@ -35,7 +35,7 @@ const page: ServiceContent = {
             "**Right hooks** - a driver passes the cyclist, then turns right across their path",
             "**Left turns** - an oncoming driver turns left into a cyclist going straight",
             "**Dooring** - a parked driver or passenger opens a door into the bike lane or traffic",
-            "**Rear-end crashes** - a distracted driver doesn’t see the rider ahead",
+            "**Rear end crashes** - a distracted driver doesn’t see the rider ahead",
             "**Drivers pulling out** of driveways, parking lots, or side streets without looking",
           ],
         },
@@ -43,10 +43,10 @@ const page: ServiceContent = {
       ],
     },
     {
-      heading: "California’s three-foot passing law",
+      heading: "California’s three foot passing law",
       blocks: [
         { p: "Under Vehicle Code §21760, a driver passing a bicyclist going the same direction must leave at least **three feet**." },
-        { p: "If a driver clipped you, knocked you off balance, or forced you off the road while passing, a violation of the three-foot rule can be strong evidence that the driver was careless. Witness statements, video, and the damage pattern on the bike and car can show how close the driver came." },
+        { p: "If a driver clipped you, knocked you off balance, or forced you off the road while passing, a violation of the three foot rule can be strong evidence that the driver was careless. Witness statements, video, and the damage pattern on the bike and car can show how close the driver came." },
       ],
     },
     {
@@ -61,7 +61,7 @@ const page: ServiceContent = {
       blocks: [
         { p: "A pothole that a car rolls over can throw a cyclist to the ground. Other hazards include broken or uneven pavement, sunken drain grates, debris, poorly maintained bike lanes that end suddenly, and construction zones with no safe route for bikes." },
         { p: "When the road belongs to a city, county, or the state, the public entity may be responsible. Under Government Code §835, a public entity can be liable for a dangerous condition of its property if the condition created a foreseeable risk of the injury, caused the injury, and either a public employee created it or the entity knew about it in time to fix it." },
-        { callout: "**Six-month deadline for road hazard claims.** A personal injury claim against a public entity generally must be filed in writing within **six months** (Government Code §911.2). Photograph the hazard as soon as you can - it may be repaired quickly. See [claims against government entities](/government-claims-lawyer)." },
+        { callout: "**Six month deadline for road hazard claims.** A personal injury claim against a public entity generally must be filed in writing within **six months** (Government Code §911.2). Photograph the hazard as soon as you can - it may be repaired quickly. See [claims against government entities](/government-claims-lawyer)." },
         { p: "If a bike part failed - a frame crack, a brake failure, or a fork or wheel that broke - the manufacturer or seller may be strictly liable. Keep the bike unchanged and see our page on [defective products](/product-liability-lawyer)." },
       ],
     },
@@ -71,8 +71,8 @@ const page: ServiceContent = {
         { p: "Many cyclists don’t realize how many insurance sources may apply after a crash:" },
         {
           ul: [
-            "**The at-fault driver’s liability insurance**, the first place most claims start",
-            "**Your own uninsured/underinsured motorist (UM/UIM) coverage**, which may apply even though you were riding a bike - especially important after a hit-and-run or when the driver has only minimum coverage. Check your auto policy.",
+            "**The at fault driver’s liability insurance**, the first place most claims start",
+            "**Your own uninsured/underinsured motorist (UM/UIM) coverage**, which may apply even though you were riding a bike - especially important after a hit and run or when the driver has only minimum coverage. Check your auto policy.",
             "**Medical payments coverage** on your own auto policy, if you have it",
             "**The driver’s employer’s policy**, if the driver was working",
             "**Homeowner’s or renter’s insurance**, which may come into play in some situations, such as a crash with another cyclist",
@@ -84,7 +84,7 @@ const page: ServiceContent = {
       heading: "Compensation and deadlines",
       blocks: [
         { p: "A bicycle accident claim can include medical bills, lost wages and earning ability, the cost of repairing or replacing your bike and gear, and pain and suffering. If a cyclist was killed, the family may have a wrongful death claim - see [who can file a wrongful death claim](/wrongful-death/who-can-file)." },
-        { p: "Most personal injury lawsuits in California must be filed within **two years** of the injury (Code of Civil Procedure §335.1). If a public road contributed, the six-month government claim deadline comes first." },
+        { p: "Most personal injury lawsuits in California must be filed within **two years** of the injury (Code of Civil Procedure §335.1). If a public road contributed, the six month government claim deadline comes first." },
       ],
     },
     {

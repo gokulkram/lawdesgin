@@ -6,7 +6,7 @@ const page: ServiceContent = {
   name: "Who Can File",
   title: "Who Can File a Wrongful Death Lawsuit",
   description:
-    "Who can file a wrongful death lawsuit in California? A plain guide to CCP §377.60: spouses, partners, children, heirs, dependents, and the 180-day rule.",
+    "Who can file a wrongful death lawsuit in California? A plain guide to CCP §377.60: spouses, partners, children, heirs, dependents, and the 180 day rule.",
   h1: "Who Can File a Wrongful Death Lawsuit in California?",
   heroText:
     "California law decides which family members can bring a wrongful death claim - and it is not always the people you would expect. Here is how the rules work, explained plainly.",
@@ -69,7 +69,7 @@ const page: ServiceContent = {
         {
           ul: [
             "**Had lived in the person’s household for the previous 180 days**, and",
-            "**Depended on the person for one-half or more of their support**",
+            "**Depended on the person for one half or more of their support**",
           ],
         },
         { p: "Both parts must be met. A child who lived in the home for four months, or who got most of their support from someone else, would not qualify under this rule - although they may still qualify under another group. Because the claimant is a minor, a responsible adult handles the case on the child’s behalf." },
@@ -93,7 +93,7 @@ const page: ServiceContent = {
       heading: "The survival claim is filed by someone else",
       blocks: [
         { p: "A death can create two different claims. The **wrongful death** claim, covered on this page, is for the family’s losses. A separate **survival action** is the claim the person who died could have brought if they had lived - for example, for their medical bills and lost earnings before death." },
-        { p: "Under §377.30, the survival action is brought by the person’s **personal representative** (the executor or court-appointed administrator of the estate) or, if there is none, by the **successor in interest**. That may or may not be the same person who brings the wrongful death claim. See our guide to [survival actions](/wrongful-death/survival-action) for how that claim works and what it can recover." },
+        { p: "Under §377.30, the survival action is brought by the person’s **personal representative** (the executor or court appointed administrator of the estate) or, if there is none, by the **successor in interest**. That may or may not be the same person who brings the wrongful death claim. See our guide to [survival actions](/wrongful-death/survival-action) for how that claim works and what it can recover." },
       ],
     },
     {

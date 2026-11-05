@@ -33,19 +33,19 @@ const page: ServiceContent = {
           ul: [
             "**Left turns in front of a rider** at intersections or driveways",
             "**Unsafe lane changes** into a rider in a blind spot",
-            "**Rear-end crashes** when a rider slows or stops in traffic",
+            "**Rear end crashes** when a rider slows or stops in traffic",
             "**Opening a car door** into the path of a rider",
             "**Road hazards** such as potholes, uneven pavement, loose gravel, or debris that a car can roll over but a motorcycle cannot",
             "**Defective parts**, such as brakes, tires, or throttle failures",
           ],
         },
-        { p: "Motorcycle crashes often cause serious injuries - fractures, road rash, spinal injuries, and head injuries. See our pages on [brain injuries](/brain-injury-lawyer) and [catastrophic injuries](/catastrophic-injury-lawyer) for more on long-term claims." },
+        { p: "Motorcycle crashes often cause serious injuries - fractures, road rash, spinal injuries, and head injuries. See our pages on [brain injuries](/brain-injury-lawyer) and [catastrophic injuries](/catastrophic-injury-lawyer) for more on long term claims." },
       ],
     },
     {
       heading: "Lane splitting is legal in California",
       blocks: [
-        { p: "California law recognizes lane splitting. Vehicle Code §21658.1 defines it as driving a two-wheeled motorcycle between rows of stopped or moving vehicles in the same lane, and it allows the California Highway Patrol to publish safety guidelines for riders." },
+        { p: "California law recognizes lane splitting. Vehicle Code §21658.1 defines it as driving a two wheeled motorcycle between rows of stopped or moving vehicles in the same lane, and it allows the California Highway Patrol to publish safety guidelines for riders." },
         { p: "Because lane splitting is legal, it is **not automatically negligence**. An insurer can’t deny your claim just because you were splitting lanes when a driver changed lanes into you. The question is still whether each person acted with reasonable care under the circumstances - how fast traffic was moving, how fast you were going, and whether the driver checked mirrors and signaled." },
         { p: "If a jury decides a rider’s speed or choices contributed to the crash, California’s pure comparative fault rule reduces the rider’s compensation by that percentage - it doesn’t eliminate it. Our [car accident page](/car-accident-lawyer) explains comparative fault in more detail." },
       ],
@@ -61,14 +61,14 @@ const page: ServiceContent = {
     {
       heading: "Overcoming bias against riders",
       blocks: [
-        { p: "Some adjusters and jurors assume motorcyclists are risk-takers. That bias can show up as lowball offers, claims that you were speeding, or a police report that relies only on the driver’s version." },
+        { p: "Some adjusters and jurors assume motorcyclists are risk takers. That bias can show up as lowball offers, claims that you were speeding, or a police report that relies only on the driver’s version." },
         { p: "Good evidence is the answer. Accident reconstruction, scene measurements, vehicle damage, witness statements, video, and data from the other vehicle can show what actually happened. Your riding history, training, and gear can also help show you were a careful rider." },
       ],
     },
     {
       heading: "Insurance for motorcycle accidents",
       blocks: [
-        { p: "Your claim usually starts with the at-fault driver’s liability insurance. California’s minimum limits are low compared with the cost of a serious motorcycle injury, so other sources often matter:" },
+        { p: "Your claim usually starts with the at fault driver’s liability insurance. California’s minimum limits are low compared with the cost of a serious motorcycle injury, so other sources often matter:" },
         {
           ul: [
             "**Uninsured/underinsured motorist (UM/UIM) coverage** on your motorcycle policy, if the driver had no insurance, too little, or fled the scene",
@@ -97,7 +97,7 @@ const page: ServiceContent = {
     {
       heading: "How California Law handles motorcycle cases",
       blocks: [
-        { p: "A senior attorney leads every case. We gather the evidence that answers rider bias head-on - scene measurements, video, witness statements, and reconstruction where needed - and we document the full cost of your injuries. We negotiate with the insurers and are prepared to go to trial if they won’t be fair." },
+        { p: "A senior attorney leads every case. We gather the evidence that answers rider bias head on - scene measurements, video, witness statements, and reconstruction where needed - and we document the full cost of your injuries. We negotiate with the insurers and are prepared to go to trial if they won’t be fair." },
         { p: "We work on a contingency fee: no attorney’s fee unless we win. With six offices across California and home or hospital visits anywhere in the state, we come to you." },
       ],
     },

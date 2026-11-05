@@ -10,7 +10,7 @@ const page: ServiceContent = {
   h1: "California Brain Injury Lawyer",
   heroText:
     "Brain injuries are often invisible - to others, to insurers, and sometimes to the injured person. We help Californians with concussions and traumatic brain injuries prove what happened and what it costs, with no fee unless we win.",
-  summary: "Concussions to severe traumatic brain injuries - hidden symptoms, medical proof, and compensation for long-term care and lost earning ability.",
+  summary: "Concussions to severe traumatic brain injuries - hidden symptoms, medical proof, and compensation for long term care and lost earning ability.",
   intro:
     "If you or a loved one suffered a brain injury because of someone else’s carelessness - in a crash, a fall, or an accident at work - you can claim compensation in California for medical care, lost income, and the ways the injury has changed daily life. Brain injuries are some of the hardest injuries to prove, because the damage often doesn’t show on the outside and symptoms can appear days or weeks later. You generally have **two years** to file a lawsuit. Here is what a traumatic brain injury is, why it is so often missed, and how a claim is built.",
   steps: {
@@ -20,23 +20,23 @@ const page: ServiceContent = {
       { title: "Watch for symptoms over the next days and weeks", text: "Headaches, confusion, memory gaps, sensitivity to light or noise, mood changes, and trouble sleeping can appear later. If they do, go back to the doctor and say so." },
       { title: "Ask family and friends what they notice", text: "People close to you often see changes - irritability, forgetfulness, personality shifts - before you do. Their observations can also become important evidence." },
       { title: "Follow through with referrals", text: "If you are referred to a neurologist, neuropsychologist, or therapist, go. Gaps in treatment are something insurers use to argue the injury isn’t serious." },
-      { title: "Don’t give recorded statements", text: "A brain injury can affect memory and word-finding. Avoid giving a recorded statement to the other side’s insurer or signing anything before you understand your rights." },
+      { title: "Don’t give recorded statements", text: "A brain injury can affect memory and word finding. Avoid giving a recorded statement to the other side’s insurer or signing anything before you understand your rights." },
     ],
   },
   sections: [
     {
       heading: "What is a traumatic brain injury?",
       blocks: [
-        { p: "A **traumatic brain injury (TBI)** happens when an outside force - a blow, a jolt, or an object entering the skull - disrupts how the brain works. The brain can strike the inside of the skull, twist, or be stretched, even when the head never hits anything. That is why rear-end crashes and falls can cause brain injuries without an obvious wound." },
+        { p: "A **traumatic brain injury (TBI)** happens when an outside force - a blow, a jolt, or an object entering the skull - disrupts how the brain works. The brain can strike the inside of the skull, twist, or be stretched, even when the head never hits anything. That is why rear end crashes and falls can cause brain injuries without an obvious wound." },
         { p: "Brain injuries range widely in severity:" },
         {
           ul: [
             "**Concussion (often called mild TBI)** - a brief disruption of brain function. Many people recover, but some have symptoms that last months or longer.",
             "**Moderate TBI** - usually involves a longer loss of consciousness or confusion, and may show bruising or bleeding on imaging.",
-            "**Severe TBI** - can cause a coma, long-term disability, or permanent changes in thinking, movement, and behavior.",
+            "**Severe TBI** - can cause a coma, long term disability, or permanent changes in thinking, movement, and behavior.",
           ],
         },
-        { p: "The word “mild” describes the initial injury, not its effect on a person’s life. A so-called mild brain injury can still end a career or strain a family." },
+        { p: "The word “mild” describes the initial injury, not its effect on a person’s life. A so called mild brain injury can still end a career or strain a family." },
       ],
     },
     {
@@ -62,7 +62,7 @@ const page: ServiceContent = {
           ul: [
             "**Car, truck, and motorcycle crashes** - the sudden stop or impact can injure the brain even without a direct blow (see [car accidents](/car-accident-lawyer) and [motorcycle accidents](/motorcycle-accident-lawyer))",
             "**Pedestrian and bicycle accidents**, where the head often strikes a vehicle or the pavement",
-            "**Slip-and-fall and trip-and-fall accidents** on unsafe property (see [premises liability](/premises-liability-lawyer))",
+            "**Slip and fall and trip and fall accidents** on unsafe property (see [premises liability](/premises-liability-lawyer))",
             "**Workplace and construction accidents**, such as falls and falling objects",
             "**Defective products**, such as helmets or vehicle safety systems that fail",
             "**Assaults** where a property owner failed to provide reasonable security",
@@ -88,14 +88,14 @@ const page: ServiceContent = {
       ],
     },
     {
-      heading: "Long-term care and what a claim can cover",
+      heading: "Long term care and what a claim can cover",
       blocks: [
         { p: "Recovery from a brain injury is different for everyone. Some people improve over months; others need lifelong support. Care can include rehabilitation, physical, occupational, and speech therapy, cognitive therapy, medication, counseling, and - for severe injuries - supervision or residential care." },
         { p: "A California brain injury claim can include:" },
         {
           ul: [
             "**Medical expenses** - past and future treatment, therapy, testing, and medication",
-            "**Long-term care** - home care, supervision, or residential care if needed",
+            "**Long term care** - home care, supervision, or residential care if needed",
             "**Lost income and lost earning capacity** - especially important if the person can no longer do the same kind of work",
             "**Pain and suffering** - including emotional distress, cognitive changes, and loss of enjoyment of life",
           ],
@@ -120,7 +120,7 @@ const page: ServiceContent = {
     },
   ],
   faqs: [
-    { q: "Can I have a brain injury if I didn’t hit my head?", a: "Yes. A sudden jolt - like the whiplash motion in a rear-end crash - can move the brain inside the skull and injure it even without a direct blow to the head." },
+    { q: "Can I have a brain injury if I didn’t hit my head?", a: "Yes. A sudden jolt - like the whiplash motion in a rear end crash - can move the brain inside the skull and injure it even without a direct blow to the head." },
     { q: "My CT scan was normal. Can I still have a brain injury claim?", a: "Yes. Many concussions don’t appear on standard scans. Symptoms, medical evaluations, neuropsychological testing, and the observations of people who know you can all help prove the injury." },
     { q: "Is a concussion serious enough for a lawsuit?", a: "It can be. Many people recover from a concussion, but some have headaches, memory problems, or mood changes that last for months or longer and affect their work. What matters is the effect on your life, not the label." },
     { q: "How long do I have to file a brain injury claim in California?", a: "Generally two years from the date of the injury. If a government entity may be responsible, a written claim is usually due within six months. Don’t wait - symptoms can take time to appear, but the deadline still runs." },

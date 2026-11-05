@@ -6,7 +6,7 @@ const page: ServiceContent = {
   name: "Survival Actions",
   title: "Survival Actions in California",
   description:
-    "What is a survival action in California? How it differs from wrongful death, who brings it, what it recovers, and the current pain-and-suffering rule.",
+    "What is a survival action in California? How it differs from wrongful death, who brings it, what it recovers, and the current pain and suffering rule.",
   h1: "Survival Actions in California: The Claim That Belongs to Your Loved One",
   heroText:
     "When someone dies because of another’s negligence, their own legal claim does not end with them. A survival action lets it continue - alongside the family’s wrongful death claim.",

@@ -18,7 +18,7 @@ const page: ServiceContent = {
     items: [
       { title: "Make sure your loved one is safe", text: "If there is immediate danger or a medical emergency, call 911. If something seems wrong, ask for a doctor’s evaluation - ideally by a physician outside the facility - and consider whether your loved one should be moved." },
       { title: "Document what you see", text: "Take dated photos of injuries, bedsores, soiled bedding, or unsafe conditions. Write down what your loved one tells you, who was on duty, and any explanations staff give." },
-      { title: "Report your concerns in writing", text: "Tell the facility administrator in writing and keep a copy. You can also report to local law enforcement, your county’s adult protective services, the long-term care ombudsman program, or the state agency that licenses the facility." },
+      { title: "Report your concerns in writing", text: "Tell the facility administrator in writing and keep a copy. You can also report to local law enforcement, your county’s adult protective services, the long term care ombudsman program, or the state agency that licenses the facility." },
       { title: "Request the records", text: "Ask for your loved one’s chart, care plan, medication records, and any incident reports. Records can be changed or lost, so request them early." },
       { title: "Talk to a lawyer", text: "A lawyer can send a preservation letter for records, staffing schedules, and video, and help you decide on next steps while you focus on your family member." },
     ],
@@ -79,7 +79,7 @@ const page: ServiceContent = {
         {
           ul: [
             "**The nursing home or skilled nursing facility** that provided the care",
-            "**Assisted living and residential care facilities**, including memory-care homes",
+            "**Assisted living and residential care facilities**, including memory care homes",
             "**The company that owns or manages the facility**, when its staffing and budget decisions led to the neglect",
             "**Individual caregivers** who abused or neglected the resident",
             "**Physicians or other providers**, if medical care was negligent - see [medical malpractice](/medical-malpractice-lawyer)",
@@ -107,7 +107,7 @@ const page: ServiceContent = {
     { q: "Who is protected by California’s Elder Abuse Act?", a: "People 65 and older, and dependent adults - adults whose physical or mental limitations restrict their ability to care for themselves or protect their rights." },
     { q: "Can we still bring a claim if our loved one has passed away?", a: "Yes. The family may have a wrongful death claim, and if elder abuse or neglect with recklessness, oppression, fraud, or malice is proven by clear and convincing evidence, the victim’s own pain and suffering can still be compensated after death, subject to limits." },
     { q: "Should we move our loved one out of the facility?", a: "If you believe they are in danger, their safety comes first. Before or during a move, photograph their condition and request their records so the evidence isn’t lost." },
-    { q: "Where can I report nursing home abuse in California?", a: "Call 911 for emergencies. You can also report to local law enforcement, county adult protective services, the long-term care ombudsman program, or the state agency that licenses the facility. Reporting does not stop you from also bringing a legal claim." },
+    { q: "Where can I report nursing home abuse in California?", a: "Call 911 for emergencies. You can also report to local law enforcement, county adult protective services, the long term care ombudsman program, or the state agency that licenses the facility. Reporting does not stop you from also bringing a legal claim." },
     { q: "Are bedsores always a sign of neglect?", a: "Not always, but many pressure injuries are preventable with regular repositioning, nutrition, and skin checks. Advanced bedsores, or sores that develop quickly, often point to inadequate care." },
     { q: "How much does it cost to hire a nursing home abuse lawyer?", a: "With California Law, nothing upfront. We work on a contingency fee, so there is no attorney’s fee unless we win. In qualifying elder abuse cases, the law also requires the court to award attorney’s fees and costs." },
   ],

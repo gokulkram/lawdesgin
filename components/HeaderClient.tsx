@@ -6,12 +6,41 @@ import { useEffect, useRef, useState } from "react";
 import { NAV } from "@/lib/firm";
 import Logo from "@/components/Logo";
 
-// Scroll distance (px) over which the header fades from see-through to frosted navy.
-const FADE_DISTANCE = 300;
+// Scroll distance (px) over which the header fades from see-through to frosted glass.
+const FADE_DISTANCE = 220;
+
+// "light" when the section under the header is a light colour, "dark" for navy sections and photos.
+// Checks five points across the bar and takes the majority, so small gaps (between photo tiles,
+// for example) don't make it flicker.
+function toneUnder(header: HTMLElement): "light" | "dark" {
+  const y = header.offsetHeight / 2;
+  let light = 0;
+  for (const x of [0.1, 0.3, 0.5, 0.7, 0.9]) if (toneAt(header, innerWidth * x, y) === "light") light++;
+  return light >= 3 ? "light" : "dark";
+}
+
+// Goes down through everything stacked at (x, y) under the header, top to bottom: a photo or
+// background image counts as dark (also when text sits on top of it), otherwise the first solid
+// background colour decides.
+function toneAt(header: HTMLElement, x: number, y: number): "light" | "dark" {
+  for (const e of document.elementsFromPoint(x, y)) {
+    if (header.contains(e)) continue;
+    if (/^(IMG|VIDEO|CANVAS|PICTURE)$/.test(e.tagName)) return "dark";
+    const cs = getComputedStyle(e);
+    if (cs.backgroundImage.includes("url(")) return "dark";
+    const m = cs.backgroundColor.match(/[\d.]+/g);
+    if (m && (m[3] === undefined || +m[3] > 0.5)) {
+      const [r, g, b] = m.map(Number);
+      return 0.299 * r + 0.587 * g + 0.114 * b > 150 ? "light" : "dark";
+    }
+  }
+  return "light";
+}
 
 // Firm phone comes from the server wrapper (components/Header.tsx).
-// The header floats over the page hero: see-through at the top, then a navy frosted-glass
-// background fades in and the bar shrinks as you scroll (driven by the --p CSS variable, 0 to 1).
+// The header floats over the page (like octicase.com): see-through at the top, then a frosted-glass
+// background fades in as you scroll (the --p CSS variable, 0 to 1). data-tone switches it between
+// dark glass with white links and white glass with navy links, following the section underneath.
 export default function HeaderClient({ phone, phoneHref }: { phone: string; phoneHref: string }) {
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
@@ -31,14 +60,19 @@ export default function HeaderClient({ phone, phoneHref }: { phone: string; phon
     let frame = 0;
     const update = () => {
       frame = 0;
+      const header = headerRef.current;
+      if (!header) return;
       const p = Math.min(Math.max(window.scrollY / FADE_DISTANCE, 0), 1);
-      headerRef.current?.style.setProperty("--p", p.toFixed(3));
+      header.style.setProperty("--p", p.toFixed(3));
+      const tone = toneUnder(header);
+      if (header.dataset.tone !== tone) header.dataset.tone = tone;
     };
     const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
     update();
-    return () => { window.removeEventListener("scroll", onScroll); cancelAnimationFrame(frame); };
-  }, []);
+    return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); cancelAnimationFrame(frame); };
+  }, [pathname]);
 
   // close the mobile menu on navigation
   useEffect(() => setOpen(false), [pathname]);

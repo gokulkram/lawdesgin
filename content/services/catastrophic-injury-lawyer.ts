@@ -6,11 +6,11 @@ const page: ServiceContent = {
   name: "Catastrophic Injuries",
   title: "California Catastrophic Injury Lawyer",
   description:
-    "Life-changing injury in California? How lifetime care, lost earning capacity and life care plans are proven, plus the 2-year deadline. Free consultation.",
+    "Life changing injury in California? How lifetime care, lost earning capacity and life care plans are proven, plus the 2 year deadline. Free consultation.",
   h1: "California Catastrophic Injury Lawyer",
   heroText:
     "A catastrophic injury changes the rest of a life, and the claim has to account for all of it. We help seriously injured Californians and their families build cases that look decades ahead - with no fee unless we win.",
-  summary: "Life-changing injuries - brain and spinal cord injuries, severe burns, amputations - and claims built around lifetime care and lost earning capacity.",
+  summary: "Life changing injuries - brain and spinal cord injuries, severe burns, amputations - and claims built around lifetime care and lost earning capacity.",
   intro:
     "A catastrophic injury is one that permanently changes how a person lives and works - a severe brain injury, paralysis, an amputation, or serious burns. If someone else’s carelessness caused it, California law lets you claim compensation for **the whole future**, not just the bills you have today: lifetime medical care, the income you can no longer earn, and the loss of the life you had. You generally have **two years** to file a lawsuit, and far less if a government agency is involved. Because you get only one chance to resolve the claim, the real work is proving what the future will cost.",
   sections: [
@@ -35,13 +35,13 @@ const page: ServiceContent = {
       heading: "Why these claims are so often undervalued",
       blocks: [
         { p: "In the first weeks after a serious injury, nobody knows the full picture. Doctors may not yet know how much function will return. The person may still be in the hospital or a rehabilitation center. Meanwhile, insurance adjusters may make an offer based on the bills that exist so far." },
-        { p: "Accepting that kind of offer is risky. Once you sign a release, you usually cannot reopen the claim - even if you later need more surgery, round-the-clock care, or a wheelchair-accessible home. A catastrophic injury claim should be valued only once there is a clear medical picture of what the future looks like." },
+        { p: "Accepting that kind of offer is risky. Once you sign a release, you usually cannot reopen the claim - even if you later need more surgery, round the clock care, or a wheelchair accessible home. A catastrophic injury claim should be valued only once there is a clear medical picture of what the future looks like." },
       ],
     },
     {
       heading: "How catastrophic injuries happen",
       blocks: [
-        { p: "Most catastrophic injuries come from sudden, high-force events. The cause matters because it decides who can be held responsible and which insurance may pay:" },
+        { p: "Most catastrophic injuries come from sudden, high force events. The cause matters because it decides who can be held responsible and which insurance may pay:" },
         {
           ul: [
             "**Vehicle crashes** - cars, trucks, motorcycles, and collisions with pedestrians or cyclists (see [car accidents](/car-accident-lawyer))",
@@ -62,9 +62,9 @@ const page: ServiceContent = {
           ul: [
             "**Medical records and imaging** - hospital records, surgical reports, and scans that document the injury and its severity",
             "**Treating doctors and therapists** - the people who know the patient’s condition firsthand, explaining the diagnosis, the prognosis, and the care likely to be needed",
-            "**A life care plan** - a detailed, item-by-item plan, usually prepared by a qualified medical professional, listing future needs such as surgeries, therapy, medication, equipment, home care, and how often each will be needed",
+            "**A life care plan** - a detailed, item by item plan, usually prepared by a qualified medical professional, listing future needs such as surgeries, therapy, medication, equipment, home care, and how often each will be needed",
             "**Vocational evidence** - an assessment of what work, if any, the person can still do",
-            "**An economist** - who converts the life care plan and lost earnings into present-day dollars",
+            "**An economist** - who converts the life care plan and lost earnings into present day dollars",
           ],
         },
         { p: "The goal is to replace guesswork with a documented plan the insurer or a jury can follow line by line." },
@@ -78,7 +78,7 @@ const page: ServiceContent = {
         {
           ul: [
             "**Past and future medical care** - emergency care, surgeries, hospital stays, rehabilitation, medication, and ongoing treatment",
-            "**Long-term and in-home care** - nursing care, attendant care, and help with daily living",
+            "**Long term and in home care** - nursing care, attendant care, and help with daily living",
             "**Equipment and modifications** - wheelchairs, prosthetics, ramps, accessible bathrooms, and modified vehicles",
             "**Lost wages and lost earning capacity** - the income already lost and the income the person would have earned over a full career",
             "**Pain and suffering** - physical pain, emotional distress, disfigurement, and loss of enjoyment of life",
@@ -86,7 +86,7 @@ const page: ServiceContent = {
           ],
         },
         { p: "Lost earning capacity deserves special attention. For a young person or someone early in their career, the difference between what they would have earned and what they can earn now can be one of the largest parts of the claim." },
-        { p: "California uses **pure comparative fault**, so you can recover even if you were partly to blame; your award is reduced by your share of fault. When several defendants share fault, each pays non-economic damages (such as pain and suffering) only in proportion to its own fault under Civil Code §1431.2 (Proposition 51), while economic damages like medical costs can be collected in full from any responsible defendant." },
+        { p: "California uses **pure comparative fault**, so you can recover even if you were partly to blame; your award is reduced by your share of fault. When several defendants share fault, each pays non economic damages (such as pain and suffering) only in proportion to its own fault under Civil Code §1431.2 (Proposition 51), while economic damages like medical costs can be collected in full from any responsible defendant." },
       ],
     },
     {
@@ -106,11 +106,11 @@ const page: ServiceContent = {
     },
   ],
   faqs: [
-    { q: "What counts as a catastrophic injury in California?", a: "There is no single legal definition. The term usually means an injury that causes permanent or long-term disability - such as a severe brain injury, spinal cord injury, amputation, or serious burns - and that affects a person’s ability to work and live independently." },
+    { q: "What counts as a catastrophic injury in California?", a: "There is no single legal definition. The term usually means an injury that causes permanent or long term disability - such as a severe brain injury, spinal cord injury, amputation, or serious burns - and that affects a person’s ability to work and live independently." },
     { q: "How long do I have to file a catastrophic injury lawsuit?", a: "Generally two years from the date of injury. If a government entity may be responsible, a written claim is usually due within six months. For injured children the deadline is usually paused until age 18, except for government claims." },
     { q: "What is a life care plan?", a: "It is a detailed report, usually prepared by a qualified medical professional, that lists the care and services an injured person is expected to need for the rest of their life - such as surgeries, therapy, equipment, medication, and home care - along with how often each is needed. An economist can then calculate what that care will cost." },
     { q: "Should I accept the insurance company’s first offer?", a: "Be very careful. Early offers usually reflect only current bills. Once you sign a release, you generally cannot ask for more, even if your needs grow. It is wise to have the offer reviewed before you sign anything." },
-    { q: "What if the at-fault driver’s insurance isn’t enough?", a: "California’s minimum auto liability coverage is $30,000 per person, which rarely covers a catastrophic injury. Other sources may include an employer, a vehicle or product manufacturer, a property owner, umbrella policies, and your own underinsured motorist coverage." },
+    { q: "What if the at fault driver’s insurance isn’t enough?", a: "California’s minimum auto liability coverage is $30,000 per person, which rarely covers a catastrophic injury. Other sources may include an employer, a vehicle or product manufacturer, a property owner, umbrella policies, and your own underinsured motorist coverage." },
     { q: "Will my case go to trial?", a: "Many injury claims are resolved through negotiation, but that is never certain. A claim is valued more fairly when the insurer knows the case has been prepared for trial, so we build every case as if it will go before a jury." },
     { q: "How much does it cost to hire California Law?", a: "Nothing upfront. We work on a contingency fee, so there is no attorney’s fee unless we win. How case costs are handled is explained in writing before we begin." },
   ],

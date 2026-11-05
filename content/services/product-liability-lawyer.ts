@@ -66,7 +66,7 @@ const page: ServiceContent = {
         {
           ul: [
             "**Vehicle defects** - brakes, tires, airbags, seatbelts, steering, and fuel systems that fail, or vehicles that roll over or catch fire. A defect can turn a minor crash into a serious one; see [car accidents](/car-accident-lawyer).",
-            "**Batteries, e-bikes, and scooters** - lithium-ion batteries that overheat or catch fire, and frames or brakes that fail",
+            "**Batteries, e-bikes, and scooters** - lithium ion batteries that overheat or catch fire, and frames or brakes that fail",
             "**Household products and appliances** - heaters, pressure cookers, furniture that tips over, and electrical products that shock or burn - see [burn injuries](/burn-injury-lawyer)",
             "**Tools and industrial machinery** - missing guards, failed safety switches, and equipment that starts unexpectedly",
             "**Medical devices and drugs** - implants that fail and medications sold without adequate warnings",

@@ -21,7 +21,7 @@ const page: ServiceContent = {
       { title: "Request the fatal crash report by mail if LAPD investigated", text: "LAPD does not release reports involving a fatality online. If the crash was on a freeway or in an unincorporated area, the report is usually with the CHP." },
       { title: "Keep the vehicle, phone and records", text: "Don’t let the vehicle be repaired or scrapped, and keep medical bills, funeral receipts, and records of your loved one’s income." },
       { title: "Don’t sign insurance releases", text: "An early settlement offer or release can end the family’s claim. Talk to a lawyer before signing anything." },
-      { title: "Check for a six-month deadline", text: "If a City of Los Angeles, County, Metro or Caltrans vehicle or road may be involved, a written government claim is generally due within six months of the death." },
+      { title: "Check for a six month deadline", text: "If a City of Los Angeles, County, Metro or Caltrans vehicle or road may be involved, a written government claim is generally due within six months of the death." },
     ],
   },
   sections: [
@@ -29,7 +29,7 @@ const page: ServiceContent = {
       heading: "The Los Angeles County Medical Examiner",
       blocks: [
         { p: "The County of Los Angeles **Department of Medical Examiner** has jurisdiction over sudden, violent or unusual deaths in the county, including deaths known or suspected to result from an accident or injury. Deaths from crashes, falls, workplace incidents and similar events therefore fall under the Medical Examiner’s jurisdiction, and its investigation determines the cause and manner of death." },
-        { p: "For a wrongful death claim, the Medical Examiner’s case report - including any autopsy findings and toxicology - can be important evidence. It can confirm how the injuries caused the death and answer questions an insurer may raise about pre-existing conditions. Families can contact Medical Examiner Public Services to find out how to get a copy; information is available on the [Medical Examiner’s website](https://me.lacounty.gov/). Photographs are not included in the report and are released to the legal next of kin only under a court order." },
+        { p: "For a wrongful death claim, the Medical Examiner’s case report - including any autopsy findings and toxicology - can be important evidence. It can confirm how the injuries caused the death and answer questions an insurer may raise about pre existing conditions. Families can contact Medical Examiner Public Services to find out how to get a copy; information is available on the [Medical Examiner’s website](https://me.lacounty.gov/). Photographs are not included in the report and are released to the legal next of kin only under a court order." },
       ],
     },
     {
@@ -50,7 +50,7 @@ const page: ServiceContent = {
       heading: "Fatal crash reports and the criminal investigation",
       blocks: [
         { p: "When a death happens on a City of Los Angeles street, the LAPD investigates; reports involving a fatality cannot be released online and must be requested by mail through [LAPD’s traffic report page](https://www.lapdonline.org/request-a-traffic-report/). For deaths on freeways and in unincorporated areas, the CHP investigates, and the report can be requested through the [CHP crash report page](https://www.chp.ca.gov/traffic/request-a-crash-report/)." },
-        { p: "If the driver may face criminal charges - for example, for DUI or hit-and-run - the criminal case and the family’s civil claim proceed separately. The family does not have to wait for the criminal case to end before protecting its claim. Our page on [fatal car accidents](/wrongful-death/car-accident) explains how the two interact." },
+        { p: "If the driver may face criminal charges - for example, for DUI or hit and run - the criminal case and the family’s civil claim proceed separately. The family does not have to wait for the criminal case to end before protecting its claim. Our page on [fatal car accidents](/wrongful-death/car-accident) explains how the two interact." },
       ],
     },
     {

@@ -6,13 +6,13 @@ const page: ServiceContent = {
   name: "Medical Malpractice Deaths",
   title: "Medical Malpractice Wrongful Death Lawyer",
   description:
-    "When medical negligence causes a death in California: the family’s claim, the 2026 MICRA death cap of $650,000, the 90-day notice, and strict deadlines.",
+    "When medical negligence causes a death in California: the family’s claim, the 2026 MICRA death cap of $650,000, the 90 day notice, and strict deadlines.",
   h1: "Wrongful Death from Medical Malpractice in California",
   heroText:
     "When a loved one dies after medical care that went wrong, families deserve honest answers. We help California families find out what happened and pursue accountability.",
-  summary: "When medical negligence takes a life: the family’s claim, MICRA’s $650,000 death cap for 2026, the 90-day notice rule, and short deadlines.",
+  summary: "When medical negligence takes a life: the family’s claim, MICRA’s $650,000 death cap for 2026, the 90 day notice rule, and short deadlines.",
   intro:
-    "If a doctor, hospital, or other health care provider failed to meet the standard of care and your loved one died as a result, your family may have a **wrongful death claim** for medical malpractice. These cases follow special California rules. Non-economic damages - such as the loss of love and companionship - are capped under **MICRA**: for 2026, the cap in a death case is **$650,000**, and separate caps can apply to different types of defendants. Economic damages, like lost financial support, are **not capped**. The deadline can be as short as **one year from discovery**, and a **90-day notice** must be given before suing. Here is how these claims work.",
+    "If a doctor, hospital, or other health care provider failed to meet the standard of care and your loved one died as a result, your family may have a **wrongful death claim** for medical malpractice. These cases follow special California rules. Non economic damages - such as the loss of love and companionship - are capped under **MICRA**: for 2026, the cap in a death case is **$650,000**, and separate caps can apply to different types of defendants. Economic damages, like lost financial support, are **not capped**. The deadline can be as short as **one year from discovery**, and a **90 day notice** must be given before suing. Here is how these claims work.",
   sections: [
     {
       heading: "When is a death medical malpractice?",
@@ -39,12 +39,12 @@ const page: ServiceContent = {
       ],
     },
     {
-      heading: "MICRA: California’s cap on non-economic damages",
+      heading: "MICRA: California’s cap on non economic damages",
       blocks: [
-        { p: "The Medical Injury Compensation Reform Act (MICRA), Civil Code §3333.2, limits **non-economic damages** in cases against health care providers. The law was amended in 2022, and the caps now rise on a fixed schedule." },
+        { p: "The Medical Injury Compensation Reform Act (MICRA), Civil Code §3333.2, limits **non economic damages** in cases against health care providers. The law was amended in 2022, and the caps now rise on a fixed schedule." },
         {
           ul: [
-            "**2026 cap in a death case: $650,000.** (The cap for non-death injury cases is $470,000.)",
+            "**2026 cap in a death case: $650,000.** (The cap for non death injury cases is $470,000.)",
             "**The death cap started at $500,000 in 2023** and rises by $50,000 every January 1 until it reaches $1,000,000 in 2033.",
             "**From 2034,** the caps increase by 2% each year.",
           ],
@@ -54,12 +54,12 @@ const page: ServiceContent = {
       ],
     },
     {
-      heading: "Deadlines and the 90-day notice",
+      heading: "Deadlines and the 90 day notice",
       blocks: [
-        { p: "Medical malpractice claims have their own deadline under Code of Civil Procedure §340.5: **three years from the injury or one year from discovery, whichever comes first**. The three-year period can be extended for fraud, intentional concealment, or a foreign object left in the patient’s body." },
+        { p: "Medical malpractice claims have their own deadline under Code of Civil Procedure §340.5: **three years from the injury or one year from discovery, whichever comes first**. The three year period can be extended for fraud, intentional concealment, or a foreign object left in the patient’s body." },
         { p: "Before filing, the family must give the health care provider at least **90 days’ notice** of the intent to sue (§364). If that notice is served within the last 90 days before the deadline, the deadline is extended by 90 days from the date of service." },
         { p: "If the hospital or clinic is run by a county, the state, or another public entity, a written government claim is generally due within **six months** (Government Code §911.2). See [wrongful death deadlines](/wrongful-death/statute-of-limitations) for how all of these rules fit together." },
-        { callout: "**Don’t wait for answers to come to you.** The one-year limit can run out long before three years have passed. If you have concerns about your loved one’s care, it is worth getting a legal review promptly." },
+        { callout: "**Don’t wait for answers to come to you.** The one year limit can run out long before three years have passed. If you have concerns about your loved one’s care, it is worth getting a legal review promptly." },
       ],
     },
     {
@@ -92,9 +92,9 @@ const page: ServiceContent = {
     },
   ],
   faqs: [
-    { q: "What is the MICRA cap for a wrongful death case in 2026?", a: "For 2026, the cap on non-economic damages in a death case is $650,000. Separate caps can apply to health care providers, health care institutions, and unaffiliated providers or institutions, so up to three caps may apply in one case. Economic damages are not capped." },
-    { q: "Does the MICRA cap limit lost income and funeral costs?", a: "No. MICRA caps only non-economic damages. Economic losses such as lost financial support, household services, medical bills, and funeral and burial costs are not capped." },
-    { q: "How long do we have to file a medical malpractice wrongful death claim?", a: "Medical negligence claims must generally be filed within three years from the injury or one year from discovery, whichever comes first. A 90-day notice of intent to sue is also required. Shorter rules apply if a public hospital is involved." },
+    { q: "What is the MICRA cap for a wrongful death case in 2026?", a: "For 2026, the cap on non economic damages in a death case is $650,000. Separate caps can apply to health care providers, health care institutions, and unaffiliated providers or institutions, so up to three caps may apply in one case. Economic damages are not capped." },
+    { q: "Does the MICRA cap limit lost income and funeral costs?", a: "No. MICRA caps only non economic damages. Economic losses such as lost financial support, household services, medical bills, and funeral and burial costs are not capped." },
+    { q: "How long do we have to file a medical malpractice wrongful death claim?", a: "Medical negligence claims must generally be filed within three years from the injury or one year from discovery, whichever comes first. A 90 day notice of intent to sue is also required. Shorter rules apply if a public hospital is involved." },
     { q: "How do we know if our loved one’s death was malpractice?", a: "Often families can’t tell on their own. A lawyer can obtain the medical records and have them reviewed by qualified medical professionals to determine whether the care fell below the standard and whether that caused the death." },
     { q: "Can we sue the hospital as well as the doctor?", a: "Possibly. Hospitals and other institutions can be responsible for their own negligence and, in some situations, for their staff. Under MICRA, a separate cap can apply to institutions." },
     { q: "Is a death in a nursing home handled the same way?", a: "Not always. California’s Elder Abuse Act may apply when an elder or dependent adult dies after neglect or abuse, and it has different rules on damages and attorney’s fees." },

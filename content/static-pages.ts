@@ -65,7 +65,7 @@ export const STATIC_PAGES: StaticPageSeed[] = [
     name: "All Guides",
     group: "Resources",
     title: "Injury Law Guides & Resources",
-    description: "Plain-English guides to California injury claims: collision reports, insurance adjusters, medical bills, pain and suffering, fees, and how long cases take.",
+    description: "Plain English guides to California injury claims: collision reports, insurance adjusters, medical bills, pain and suffering, fees, and how long cases take.",
   },
   {
     path: "/privacy",
@@ -79,7 +79,7 @@ export const STATIC_PAGES: StaticPageSeed[] = [
     name: "Disclaimer",
     group: "Legal",
     title: "Legal Disclaimer",
-    description: "Attorney advertising disclaimer for California Law: no legal advice, no attorney-client relationship, and prior results do not guarantee outcomes.",
+    description: "Attorney advertising disclaimer for California Law: no legal advice, no attorney client relationship, and prior results do not guarantee outcomes.",
   },
   {
     path: "/site-map",

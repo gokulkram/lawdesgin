@@ -16,7 +16,7 @@ const page: ServiceContent = {
   steps: {
     heading: "What to do after a serious burn",
     items: [
-      { title: "Get emergency medical care", text: "Burns can be deeper than they look, and the risk of infection is serious. Follow your doctors’ instructions and keep every follow-up appointment." },
+      { title: "Get emergency medical care", text: "Burns can be deeper than they look, and the risk of infection is serious. Follow your doctors’ instructions and keep every follow up appointment." },
       { title: "Keep the product or item involved", text: "If a device, appliance, battery, or piece of equipment caught fire or exploded, don’t throw it away, repair it, or return it. It may be the most important evidence in the case." },
       { title: "Photograph your injuries over time", text: "Take pictures of the burns at each stage of healing, and of the scene if you can. Scarring changes over months, and photos help show what you went through." },
       { title: "Get the incident reports", text: "Note the fire department, police, or workplace report numbers, and the names of witnesses." },
@@ -30,10 +30,10 @@ const page: ServiceContent = {
         { p: "Doctors describe burns by how deeply they damage the skin and the tissue underneath:" },
         {
           ul: [
-            "**First-degree burns** affect only the outer layer of skin. They are red and painful but usually heal without lasting damage.",
-            "**Second-degree burns** reach deeper layers of skin and cause blisters. Deeper second-degree burns can scar and may need grafting.",
-            "**Third-degree (full-thickness) burns** destroy the full depth of the skin. They usually require surgery and skin grafts and leave permanent scarring.",
-            "**Fourth-degree burns** extend into muscle, tendon, or bone and can lead to amputation or loss of function.",
+            "**First degree burns** affect only the outer layer of skin. They are red and painful but usually heal without lasting damage.",
+            "**Second degree burns** reach deeper layers of skin and cause blisters. Deeper second degree burns can scar and may need grafting.",
+            "**Third degree (full thickness) burns** destroy the full depth of the skin. They usually require surgery and skin grafts and leave permanent scarring.",
+            "**Fourth degree burns** extend into muscle, tendon, or bone and can lead to amputation or loss of function.",
           ],
         },
         { p: "The size and location of a burn matter as much as its depth. Burns to the face, hands, feet, joints, or a large part of the body can be especially serious. Burns can also come with smoke inhalation injuries, infections, and complications that affect the whole body." },
@@ -43,7 +43,7 @@ const page: ServiceContent = {
       heading: "Why burn injuries are often underestimated",
       blocks: [
         { p: "A burn may look like it has healed long before recovery is over. Scar tissue can tighten as it matures, limiting movement in the hands, arms, neck, or other joints, and may require more surgery years later. Grafted skin may be sensitive to heat and sun, itch, or break down." },
-        { p: "Burns also take an emotional toll. Visible scarring can affect confidence, relationships, and work, and many burn survivors experience anxiety, depression, or post-traumatic stress. These effects are real parts of the injury and belong in the claim." },
+        { p: "Burns also take an emotional toll. Visible scarring can affect confidence, relationships, and work, and many burn survivors experience anxiety, depression, or post traumatic stress. These effects are real parts of the injury and belong in the claim." },
       ],
     },
     {
@@ -52,7 +52,7 @@ const page: ServiceContent = {
         { p: "Burn injuries can come from heat, flames, chemicals, or electricity. Common causes include:" },
         {
           ul: [
-            "**Vehicle crashes and vehicle fires**, including fuel-system fires after a collision (see [car accidents](/car-accident-lawyer))",
+            "**Vehicle crashes and vehicle fires**, including fuel system fires after a collision (see [car accidents](/car-accident-lawyer))",
             "**Explosions** from gas leaks, propane tanks, or industrial equipment",
             "**Defective products** - overheating batteries, e-bikes and scooters, phones, appliances, heaters, and pressure cookers (see [defective products](/product-liability-lawyer))",
             "**Workplace accidents** in kitchens, construction sites, factories, and refineries (see [workplace injuries](/workplace-injury-lawyer))",
@@ -93,12 +93,12 @@ const page: ServiceContent = {
         { p: "A California burn injury claim can include:" },
         {
           ul: [
-            "**Medical expenses** - emergency and burn-unit care, skin grafts, reconstructive surgery, and future procedures",
+            "**Medical expenses** - emergency and burn unit care, skin grafts, reconstructive surgery, and future procedures",
             "**Rehabilitation and therapy** - physical and occupational therapy, pressure garments, and scar treatment",
             "**Lost income and lost earning capacity**",
             "**Scarring and disfigurement** - the lasting change to appearance and how it affects daily life",
             "**Pain and suffering** - including the pain of treatment, emotional distress, and loss of enjoyment of life",
-            "**Counseling** for anxiety, depression, or post-traumatic stress",
+            "**Counseling** for anxiety, depression, or post traumatic stress",
           ],
         },
         { p: "For the most severe burns, the lifetime cost of care can be very large. See [catastrophic injuries](/catastrophic-injury-lawyer) for how lifetime damages are proven." },
@@ -120,11 +120,11 @@ const page: ServiceContent = {
     },
   ],
   faqs: [
-    { q: "Can I get compensation for scarring?", a: "Yes. Scarring and disfigurement are part of the non-economic damages in a California injury claim, along with pain and suffering and emotional distress. The future cost of scar treatment and reconstructive surgery can also be included." },
+    { q: "Can I get compensation for scarring?", a: "Yes. Scarring and disfigurement are part of the non economic damages in a California injury claim, along with pain and suffering and emotional distress. The future cost of scar treatment and reconstructive surgery can also be included." },
     { q: "My phone or e-bike battery caught fire. Who is responsible?", a: "Often the manufacturer and the sellers of the product. In California they are strictly liable for defective products, so you generally don’t need to prove carelessness - only that the product was defective and caused the injury. Keep the device and don’t return it." },
     { q: "I was burned at work. Can I sue?", a: "Workers’ compensation is generally the only remedy against your employer, but you may have a separate claim against a third party - such as the maker of defective equipment, a contractor, or a property owner." },
     { q: "How long do I have to file a burn injury lawsuit in California?", a: "Generally two years from the date of injury. If a government entity may be responsible, a written claim is usually due within six months. Evidence should be preserved immediately." },
-    { q: "What if my child was burned?", a: "A claim can be brought on the child’s behalf. The two-year deadline is generally paused while the child is a minor, but not for claims against government entities, which still require a claim within six months." },
+    { q: "What if my child was burned?", a: "A claim can be brought on the child’s behalf. The two year deadline is generally paused while the child is a minor, but not for claims against government entities, which still require a claim within six months." },
     { q: "How much does it cost to hire California Law?", a: "Nothing upfront. We work on a contingency fee, so there is no attorney’s fee unless we win. How case costs are handled is explained in writing before we begin." },
   ],
   related: ["/catastrophic-injury-lawyer", "/product-liability-lawyer", "/workplace-injury-lawyer", "/car-accident-lawyer"],

@@ -9,10 +9,10 @@ const page: ServiceContent = {
     "Hit by a truck in San Diego County? Otay Mesa border freight, port truck routes, CHP truck inspections, crash reports and your claim. Free consultation.",
   h1: "San Diego Truck Accident Lawyer",
   heroText:
-    "Cross-border freight, port cargo and interstate trucking all meet on San Diego County roads. When a commercial truck causes a crash, we help injured people and families hold the right companies accountable - with no fee unless we win.",
+    "Cross border freight, port cargo and interstate trucking all meet on San Diego County roads. When a commercial truck causes a crash, we help injured people and families hold the right companies accountable - with no fee unless we win.",
   summary: "Truck crashes in San Diego County - Otay Mesa border freight, port traffic, I-5 and I-15 corridors, and the evidence that proves fault.",
   intro:
-    "If you were hurt in a crash with a big rig, delivery truck or other commercial vehicle in San Diego County, your case may involve more than one company - the driver, the motor carrier, the owner of the trailer, a shipper or a maintenance shop - and evidence that can be lost within weeks. San Diego adds its own layer: trucks crossing from Mexico at Otay Mesa, cargo moving out of the Port of San Diego’s marine terminals, and long-haul traffic on I-5 and I-15 that passes CHP inspection stations on the way in and out of the county. This page covers that local picture. For how liability, federal safety rules and insurance work in every California truck case, see our [California truck accident lawyer page](/truck-accident-lawyer).",
+    "If you were hurt in a crash with a big rig, delivery truck or other commercial vehicle in San Diego County, your case may involve more than one company - the driver, the motor carrier, the owner of the trailer, a shipper or a maintenance shop - and evidence that can be lost within weeks. San Diego adds its own layer: trucks crossing from Mexico at Otay Mesa, cargo moving out of the Port of San Diego’s marine terminals, and long haul traffic on I-5 and I-15 that passes CHP inspection stations on the way in and out of the county. This page covers that local picture. For how liability, federal safety rules and insurance work in every California truck case, see our [California truck accident lawyer page](/truck-accident-lawyer).",
   steps: {
     heading: "After a truck crash in San Diego County",
     items: [
@@ -27,9 +27,9 @@ const page: ServiceContent = {
     {
       heading: "Why San Diego County sees heavy truck traffic",
       blocks: [
-        { p: "San Diego’s truck traffic is shaped by the border. In 1994 the federal government closed the **San Ysidro** port of entry to commercial vehicles and rerouted them to the **Otay Mesa** port of entry, about six miles east. Trucks crossing northbound from Mexico are funneled onto **SR-905**, a six-lane freeway that runs from just west of I-5 east to the Otay Mesa crossing, and from there onto **I-805**, **SR-125** and **SR-11**. Freeway-to-freeway connectors between SR-905, SR-125 and SR-11 opened so that commercial and passenger vehicles leaving the crossing no longer have to use local roads, and a second crossing - **Otay Mesa East**, at the end of SR-11 - is under construction." },
+        { p: "San Diego’s truck traffic is shaped by the border. In 1994 the federal government closed the **San Ysidro** port of entry to commercial vehicles and rerouted them to the **Otay Mesa** port of entry, about six miles east. Trucks crossing northbound from Mexico are funneled onto **SR-905**, a six lane freeway that runs from just west of I-5 east to the Otay Mesa crossing, and from there onto **I-805**, **SR-125** and **SR-11**. Freeway to freeway connectors between SR-905, SR-125 and SR-11 opened so that commercial and passenger vehicles leaving the crossing no longer have to use local roads, and a second crossing - **Otay Mesa East**, at the end of SR-11 - is under construction." },
         { p: "Further east, the smaller **Tecate** crossing also handles commercial traffic. And on the waterfront, the Port of San Diego’s two cargo terminals send trucks onto city streets and freeways: the **Tenth Avenue Marine Terminal** in San Diego, which handles refrigerated, bulk and breakbulk cargo and has a designated truck route through Barrio Logan, and the **National City Marine Terminal**, the port’s vehicle import and export terminal on the south bay." },
-        { p: "Long-haul freight enters and leaves the county on **I-5** along the coast and **I-15** inland. These corridors mix heavy trucks with commuter traffic, so blind-spot lane changes, rear-end collisions at slowdowns and wide turns on surface streets near terminals and warehouses are real risks." },
+        { p: "Long haul freight enters and leaves the county on **I-5** along the coast and **I-15** inland. These corridors mix heavy trucks with commuter traffic, so blind spot lane changes, rear end collisions at slowdowns and wide turns on surface streets near terminals and warehouses are real risks." },
       ],
     },
     {
@@ -38,12 +38,12 @@ const page: ServiceContent = {
         { p: "The California Highway Patrol runs several commercial vehicle enforcement facilities in San Diego County, and their records can matter in a crash case:" },
         {
           ul: [
-            "**Otay Mesa** - a port-of-entry inspection facility for commercial vehicles entering California from Mexico, which also oversees the **Tecate** facility further east along the border. Officers inspect equipment, loading and driver qualifications, including sobriety and fatigue.",
+            "**Otay Mesa** - a port of entry inspection facility for commercial vehicles entering California from Mexico, which also oversees the **Tecate** facility further east along the border. Officers inspect equipment, loading and driver qualifications, including sobriety and fatigue.",
             "**San Onofre** - on Interstate 5 in northern San Diego County, inspecting northbound and southbound commercial traffic on the coast route.",
             "**Rainbow** - on Interstate 15 near Rainbow Valley Boulevard by Fallbrook, with facilities in both directions.",
           ],
         },
-        { p: "Prior inspection results and out-of-service orders for a truck or carrier can show a pattern of poor maintenance or rule violations. They don’t replace the crash investigation, but they help show whether a company knew - or should have known - about a problem before the crash." },
+        { p: "Prior inspection results and out of service orders for a truck or carrier can show a pattern of poor maintenance or rule violations. They don’t replace the crash investigation, but they help show whether a company knew - or should have known - about a problem before the crash." },
       ],
     },
     {
@@ -56,7 +56,7 @@ const page: ServiceContent = {
     {
       heading: "California and federal truck rules in brief",
       blocks: [
-        { p: "Trucks with three or more axles, and vehicles towing, are limited to **55 mph** in California (Veh. Code §22406). Federal hours-of-service rules let property-carrying drivers drive at most 11 hours within a 14-hour on-duty window after 10 hours off, and trucks record ELD and engine data that can show speed, braking and driving time. Fault is decided under California’s pure comparative fault rule, and an injury lawsuit generally must be filed within **two years** (CCP §335.1). If a public agency vehicle or a dangerous road condition was involved - an MTS bus, a city or county truck, or a state highway - a written government claim is usually due within **six months** (Gov. Code §911.2)." },
+        { p: "Trucks with three or more axles, and vehicles towing, are limited to **55 mph** in California (Veh. Code §22406). Federal hours of service rules let property carrying drivers drive at most 11 hours within a 14 hour on duty window after 10 hours off, and trucks record ELD and engine data that can show speed, braking and driving time. Fault is decided under California’s pure comparative fault rule, and an injury lawsuit generally must be filed within **two years** (CCP §335.1). If a public agency vehicle or a dangerous road condition was involved - an MTS bus, a city or county truck, or a state highway - a written government claim is usually due within **six months** (Gov. Code §911.2)." },
         { p: "Our [statewide truck accident page](/truck-accident-lawyer) explains who can be liable - carriers, brokers, shippers, maintenance companies and manufacturers - and the evidence that proves it. If a loved one was killed, see [fatal truck accidents](/wrongful-death/truck-accident)." },
       ],
     },

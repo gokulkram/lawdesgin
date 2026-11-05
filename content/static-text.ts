@@ -73,7 +73,7 @@ const HOME: HomeText = {
   },
   injury: {
     title: "Personal Injury",
-    text: "Serious-injury cases of every kind. We take on insurers and corporations to recover everything you’re owed.",
+    text: "Serious injury cases of every kind. We take on insurers and corporations to recover everything you’re owed.",
     button: "See all practice areas →",
   },
   death: {
@@ -113,7 +113,7 @@ const ABOUT: AboutText = {
   },
   story: {
     eyebrow: "Our Story",
-    title: "Big-firm results, with the care of people who know you",
+    title: "Big firm results, with the care of people who know you",
     paragraphs: [
       "California Law was founded by trial attorneys who grew tired of watching insurance companies take advantage of people at their lowest moments. We set out to build something different: a firm with the resources to take on any opponent, and the heart to treat every client like family.",
       "Today, from six offices across California, we focus our practice on personal injury and wrongful death - because that focus is what produces results. We don’t dabble. We do this every day, and we do it well.",
@@ -163,7 +163,7 @@ const PRIVACY: LegalText = {
             "**Accessibility settings.** If you use the accessibility menu, your choices (such as text size) are saved in your own browser’s local storage. They are not sent to us.",
           ],
         },
-        { p: "This website does not use advertising cookies or third-party analytics." },
+        { p: "This website does not use advertising cookies or third party analytics." },
       ],
     },
     {
@@ -186,11 +186,11 @@ const PRIVACY: LegalText = {
     },
     {
       heading: "Submitting a form does not make you a client",
-      blocks: [{ p: "Contacting us does not create an attorney-client relationship. Please don’t send confidential or time-sensitive details through this website until an attorney has agreed to represent you. We nonetheless treat every inquiry as confidential." }],
+      blocks: [{ p: "Contacting us does not create an attorney client relationship. Please don’t send confidential or time sensitive details through this website until an attorney has agreed to represent you. We nonetheless treat every inquiry as confidential." }],
     },
     {
       heading: "How long we keep it",
-      blocks: [{ p: "We keep inquiry information as long as needed to evaluate your matter, maintain conflict-check records, and meet our legal and professional record-keeping obligations." }],
+      blocks: [{ p: "We keep inquiry information as long as needed to evaluate your matter, maintain conflict check records, and meet our legal and professional record keeping obligations." }],
     },
     {
       heading: "Your California privacy rights",
@@ -216,11 +216,11 @@ const DISCLAIMER: LegalText = {
   body: [
     { heading: "Attorney advertising", blocks: [{ p: "This website is an advertisement for legal services under the California Rules of Professional Conduct." }] },
     { heading: "No legal advice", blocks: [{ p: "The information on this website is for general information only. It is not legal advice and is not a substitute for advice from a lawyer about your specific situation. Laws change, and how they apply depends on the facts of each case." }] },
-    { heading: "No attorney-client relationship", blocks: [{ p: "Viewing this website, submitting a form, or contacting us by phone or email does not create an attorney-client relationship. An attorney-client relationship is formed only when the firm agrees in writing to represent you. Until then, please don’t send confidential information you would not want shared." }] },
+    { heading: "No attorney client relationship", blocks: [{ p: "Viewing this website, submitting a form, or contacting us by phone or email does not create an attorney client relationship. An attorney client relationship is formed only when the firm agrees in writing to represent you. Until then, please don’t send confidential information you would not want shared." }] },
     { heading: "Results and testimonials", blocks: [{ p: "Prior results do not guarantee or predict a similar outcome in any future matter. Every case is different and is decided on its own facts. Testimonials reflect individual clients’ experiences and are not a guarantee of the outcome in your case. Figures shown on this website are illustrative." }] },
     { heading: "Deadlines", blocks: [{ p: "Legal claims are subject to strict time limits. Some - such as claims against government entities - can be as short as six months. Don’t delay seeking advice because of anything you read here." }] },
     { heading: "Where we practice", blocks: [{ p: "Our attorneys are licensed to practice law in California. We do not seek to represent anyone based on this website in a state where it does not comply with that state’s laws and rules." }] },
-    { heading: "Fees", blocks: [{ p: "“No fee unless we win” refers to attorney’s fees under a contingency-fee agreement. Case costs and how they are handled are explained in the written fee agreement before representation begins." }] },
+    { heading: "Fees", blocks: [{ p: "“No fee unless we win” refers to attorney’s fees under a contingency fee agreement. Case costs and how they are handled are explained in the written fee agreement before representation begins." }] },
     { heading: "Links to other websites", blocks: [{ p: "Links to outside websites are provided for convenience. We don’t control and aren’t responsible for their content." }] },
   ],
 };
@@ -276,7 +276,7 @@ const WRONGFUL_DEATH: WrongfulDeathText = {
   guidesTitle: "Understand your family’s rights",
   sidebar: {
     title: "Talk to us, free",
-    text: "A confidential, no-obligation conversation with a wrongful death attorney - available 24/7.",
+    text: "A confidential, no obligation conversation with a wrongful death attorney - available 24/7.",
     button: "Request a Free Review",
     callText: "Or call us anytime:",
     statsTitle: "A track record families trust",

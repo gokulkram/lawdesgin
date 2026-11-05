@@ -35,7 +35,7 @@ const page: ArticleContent = {
             "**County sheriff’s departments** - handle crashes in some unincorporated areas and in cities that contract with the sheriff for policing.",
           ],
         },
-        { p: "If you aren’t sure, call the non-emergency line of the agency you think responded and give them the date, time, and location. If it isn’t theirs, they can usually tell you who has it. The CHP’s website at [chp.ca.gov](https://www.chp.ca.gov/) has a “Request a Traffic Crash Report” link for CHP-investigated collisions." },
+        { p: "If you aren’t sure, call the non emergency line of the agency you think responded and give them the date, time, and location. If it isn’t theirs, they can usually tell you who has it. The CHP’s website at [chp.ca.gov](https://www.chp.ca.gov/) has a “Request a Traffic Crash Report” link for CHP investigated collisions." },
         { callout: "**No report at all?** Officers don’t always write a full report - for example, after a minor crash with no reported injuries. If no report exists, your own photos, witness contacts, and medical records become even more important, and you still have your separate duty to report to the DMV (see below)." },
       ],
     },
@@ -98,7 +98,7 @@ const page: ArticleContent = {
       heading: "The police report doesn’t replace your DMV SR-1",
       blocks: [
         { p: "Getting the police report and reporting to the DMV are two different things. Under **Vehicle Code §16000**, each driver must report a collision to the DMV within **10 days** on form **SR-1** if anyone was injured or killed, or if property damage was more than **$1,000** - whether or not police came to the scene and whoever was at fault." },
-        { callout: "**Don’t miss the 10-day SR-1 deadline.** The police report goes to the agency that wrote it, not to the DMV for you. Each driver involved must file their own SR-1." },
+        { callout: "**Don’t miss the 10 day SR-1 deadline.** The police report goes to the agency that wrote it, not to the DMV for you. Each driver involved must file their own SR-1." },
       ],
     },
   ],

@@ -16,7 +16,7 @@ const page: ServiceContent = {
   steps: {
     heading: "After a truck crash in Los Angeles County",
     items: [
-      { title: "Get medical care", text: "Call 911. Even a low-speed impact with a loaded truck can cause serious injuries. Follow up on every symptom." },
+      { title: "Get medical care", text: "Call 911. Even a low speed impact with a loaded truck can cause serious injuries. Follow up on every symptom." },
       { title: "Record the truck’s identifiers", text: "Photograph the company name on the cab, the USDOT or carrier number, the tractor and trailer plates, and any container number. With port trucks, the container, the chassis and the tractor may each belong to a different company." },
       { title: "Get the CHP report number", text: "Most truck crashes on LA freeways are investigated by the CHP. Ask the officer for the report number and the CHP Area office handling it." },
       { title: "Don’t give a statement to the carrier", text: "Trucking companies and their insurers often send investigators quickly. You don’t have to talk to them - refer them to your lawyer." },
@@ -28,14 +28,14 @@ const page: ServiceContent = {
       heading: "Port trucks and the freight corridors of Los Angeles",
       blocks: [
         { p: "The **Port of Los Angeles** and the **Port of Long Beach** sit side by side in San Pedro Bay. Trucks serving the terminals use a network of freeways - the **I-110 Harbor Freeway**, the **I-710 Long Beach Freeway**, the **I-405 San Diego Freeway**, the **SR-91 Artesia Freeway**, the **SR-47/SR-103 Terminal Island Freeway**, and SR-47 over the **Vincent Thomas Bridge**." },
-        { p: "The I-710 is the principal route for container trucks moving between the port terminals and the intermodal rail yards in **Commerce and Vernon**, so the corridor from Long Beach north toward State Route 60 carries heavy truck traffic alongside commuters. Rail freight also runs on the **Alameda Corridor**, a 20-mile rail expressway between the ports and the rail yards near downtown Los Angeles, and trucks carry cargo from the ports to warehouses and distribution centers across the region." },
-        { p: "Port drayage crashes raise questions that ordinary truck cases don’t. The driver may be an owner-operator working under a motor carrier’s authority; the chassis may come from a leasing pool; the container may belong to an ocean carrier; and a terminal may have loaded it. Each relationship can matter for who is responsible for the driver’s conduct, a failed brake or light, or an overweight or poorly loaded container." },
+        { p: "The I-710 is the principal route for container trucks moving between the port terminals and the intermodal rail yards in **Commerce and Vernon**, so the corridor from Long Beach north toward State Route 60 carries heavy truck traffic alongside commuters. Rail freight also runs on the **Alameda Corridor**, a 20 mile rail expressway between the ports and the rail yards near downtown Los Angeles, and trucks carry cargo from the ports to warehouses and distribution centers across the region." },
+        { p: "Port drayage crashes raise questions that ordinary truck cases don’t. The driver may be an owner operator working under a motor carrier’s authority; the chassis may come from a leasing pool; the container may belong to an ocean carrier; and a terminal may have loaded it. Each relationship can matter for who is responsible for the driver’s conduct, a failed brake or light, or an overweight or poorly loaded container." },
       ],
     },
     {
       heading: "I-5 north: truck lanes on the grade",
       blocks: [
-        { p: "North of the San Fernando Valley, I-5 climbs toward Santa Clarita on its way to the Central Valley - a major freight corridor for trucks leaving Los Angeles. Near the **State Route 14 split** in Los Angeles County, Caltrans operates **truck-only lanes** to separate slower trucks from faster traffic on the grade. (Farther north, Tejon Pass - the Grapevine - lies beyond the county line, in Kern County.)" },
+        { p: "North of the San Fernando Valley, I-5 climbs toward Santa Clarita on its way to the Central Valley - a major freight corridor for trucks leaving Los Angeles. Near the **State Route 14 split** in Los Angeles County, Caltrans operates **truck only lanes** to separate slower trucks from faster traffic on the grade. (Farther north, Tejon Pass - the Grapevine - lies beyond the county line, in Kern County.)" },
         { p: "Long grades put heavy demands on a truck’s brakes, and merges where truck lanes rejoin general traffic require careful lane changes. Brake maintenance records, the driver’s hours, and engine data showing speed and braking on the descent can all be key evidence in a crash on this stretch." },
       ],
     },
@@ -57,7 +57,7 @@ const page: ServiceContent = {
     {
       heading: "California truck law in brief",
       blocks: [
-        { p: "Under Vehicle Code §22406, trucks with three or more axles and vehicles towing a trailer are limited to **55 mph**, even where cars may go 65. Federal hours-of-service rules limit a property-carrying driver to 11 hours of driving within a 14-hour window after 10 hours off duty. When several companies share fault, Civil Code §1431.2 divides non-economic damages by each defendant’s share. If a truck crash took a loved one’s life, see [fatal truck accidents](/wrongful-death/truck-accident) and our [Los Angeles wrongful death page](/los-angeles/wrongful-death-lawyer)." },
+        { p: "Under Vehicle Code §22406, trucks with three or more axles and vehicles towing a trailer are limited to **55 mph**, even where cars may go 65. Federal hours of service rules limit a property carrying driver to 11 hours of driving within a 14 hour window after 10 hours off duty. When several companies share fault, Civil Code §1431.2 divides non economic damages by each defendant’s share. If a truck crash took a loved one’s life, see [fatal truck accidents](/wrongful-death/truck-accident) and our [Los Angeles wrongful death page](/los-angeles/wrongful-death-lawyer)." },
       ],
     },
     {
@@ -71,7 +71,7 @@ const page: ServiceContent = {
   faqs: [
     { q: "Who is responsible when a port truck causes a crash in Los Angeles?", a: "Possibly several companies: the driver, the motor carrier whose authority the truck runs under, the company that owns or leases the chassis, the party that loaded the container, and a maintenance shop. Sorting out those relationships is one of the first steps in a port truck case." },
     { q: "Who investigates truck crashes on the 710 or the 110?", a: "Usually the California Highway Patrol, which has primary jurisdiction on freeways, including those that run through the City of Los Angeles. You can request the report online through the CHP Crash Portal or with form CHP 190." },
-    { q: "What are the truck lanes on I-5 near Santa Clarita?", a: "Caltrans operates truck-only lanes on I-5 near the State Route 14 split to separate slower trucks from faster traffic on the grade. Crashes where those lanes merge with general traffic can raise questions about lane changes, speed and braking." },
+    { q: "What are the truck lanes on I-5 near Santa Clarita?", a: "Caltrans operates truck only lanes on I-5 near the State Route 14 split to separate slower trucks from faster traffic on the grade. Crashes where those lanes merge with general traffic can raise questions about lane changes, speed and braking." },
     { q: "How fast can a big rig legally drive on LA freeways?", a: "Trucks with three or more axles, and vehicles towing a trailer, are limited to 55 mph in California, even on freeways posted at 65." },
     { q: "What if the truck belonged to the city or county?", a: "A written claim generally must be presented within six months - to the City Clerk for City of Los Angeles vehicles, or to the Board of Supervisors’ Executive Office for County vehicles. Other public agencies have their own procedures." },
     { q: "Where would my Los Angeles truck accident lawsuit be filed?", a: "In the Superior Court of Los Angeles County - at the Stanley Mosk Courthouse downtown or the Antelope Valley Courthouse in Lancaster under the court’s Local Rule 2.3." },

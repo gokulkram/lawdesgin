@@ -91,7 +91,7 @@ export default function LeadDialog({ title, text, autoOpenOn = [], autoOpenAfter
   }, [auto, autoOpenAfter]);
 
   return (
-    <dialog ref={ref} id="lead-form" className="lead-modal" aria-labelledby="lead-modal-title">
+    <dialog ref={ref} id="lead-form" className="lead-modal" aria-labelledby="lead-modal-title" data-lenis-prevent>
       <div className="lead-card lead-modal__card">
         {/* a link, so it also closes the no-JavaScript :target version */}
         <a href="#" className="lead-modal__close" aria-label="Close" onClick={(e) => { e.preventDefault(); ref.current?.close(); }}>&times;</a>

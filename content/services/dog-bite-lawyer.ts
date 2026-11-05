@@ -6,7 +6,7 @@ const page: ServiceContent = {
   name: "Dog Bites",
   title: "California Dog Bite Lawyer",
   description:
-    "Bitten by a dog in California? Owners are strictly liable for most bites. Learn what to do, who pays, claims for children, and the 2-year deadline.",
+    "Bitten by a dog in California? Owners are strictly liable for most bites. Learn what to do, who pays, claims for children, and the 2 year deadline.",
   h1: "California Dog Bite Lawyer",
   heroText:
     "A dog bite can leave deep wounds, infections, scars, and lasting fear - especially for children. California law puts responsibility on the dog’s owner, and we help victims recover what they’re owed, with no fee unless we win.",
@@ -27,7 +27,7 @@ const page: ServiceContent = {
     {
       heading: "California’s strict liability dog bite law",
       blocks: [
-        { p: "Many people assume an owner is responsible only if they knew their dog was dangerous - the so-called “one bite” rule. **California does not work that way.** Under Civil Code §3342, a dog owner is liable for damages when the dog bites someone who is:" },
+        { p: "Many people assume an owner is responsible only if they knew their dog was dangerous - the so called “one bite” rule. **California does not work that way.** Under Civil Code §3342, a dog owner is liable for damages when the dog bites someone who is:" },
         {
           ul: [
             "**In a public place** - a sidewalk, park, street, or store, or",
@@ -39,7 +39,7 @@ const page: ServiceContent = {
       ],
     },
     {
-      heading: "Bites vs. other dog-related injuries",
+      heading: "Bites vs. other dog related injuries",
       blocks: [
         { p: "The strict liability rule in §3342 covers **bites**. Dogs injure people in other ways too - knocking someone down, jumping on a child, or chasing a cyclist or jogger into traffic or a fall." },
         { p: "Those injuries can still lead to a claim, but they are usually handled as **negligence** cases. That means showing the owner failed to use reasonable care - for example, letting the dog run loose, ignoring a leash law, or failing to control a dog they knew was aggressive. Evidence about the dog’s history and the owner’s behavior matters more in these cases." },
@@ -51,7 +51,7 @@ const page: ServiceContent = {
       blocks: [
         { p: "Children are especially vulnerable to dog attacks. Because of their height, they are more likely to be bitten on the face, head, and neck, and the injuries can be severe. A child may need reconstructive surgery, and some need further procedures as they grow." },
         { p: "Children can also be left with lasting fear, nightmares, or anxiety around animals. The cost of counseling and the emotional effects of the attack can be part of the claim." },
-        { p: "A claim can be brought on a child’s behalf. In general, the two-year deadline is paused while the injured person is a minor (Code of Civil Procedure §352). But waiting has real costs - witnesses move, memories fade, and records become harder to find. It is usually wise to act much sooner." },
+        { p: "A claim can be brought on a child’s behalf. In general, the two year deadline is paused while the injured person is a minor (Code of Civil Procedure §352). But waiting has real costs - witnesses move, memories fade, and records become harder to find. It is usually wise to act much sooner." },
       ],
     },
     {
@@ -79,7 +79,7 @@ const page: ServiceContent = {
             "**Lost income** - time away from work during treatment and recovery",
             "**Scarring and disfigurement** - especially for injuries to the face or hands",
             "**Pain and suffering** - physical pain, emotional distress, anxiety, and loss of enjoyment of life",
-            "**Counseling** for fear, anxiety, or post-traumatic stress after the attack",
+            "**Counseling** for fear, anxiety, or post traumatic stress after the attack",
           ],
         },
         { p: "If a dog attack causes catastrophic injuries, see [catastrophic injuries](/catastrophic-injury-lawyer) for how lifetime damages are documented." },
@@ -106,7 +106,7 @@ const page: ServiceContent = {
     { q: "The dog knocked me down but didn’t bite me. Do I have a claim?", a: "Possibly. Injuries that aren’t bites are generally handled as negligence claims, so you would need to show the owner failed to use reasonable care - for example, by letting the dog run loose or failing to control it." },
     { q: "Will my claim be paid by my friend or neighbor personally?", a: "Usually not. Most dog bite claims are paid by the owner’s homeowner’s or renter’s insurance." },
     { q: "How long do I have to file a dog bite claim?", a: "Generally two years from the date of the bite. For children, the deadline is usually paused until they turn 18, but if a public agency is involved, a written claim is generally due within six months." },
-    { q: "Should I report the bite even if it seems minor?", a: "Yes. Reporting to animal control creates an official record and helps confirm the dog’s vaccination status. Minor-looking bites can still become infected or leave scars." },
+    { q: "Should I report the bite even if it seems minor?", a: "Yes. Reporting to animal control creates an official record and helps confirm the dog’s vaccination status. Minor looking bites can still become infected or leave scars." },
     { q: "How much does it cost to hire California Law?", a: "Nothing upfront. We work on a contingency fee, so there is no attorney’s fee unless we win. How case costs are handled is explained in writing before we begin." },
   ],
   related: ["/premises-liability-lawyer", "/catastrophic-injury-lawyer", "/government-claims-lawyer"],

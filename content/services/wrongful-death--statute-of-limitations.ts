@@ -10,9 +10,9 @@ const page: ServiceContent = {
   h1: "California Wrongful Death Statute of Limitations",
   heroText:
     "Grief does not follow a schedule, but the law does. This guide explains every deadline that can affect your family’s claim, so you can take the time you need without losing your rights.",
-  summary: "Every deadline that can affect a California wrongful death claim - the 2-year rule, medical malpractice limits, government claims, and minors.",
+  summary: "Every deadline that can affect a California wrongful death claim - the 2 year rule, medical malpractice limits, government claims, and minors.",
   intro:
-    "In California, a wrongful death lawsuit generally must be filed within **two years of the date of death** (Code of Civil Procedure §335.1). But that is not the only deadline. If a city, county, state agency, or public employee may be responsible, a written government claim is usually due within **six months**. If the death was caused by medical negligence, a shorter limit - as little as **one year from discovery** - can apply, along with a required 90-day notice. And the rules that pause deadlines for minors do not work the way many families assume. Below is each deadline, what starts the clock, and what can change it.",
+    "In California, a wrongful death lawsuit generally must be filed within **two years of the date of death** (Code of Civil Procedure §335.1). But that is not the only deadline. If a city, county, state agency, or public employee may be responsible, a written government claim is usually due within **six months**. If the death was caused by medical negligence, a shorter limit - as little as **one year from discovery** - can apply, along with a required 90 day notice. And the rules that pause deadlines for minors do not work the way many families assume. Below is each deadline, what starts the clock, and what can change it.",
   sections: [
     {
       heading: "Quick reference: California wrongful death deadlines",
@@ -42,10 +42,10 @@ const page: ServiceContent = {
       heading: "Deaths caused by medical negligence",
       blocks: [
         { p: "When a death results from the negligence of a doctor, hospital, or other health care provider, the medical negligence deadline in §340.5 applies. The lawsuit must be filed within **three years from the injury or one year from when the injury was discovered, whichever comes first**." },
-        { p: "Because the shorter period controls, the one-year limit can expire long before three years have passed. Families should not assume they have three years." },
-        { p: "The three-year limit can be extended (tolled) for **fraud**, **intentional concealment**, or when a **foreign object** was left in the patient’s body." },
-        { callout: "**The 90-day notice rule.** Under §364, you must give a health care provider at least **90 days’ notice** of your intent to sue before filing. If that notice is served within the last 90 days before the deadline, the deadline is extended by 90 days from the date of service. Timing the notice correctly is critical." },
-        { p: "For more on these cases, including California’s cap on non-economic damages, see [medical malpractice deaths](/wrongful-death/medical-malpractice)." },
+        { p: "Because the shorter period controls, the one year limit can expire long before three years have passed. Families should not assume they have three years." },
+        { p: "The three year limit can be extended (tolled) for **fraud**, **intentional concealment**, or when a **foreign object** was left in the patient’s body." },
+        { callout: "**The 90 day notice rule.** Under §364, you must give a health care provider at least **90 days’ notice** of your intent to sue before filing. If that notice is served within the last 90 days before the deadline, the deadline is extended by 90 days from the date of service. Timing the notice correctly is critical." },
+        { p: "For more on these cases, including California’s cap on non economic damages, see [medical malpractice deaths](/wrongful-death/medical-malpractice)." },
       ],
     },
     {
@@ -59,15 +59,15 @@ const page: ServiceContent = {
             "**If the claim is rejected in writing,** you generally have **six months** from the date the notice was delivered or mailed to file a lawsuit (§945.6). If the entity never sends written notice, the deadline is two years.",
           ],
         },
-        { p: "The six-month deadline catches many families by surprise, especially when it is not obvious at first that a public entity played a role. Our page on [claims against government entities](/government-claims-lawyer) walks through the process step by step." },
+        { p: "The six month deadline catches many families by surprise, especially when it is not obvious at first that a public entity played a role. Our page on [claims against government entities](/government-claims-lawyer) walks through the process step by step." },
       ],
     },
     {
       heading: "Minors and people who lack legal capacity",
       blocks: [
         { p: "Under §352, the deadline is paused (tolled) while **the injured person** is a minor or lacks legal capacity. The rule is written in terms of the person who was injured." },
-        { p: "Families sometimes assume that because a surviving child is under 18, they have years longer to bring a wrongful death claim. **Do not rely on that.** Whether any extra time is available in a death case depends on the specific facts and claims, and the safest course is to treat the two-year deadline as firm for everyone in the family." },
-        { callout: "**No pause for government claims.** The §352 rule does **not** apply to claims that require a government claim. The six-month deadline under §911.2 applies even when a minor is involved. A narrow late-claim route exists in some situations involving minors (Government Code §911.6), but it has its own strict limits - don’t rely on it. File within six months." },
+        { p: "Families sometimes assume that because a surviving child is under 18, they have years longer to bring a wrongful death claim. **Do not rely on that.** Whether any extra time is available in a death case depends on the specific facts and claims, and the safest course is to treat the two year deadline as firm for everyone in the family." },
+        { callout: "**No pause for government claims.** The §352 rule does **not** apply to claims that require a government claim. The six month deadline under §911.2 applies even when a minor is involved. A narrow late claim route exists in some situations involving minors (Government Code §911.6), but it has its own strict limits - don’t rely on it. File within six months." },
       ],
     },
     {
@@ -82,7 +82,7 @@ const page: ServiceContent = {
         {
           ul: [
             "**Write down the key dates:** the date of the incident and the date of death",
-            "**Ask whether any public entity was involved** - a government vehicle, public road, public hospital, or public employee. If so, the six-month clock may already be running.",
+            "**Ask whether any public entity was involved** - a government vehicle, public road, public hospital, or public employee. If so, the six month clock may already be running.",
             "**Keep records together:** death certificate, police or incident reports, medical records, and bills",
             "**Don’t let insurance talks stand in for a lawsuit** - negotiations do not pause the deadline",
             "**Get a free legal review** so the correct deadline for your situation is identified and calendared",
@@ -102,10 +102,10 @@ const page: ServiceContent = {
     { q: "How long do I have to file a wrongful death lawsuit in California?", a: "Generally two years from the date of death. Shorter deadlines can apply - six months for a government claim, and as little as one year from discovery for a death caused by medical negligence." },
     { q: "Does the deadline start on the date of the accident or the date of death?", a: "For the wrongful death claim, the two years run from the date of death. The person’s own claim, brought as a survival action, follows its own timing rules." },
     { q: "Does filing an insurance claim stop the clock?", a: "No. Only filing a lawsuit in court meets the statute of limitations. Insurance negotiations do not pause or extend it." },
-    { q: "Can the deadline be extended because my child is a minor?", a: "Don’t count on it. California’s tolling rule for minors is written for the injured person, and it does not apply at all to claims against government entities. Treat the two-year deadline as firm and get advice on your situation." },
+    { q: "Can the deadline be extended because my child is a minor?", a: "Don’t count on it. California’s tolling rule for minors is written for the injured person, and it does not apply at all to claims against government entities. Treat the two year deadline as firm and get advice on your situation." },
     { q: "What if the death involved a government vehicle or public road?", a: "A written government claim is generally due within six months. If it is rejected in writing, you typically have six months from the notice to file a lawsuit." },
     { q: "What happens if we miss the deadline?", a: "A claim filed after the deadline is generally barred, which means the family can lose the right to recover entirely. That is why it is important to confirm the deadline early." },
-    { q: "Is the medical malpractice deadline different for a death?", a: "Medical negligence claims follow §340.5: three years from the injury or one year from discovery, whichever comes first, plus a 90-day notice requirement before suing." },
+    { q: "Is the medical malpractice deadline different for a death?", a: "Medical negligence claims follow §340.5: three years from the injury or one year from discovery, whichever comes first, plus a 90 day notice requirement before suing." },
   ],
   related: ["/wrongful-death/who-can-file", "/government-claims-lawyer", "/wrongful-death/medical-malpractice", "/wrongful-death/survival-action"],
   updated: "2026-10-02",

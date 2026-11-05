@@ -10,14 +10,14 @@ const page: ArticleContent = {
   h1: "How Pain and Suffering Works in a California Injury Claim",
   heroText:
     "Pain and suffering can be a major part of a serious injury claim - and the hardest to prove. Here is what it covers, what evidence matters, and the rules that can limit it.",
-  summary: "What non-economic damages cover, how pain and suffering is proven, why “multipliers” aren’t the law, and the California rules that can limit it.",
+  summary: "What non economic damages cover, how pain and suffering is proven, why “multipliers” aren’t the law, and the California rules that can limit it.",
   intro:
-    "Pain and suffering is compensation for the non-financial harm an injury causes - physical pain, emotional distress, and the loss of the life you had before. California law sets **no formula** for calculating it: a judge or jury decides a fair amount based on the evidence, and in a settlement it is negotiated using that same evidence. It is proven through medical records, testimony, and everyday details of how the injury changed your life. Certain rules can limit it, including caps in medical malpractice cases and a bar for uninsured drivers.",
+    "Pain and suffering is compensation for the non financial harm an injury causes - physical pain, emotional distress, and the loss of the life you had before. California law sets **no formula** for calculating it: a judge or jury decides a fair amount based on the evidence, and in a settlement it is negotiated using that same evidence. It is proven through medical records, testimony, and everyday details of how the injury changed your life. Certain rules can limit it, including caps in medical malpractice cases and a bar for uninsured drivers.",
   sections: [
     {
-      heading: "What “non-economic damages” means",
+      heading: "What “non economic damages” means",
       blocks: [
-        { p: "California injury claims include two main kinds of damages. **Economic damages** are losses with a price tag - medical bills, lost wages, reduced earning capacity, and property damage. **Non-economic damages** are the losses that don’t come with a receipt. They include:" },
+        { p: "California injury claims include two main kinds of damages. **Economic damages** are losses with a price tag - medical bills, lost wages, reduced earning capacity, and property damage. **Non economic damages** are the losses that don’t come with a receipt. They include:" },
         {
           ul: [
             "**Physical pain** - from the injury itself, surgeries, and recovery",
@@ -39,9 +39,9 @@ const page: ArticleContent = {
             "**Medical records** - diagnoses, pain levels recorded at visits, surgeries, prescriptions, physical therapy notes, and any mental health treatment",
             "**Testimony from treating doctors** about the injury, how painful the treatment is, and what to expect in the future",
             "**Your own testimony** about what the pain feels like and how it affects each day",
-            "**Family, friends, and co-workers** who can describe the difference between who you were before and after the injury",
+            "**Family, friends, and co workers** who can describe the difference between who you were before and after the injury",
             "**Photos and video** of injuries, scars, medical equipment, and the recovery process",
-            "**Daily-life evidence** - missed events, activities you’ve given up, help you now need at home",
+            "**Daily life evidence** - missed events, activities you’ve given up, help you now need at home",
           ],
         },
         { callout: "**Keep a pain journal.** A few lines each day - your pain level, which activities were hard or impossible, sleep, mood, and medical appointments - creates a record written at the time, not reconstructed from memory later. It also helps you answer questions accurately in a deposition." },
@@ -51,17 +51,17 @@ const page: ArticleContent = {
     {
       heading: "Is there a formula? The “multiplier” myth",
       blocks: [
-        { p: "You may have read that pain and suffering is calculated by multiplying your medical bills by a number, or by assigning a dollar amount per day. Online calculators often use these methods. **They are not California law.** No California statute sets a multiplier or a per-day rate." },
+        { p: "You may have read that pain and suffering is calculated by multiplying your medical bills by a number, or by assigning a dollar amount per day. Online calculators often use these methods. **They are not California law.** No California statute sets a multiplier or a per day rate." },
         { p: "Instead, a judge or jury decides what amount fairly compensates for the harm, based on the evidence. Two people with the same medical bills can have very different pain and suffering: a fracture that heals cleanly is not the same as one that ends a career or a favorite activity." },
-        { p: "Settlement discussions turn on the same things a judge or jury would weigh: the severity and permanence of the injury, the quality of the evidence, how clear fault is, and how credible the injured person is. A rule-of-thumb number from a calculator can’t account for those things - so it shouldn’t be used to decide whether an offer is fair." },
+        { p: "Settlement discussions turn on the same things a judge or jury would weigh: the severity and permanence of the injury, the quality of the evidence, how clear fault is, and how credible the injured person is. A rule of thumb number from a calculator can’t account for those things - so it shouldn’t be used to decide whether an offer is fair." },
       ],
     },
     {
       heading: "California rules that can limit pain and suffering",
       blocks: [
-        { p: "**Uninsured drivers (Proposition 213).** Under Civil Code §3333.4, you generally cannot recover non-economic damages if you were convicted of DUI for the accident, were the owner of an uninsured vehicle involved in the accident, or were driving and can’t establish financial responsibility. You can still recover economic damages. One exception: an uninsured owner hit by a driver who was under the influence can still recover non-economic damages. See [car accident claims](/car-accident-lawyer)." },
-        { p: "**Medical malpractice caps (MICRA).** Civil Code §3333.2 caps non-economic damages against health care providers. In **2026**, the caps are **$470,000** in injury cases and **$650,000** in death cases, and they rise each January 1. Separate caps can apply to health care providers, health care institutions, and unaffiliated providers or institutions - up to three caps in one case. Economic damages, such as medical bills and lost earnings, are not capped. See [medical malpractice](/medical-malpractice-lawyer)." },
-        { p: "**Several defendants (Proposition 51).** Under Civil Code §1431.2, each defendant pays non-economic damages only in proportion to its own percentage of fault. If one defendant is 30% at fault, it pays 30% of the pain and suffering award. Economic damages can still be collected in full from any responsible defendant." },
+        { p: "**Uninsured drivers (Proposition 213).** Under Civil Code §3333.4, you generally cannot recover non economic damages if you were convicted of DUI for the accident, were the owner of an uninsured vehicle involved in the accident, or were driving and can’t establish financial responsibility. You can still recover economic damages. One exception: an uninsured owner hit by a driver who was under the influence can still recover non economic damages. See [car accident claims](/car-accident-lawyer)." },
+        { p: "**Medical malpractice caps (MICRA).** Civil Code §3333.2 caps non economic damages against health care providers. In **2026**, the caps are **$470,000** in injury cases and **$650,000** in death cases, and they rise each January 1. Separate caps can apply to health care providers, health care institutions, and unaffiliated providers or institutions - up to three caps in one case. Economic damages, such as medical bills and lost earnings, are not capped. See [medical malpractice](/medical-malpractice-lawyer)." },
+        { p: "**Several defendants (Proposition 51).** Under Civil Code §1431.2, each defendant pays non economic damages only in proportion to its own percentage of fault. If one defendant is 30% at fault, it pays 30% of the pain and suffering award. Economic damages can still be collected in full from any responsible defendant." },
         { p: "**Your own share of fault.** California uses pure comparative fault: you can recover even if you were partly to blame, but your award - including pain and suffering - is reduced by your percentage of fault." },
       ],
     },
@@ -77,8 +77,8 @@ const page: ArticleContent = {
     { q: "How is pain and suffering calculated in California?", a: "There is no formula in California law. A judge or jury awards an amount that fairly compensates for the harm based on the evidence. Settlement discussions turn on the same evidence - severity, permanence, proof, and fault." },
     { q: "Do insurance companies use a multiplier for pain and suffering?", a: "You will see multipliers in online calculators, but they are not part of California law and can’t account for the facts that drive value - how severe and permanent the injury is, the evidence, and fault." },
     { q: "Can I get pain and suffering if I was partly at fault?", a: "Yes. Under California’s pure comparative fault rule, your total award, including pain and suffering, is reduced by your percentage of fault." },
-    { q: "Can I get pain and suffering if I didn’t have car insurance?", a: "Generally not. Proposition 213 bars uninsured vehicle owners from recovering non-economic damages, though you can still recover economic damages such as medical bills. An exception applies if the other driver was under the influence." },
-    { q: "Is pain and suffering capped in California?", a: "In medical malpractice cases, yes. MICRA caps non-economic damages against health care providers - $470,000 for injury and $650,000 for death in 2026, with separate caps possible in one case." },
+    { q: "Can I get pain and suffering if I didn’t have car insurance?", a: "Generally not. Proposition 213 bars uninsured vehicle owners from recovering non economic damages, though you can still recover economic damages such as medical bills. An exception applies if the other driver was under the influence." },
+    { q: "Is pain and suffering capped in California?", a: "In medical malpractice cases, yes. MICRA caps non economic damages against health care providers - $470,000 for injury and $650,000 for death in 2026, with separate caps possible in one case." },
     { q: "Does a pain journal really help?", a: "Yes. A daily record of pain levels, limits on activities, sleep, and mood, written at the time, is often more convincing than memories pieced together later." },
   ],
   services: ["/car-accident-lawyer", "/catastrophic-injury-lawyer", "/brain-injury-lawyer", "/medical-malpractice-lawyer"],

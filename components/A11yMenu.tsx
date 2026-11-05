@@ -96,7 +96,7 @@ export default function A11yMenu() {
         </svg>
       </button>
 
-      <div ref={panelRef} className="a11y__panel" id="a11y-panel" role="dialog" aria-label="Accessibility settings" hidden={!open}>
+      <div ref={panelRef} className="a11y__panel" id="a11y-panel" role="dialog" aria-label="Accessibility settings" hidden={!open} data-lenis-prevent>
         <div className="a11y__head">
           <h2 className="a11y__title">Accessibility</h2>
           <button

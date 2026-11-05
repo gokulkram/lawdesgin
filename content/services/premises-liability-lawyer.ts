@@ -61,7 +61,7 @@ const page: ServiceContent = {
       heading: "Falls on public property",
       blocks: [
         { p: "Many falls happen on sidewalks, in parks, at government buildings, and on public transit property. Under Government Code §835, a public entity can be liable for a **dangerous condition** of its property if the condition created a foreseeable risk of the kind of injury that happened, the condition caused the injury, and either a public employee created it or the entity had notice of it in time to fix it." },
-        { callout: "**Six-month deadline.** A claim for injuries on public property generally must be filed in writing with the government entity within **six months** of the injury (Government Code §911.2) - long before the usual two-year deadline. See our step-by-step guide to [claims against government entities](/government-claims-lawyer)." },
+        { callout: "**Six month deadline.** A claim for injuries on public property generally must be filed in writing with the government entity within **six months** of the injury (Government Code §911.2) - long before the usual two year deadline. See our step by step guide to [claims against government entities](/government-claims-lawyer)." },
       ],
     },
     {
@@ -75,7 +75,7 @@ const page: ServiceContent = {
       heading: "Compensation and deadlines",
       blocks: [
         { p: "A premises liability claim can include medical expenses, future care, lost wages and earning capacity, and pain and suffering. Falls by older adults, in particular, can lead to hip fractures and long recoveries. If a loved one died after a fall or attack, the family may have a wrongful death claim." },
-        { p: "Most premises liability lawsuits must be filed within **two years** of the injury (Code of Civil Procedure §335.1). Claims against government entities have the much shorter six-month claim deadline described above." },
+        { p: "Most premises liability lawsuits must be filed within **two years** of the injury (Code of Civil Procedure §335.1). Claims against government entities have the much shorter six month claim deadline described above." },
       ],
     },
     {

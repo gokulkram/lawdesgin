@@ -12,7 +12,7 @@ const page: ServiceContent = {
     "From the 405 to surface streets in the Valley, crashes in Los Angeles County involve local police agencies, local claim rules and a local court. We help injured drivers, passengers and families - with no fee unless we win.",
   summary: "Car crashes in LA County - LAPD and CHP reports, City, County and Metro claims, and injury cases at the Stanley Mosk Courthouse.",
   intro:
-    "If you were injured in a car accident in Los Angeles County, the basic California rules apply: you can claim compensation from the at-fault driver and others who share the blame, you generally have **two years** to file a lawsuit, and your recovery is reduced - not eliminated - if you were partly at fault. What is specific to Los Angeles is the practical path: which agency wrote your report, whether a city, county or transit vehicle was involved, and which courthouse your case would be filed in. This page covers those local steps. For a full explanation of fault, insurance and damages, see our [California car accident guide](/car-accident-lawyer).",
+    "If you were injured in a car accident in Los Angeles County, the basic California rules apply: you can claim compensation from the at fault driver and others who share the blame, you generally have **two years** to file a lawsuit, and your recovery is reduced - not eliminated - if you were partly at fault. What is specific to Los Angeles is the practical path: which agency wrote your report, whether a city, county or transit vehicle was involved, and which courthouse your case would be filed in. This page covers those local steps. For a full explanation of fault, insurance and damages, see our [California car accident guide](/car-accident-lawyer).",
   steps: {
     heading: "After a car accident in Los Angeles",
     items: [
@@ -20,7 +20,7 @@ const page: ServiceContent = {
       { title: "Note exactly where you were", text: "Write down the freeway and nearest exit, or the cross streets, and the city you were in. In LA County, a few blocks can mean a different police agency and a different public entity, which matters for reports and claims." },
       { title: "Get the report number and agency", text: "Ask the officer for the report number and which agency they work for - LAPD, CHP, the Sheriff’s Department or another city’s police. You will need both to request the report." },
       { title: "Photograph the scene and the vehicles", text: "Capture damage, signals, lane markings, road defects, and any bus, city truck or Metro vehicle number. Get witness names and phone numbers before they leave." },
-      { title: "Watch the six-month clock if a public vehicle or road is involved", text: "A claim against the City of Los Angeles, the County, LA Metro or Caltrans is generally due within six months of the crash." },
+      { title: "Watch the six month clock if a public vehicle or road is involved", text: "A claim against the City of Los Angeles, the County, LA Metro or Caltrans is generally due within six months of the crash." },
     ],
   },
   sections: [
@@ -30,7 +30,7 @@ const page: ServiceContent = {
         { p: "Los Angeles County’s freeway network carries an enormous mix of commuter, commercial and visitor traffic, and the state highways are managed by **Caltrans District 7**. Some stretches funnel especially heavy traffic together:" },
         {
           ul: [
-            "**I-405 through the Sepulveda Pass**, the only direct freeway connection between the San Fernando Valley and the Westside, where heavy stop-and-go traffic sets up rear-end and lane-change crashes.",
+            "**I-405 through the Sepulveda Pass**, the only direct freeway connection between the San Fernando Valley and the Westside, where heavy stop and go traffic sets up rear end and lane change crashes.",
             "**The East Los Angeles Interchange**, where I-5, I-10, US-101 and SR-60 meet just east of downtown, and drivers merge and change lanes to reach their connectors.",
             "**I-110 (Harbor Freeway) and I-710 (Long Beach Freeway)**, which mix passenger cars with heavy port truck traffic heading to and from San Pedro Bay - see our [Los Angeles truck accident page](/los-angeles/truck-accident-lawyer).",
             "**City surface streets and boulevards**, where crashes involve left turns, red lights, pedestrians and cyclists at busy intersections.",
@@ -72,7 +72,7 @@ const page: ServiceContent = {
     {
       heading: "California law in brief",
       blocks: [
-        { p: "Most car accident claims are based on negligence. California uses **pure comparative fault**, so you can recover even if you share some blame. Every driver must carry at least $30,000 per person and $60,000 per accident in bodily injury coverage (Vehicle Code §16056), which is often far too little after a serious LA freeway crash - making your own uninsured/underinsured motorist coverage, and any employer or commercial policy, important. The two-year deadline to sue comes from Code of Civil Procedure §335.1. Our [California car accident page](/car-accident-lawyer) covers each of these in detail, and our [rideshare accident page](/rideshare-accident-lawyer) covers Uber and Lyft crashes." },
+        { p: "Most car accident claims are based on negligence. California uses **pure comparative fault**, so you can recover even if you share some blame. Every driver must carry at least $30,000 per person and $60,000 per accident in bodily injury coverage (Vehicle Code §16056), which is often far too little after a serious LA freeway crash - making your own uninsured/underinsured motorist coverage, and any employer or commercial policy, important. The two year deadline to sue comes from Code of Civil Procedure §335.1. Our [California car accident page](/car-accident-lawyer) covers each of these in detail, and our [rideshare accident page](/rideshare-accident-lawyer) covers Uber and Lyft crashes." },
       ],
     },
     {

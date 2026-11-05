@@ -20,7 +20,7 @@ const page: ServiceContent = {
       { title: "Get the official records", text: "Request the police or CHP crash report and keep the death certificate. Note the report number, the investigating agency, and the names of any officers or investigators you speak with." },
       { title: "Keep the vehicle and personal items", text: "Don’t let the car be repaired, sold, or scrapped until a lawyer has had it inspected. The vehicle and its data can show speed, braking, and seatbelt use. Keep your loved one’s phone, clothing, and belongings as well." },
       { title: "Save every bill and record", text: "Keep hospital and ambulance bills, funeral and burial receipts, and records of your loved one’s income - pay stubs, tax returns, and bank statements. These help prove the family’s loss." },
-      { title: "Be careful with insurance companies", text: "The at-fault driver’s insurer may call quickly. You do not have to give a recorded statement or accept an early offer. Once a release is signed, the claim usually cannot be reopened." },
+      { title: "Be careful with insurance companies", text: "The at fault driver’s insurer may call quickly. You do not have to give a recorded statement or accept an early offer. Once a release is signed, the claim usually cannot be reopened." },
       { title: "Talk to a lawyer about deadlines", text: "If a city or county vehicle, a public employee, or a dangerous public road may be involved, a written government claim is generally due within six months. A lawyer can identify every deadline and preserve evidence before it disappears." },
     ],
   },
@@ -60,8 +60,8 @@ const page: ServiceContent = {
         { p: "Responsibility often extends beyond the driver who caused the crash. Depending on the facts, the family’s claim may involve:" },
         {
           ul: [
-            "**The at-fault driver**, for speeding, impaired or distracted driving, running a light, or other careless driving",
-            "**An employer**, if the driver was working - for example, a delivery, sales, or company-car driver",
+            "**The at fault driver**, for speeding, impaired or distracted driving, running a light, or other careless driving",
+            "**An employer**, if the driver was working - for example, a delivery, sales, or company car driver",
             "**A rideshare company’s insurance**, if an Uber or Lyft driver was involved (see [rideshare accidents](/rideshare-accident-lawyer))",
             "**A vehicle or parts manufacturer**, if a defect - such as faulty airbags, brakes, or tires - caused the crash or made it deadly",
             "**A city, county, or the state**, if a dangerous road condition, broken signal, or poor design contributed",
@@ -73,11 +73,11 @@ const page: ServiceContent = {
     {
       heading: "Insurance after a fatal crash",
       blocks: [
-        { p: "Insurance is often the main source of compensation, and in fatal crashes the at-fault driver’s policy is frequently too small. Since January 1, 2025, California’s minimum auto liability coverage is **$30,000 per person and $60,000 per accident** for bodily injury (Vehicle Code §16056). Those amounts rarely reflect the loss of a life." },
+        { p: "Insurance is often the main source of compensation, and in fatal crashes the at fault driver’s policy is frequently too small. Since January 1, 2025, California’s minimum auto liability coverage is **$30,000 per person and $60,000 per accident** for bodily injury (Vehicle Code §16056). Those amounts rarely reflect the loss of a life." },
         { p: "That is why it matters to look for every source of coverage, which may include:" },
         {
           ul: [
-            "**Uninsured/underinsured motorist (UM/UIM) coverage** on your loved one’s own policy, when the at-fault driver had no insurance or too little",
+            "**Uninsured/underinsured motorist (UM/UIM) coverage** on your loved one’s own policy, when the at fault driver had no insurance or too little",
             "**Commercial or employer policies**, if the driver was working",
             "**Umbrella policies** and the personal assets of the responsible party",
             "**Claims against other responsible parties**, such as a manufacturer or a public entity",
@@ -118,9 +118,9 @@ const page: ServiceContent = {
   ],
   faqs: [
     { q: "Who can file a wrongful death claim after a fatal car accident?", a: "The surviving spouse, domestic partner, and children come first. If there are none, the people who would inherit by law can file. Certain dependent family members, including parents and stepchildren, may also qualify. All eligible family members generally file one lawsuit together." },
-    { q: "Do we have to wait for the criminal case to finish?", a: "No. The civil wrongful death claim is separate, and you should not assume the criminal case gives you more time - treat the two-year deadline as running. A lawyer can coordinate the two so evidence from the criminal case can still be used." },
+    { q: "Do we have to wait for the criminal case to finish?", a: "No. The civil wrongful death claim is separate, and you should not assume the criminal case gives you more time - treat the two year deadline as running. A lawyer can coordinate the two so evidence from the criminal case can still be used." },
     { q: "What if the driver had only minimum insurance?", a: "California’s minimum is $30,000 per person and $60,000 per accident, which is rarely enough after a death. Underinsured motorist coverage, employer policies, umbrella coverage, and claims against other responsible parties may provide additional compensation." },
-    { q: "Can we sue if the driver who caused the crash also died?", a: "Often, yes. The family may still have a claim involving the at-fault driver’s insurance, as well as against other responsible parties such as an employer. How this works depends on the specific facts." },
+    { q: "Can we sue if the driver who caused the crash also died?", a: "Often, yes. The family may still have a claim involving the at fault driver’s insurance, as well as against other responsible parties such as an employer. How this works depends on the specific facts." },
     { q: "How long do we have to file?", a: "Generally two years from the date of death. If a government vehicle, employee, or road may be involved, a written claim is usually due within six months." },
     { q: "What is a fatal car accident claim worth?", a: "It depends on the financial support your loved one provided, their household role, funeral costs, the family’s relationship with them, available insurance, and how clear fault is. No honest lawyer can give an exact number at the start, but we can explain what affects value in your family’s case." },
   ],

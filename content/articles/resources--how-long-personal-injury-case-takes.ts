@@ -18,7 +18,7 @@ const page: ArticleContent = {
     items: [
       { title: "Investigation and medical treatment", text: "Your lawyer gathers the police report, photos, witness statements, and video, and sends letters asking that evidence be preserved. Meanwhile, you focus on treatment. This stage usually lasts as long as your recovery does, because the value of a claim depends on knowing the full extent of your injuries." },
       { title: "Demand and negotiation", text: "Once your condition has stabilized and the medical bills and records are collected, your lawyer sends the insurer a demand package laying out liability and damages. The insurer responds, and the two sides negotiate. Many claims resolve at this stage." },
-      { title: "Filing a lawsuit", text: "If negotiations stall - or a deadline is approaching - your lawyer files a complaint in superior court. In most California injury cases, a lawsuit must be filed within two years of the injury. Filing doesn’t mean the case will go to trial; it moves the dispute into a process with court-enforced deadlines." },
+      { title: "Filing a lawsuit", text: "If negotiations stall - or a deadline is approaching - your lawyer files a complaint in superior court. In most California injury cases, a lawsuit must be filed within two years of the injury. Filing doesn’t mean the case will go to trial; it moves the dispute into a process with court enforced deadlines." },
       { title: "Discovery", text: "Both sides exchange information: written questions, document requests, medical records, and depositions (sworn testimony taken outside court). Consultants may review the evidence. This is often the longest stage of a litigated case." },
       { title: "Mediation and settlement", text: "Many cases are resolved at mediation, where a neutral mediator helps the parties negotiate. Settlement can happen at any point - even during trial." },
       { title: "Trial", text: "If the case doesn’t settle, a judge or jury decides fault and damages. Settlement can happen at any stage, and many cases resolve without a trial - but being prepared for trial often affects what the other side is willing to offer." },
@@ -31,7 +31,7 @@ const page: ArticleContent = {
         { p: "Every case is different, but the same factors come up again and again. A case tends to move **faster** when:" },
         {
           ul: [
-            "Fault is clear - for example, a rear-end collision with an independent witness",
+            "Fault is clear - for example, a rear end collision with an independent witness",
             "Injuries have healed and the medical picture is complete",
             "There is enough insurance to cover the claim, and only one insurer is involved",
             "The insurer makes a reasonable offer early",

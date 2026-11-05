@@ -5,7 +5,6 @@ import type { Testimonial } from "@/lib/admin/settings-model";
 import { SlowScroll } from "@/components/WhatWeDoFx";
 
 const DURATION = 7000; // ms each story stays before the next (also the timer bar's length)
-const pad = (n: number) => String(n).padStart(2, "0");
 const sentences = (text: string) => text.match(/[^.!?]+[.!?]+["”’]?\s*/g) ?? [text];
 
 // Home-page client stories: the current story large on the left, every story in a list on the
@@ -95,7 +94,6 @@ export default function TestimonialsClient({ items }: { items: Testimonial[] }) 
                 {t.verified && <em className="tst__verified">Verified client</em>}
               </figcaption>
             </figure>
-            {n > 1 && <div className="tst__count" aria-hidden="true"><b>{pad(i + 1)}</b> / {pad(n)}</div>}
           </div>
 
           {n > 1 && (

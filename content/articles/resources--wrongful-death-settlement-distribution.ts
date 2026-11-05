@@ -6,7 +6,7 @@ const page: ArticleContent = {
   name: "Dividing a Wrongful Death Award",
   title: "How a Wrongful Death Settlement Is Divided",
   description:
-    "How wrongful death money is divided among heirs in California: one action, the court’s role, minors’ shares, liens, and survival-action funds.",
+    "How wrongful death money is divided among heirs in California: one action, the court’s role, minors’ shares, liens, and survival action funds.",
   h1: "How Is a Wrongful Death Settlement Divided in California?",
   heroText:
     "When a family recovers compensation after a death, the next question is often the hardest: who receives what. Here is how California handles it - and how to avoid conflict along the way.",
@@ -38,7 +38,7 @@ const page: ArticleContent = {
       ],
     },
     {
-      heading: "Survival-action money goes through the estate",
+      heading: "Survival action money goes through the estate",
       blocks: [
         { p: "A death can also give rise to a **survival action** - a separate claim for the losses the person who died sustained before death, such as medical bills and lost earnings. It is brought by the personal representative of the estate (or, if there is none, the successor in interest), and it is not part of the wrongful death award." },
         { p: "Money from a survival action belongs to the estate. It passes to the people entitled to it under the person’s will or, if there is none, under the rules of inheritance - and those people may not be the same as the wrongful death heirs, or may receive different shares. When a case includes both claims, the settlement should clearly allocate how much is for the wrongful death claim and how much is for the survival action. Learn more about [survival actions](/wrongful-death/survival-action)." },

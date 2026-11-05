@@ -19,7 +19,7 @@ const page: ServiceContent = {
       { title: "Report the death and start the comp claim", text: "Make sure the employer knows of the death and ask for the workers’ compensation claim form. Keep copies of everything you submit and receive." },
       { title: "Ask who else was on the site", text: "Find out which companies were working at the location - general contractors, subcontractors, property owners, and equipment suppliers. Any of them could share responsibility." },
       { title: "Preserve the equipment and the scene", text: "A machine, vehicle, tool, or safety device involved in the death is critical evidence. A lawyer can demand that it be kept unaltered for inspection." },
-      { title: "Collect witness names", text: "Co-workers often saw what happened. Write down their names and contact information while it is easy to reach them." },
+      { title: "Collect witness names", text: "Co workers often saw what happened. Write down their names and contact information while it is easy to reach them." },
       { title: "Get legal advice before signing", text: "Talk to a lawyer before signing any settlement or release from the employer, its insurer, or another company - including anything that might affect a claim against a third party." },
     ],
   },
@@ -27,7 +27,7 @@ const page: ServiceContent = {
     {
       heading: "Workers’ compensation death benefits",
       blocks: [
-        { p: "Workers’ compensation is a system that pays benefits for work-related injuries and deaths without the family having to prove that the employer was at fault. After a work-related death, it can provide **death benefits** to the worker’s dependents." },
+        { p: "Workers’ compensation is a system that pays benefits for work related injuries and deaths without the family having to prove that the employer was at fault. After a work related death, it can provide **death benefits** to the worker’s dependents." },
         { p: "These benefits are important, but they are generally more limited than a wrongful death recovery. A workers’ comp claim does not provide the full range of losses a California wrongful death claim can include - such as the loss of love, companionship, comfort, and moral support, or a child’s loss of a parent’s guidance. That is why it is important to look for any third party who also shares responsibility." },
       ],
     },
@@ -47,7 +47,7 @@ const page: ServiceContent = {
       ],
     },
     {
-      heading: "Third-party wrongful death claims",
+      heading: "Third party wrongful death claims",
       blocks: [
         { p: "Workers’ comp protects the employer - not every company or person involved. When someone other than the employer helped cause the death, the family may bring a wrongful death claim against that **third party**. Common examples include:" },
         {
@@ -59,7 +59,7 @@ const page: ServiceContent = {
             "**A public entity**, when a dangerous condition of public property played a role - which requires a written government claim, generally within six months",
           ],
         },
-        { p: "A third-party claim is brought by the family members California allows to file - the spouse, domestic partner, children, and, in some cases, other heirs or dependents. See [who can file a wrongful death lawsuit](/wrongful-death/who-can-file). These claims can include the family’s financial losses, funeral and burial costs, and the loss of love, companionship, care, and guidance." },
+        { p: "A third party claim is brought by the family members California allows to file - the spouse, domestic partner, children, and, in some cases, other heirs or dependents. See [who can file a wrongful death lawsuit](/wrongful-death/who-can-file). These claims can include the family’s financial losses, funeral and burial costs, and the loss of love, companionship, care, and guidance." },
       ],
     },
     {
@@ -68,14 +68,14 @@ const page: ServiceContent = {
         {
           ul: [
             "**Falls** from roofs, ladders, scaffolds, and unprotected edges",
-            "**Struck-by accidents** involving vehicles, forklifts, cranes, or falling materials",
-            "**Caught-in accidents**, such as trench collapses or unguarded machinery",
+            "**Struck by accidents** involving vehicles, forklifts, cranes, or falling materials",
+            "**Caught in accidents**, such as trench collapses or unguarded machinery",
             "**Electrocution** from exposed wiring or contact with power lines",
             "**Vehicle crashes** while driving for work - including truck drivers and delivery drivers (see [fatal truck accidents](/wrongful-death/truck-accident))",
             "**Explosions and fires** at industrial sites",
           ],
         },
-        { p: "In many of these accidents, more than one company was involved in the work, the equipment, or the site. That is why a thorough investigation of who did what often reveals a third-party claim the family did not know about." },
+        { p: "In many of these accidents, more than one company was involved in the work, the equipment, or the site. That is why a thorough investigation of who did what often reveals a third party claim the family did not know about." },
       ],
     },
     {

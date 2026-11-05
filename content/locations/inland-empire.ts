@@ -56,7 +56,7 @@ const page: LocationContent = {
       heading: "Personal injury in the Inland Empire: freeways, warehouses and mountain passes",
       blocks: [
         { p: "Freight shapes traffic here. [Caltrans District 8](https://dot.ca.gov/caltrans-near-me/district-8/district-8-popular-links/about-caltrans-district-8), which manages State highways in Riverside and San Bernardino counties, notes that commercial distribution centers keep growing in the Ontario/I-15 corridor, bringing more truck traffic - enough that truck lanes are becoming a necessity on major routes. Big rigs moving between distribution centers and the freeways share lanes with commuters on I-10, I-15, SR-60, SR-91 and I-215, and the 60/91/215 interchange in Riverside County pulls several of those routes together." },
-        { p: "Weather is a local factor too. Caltrans reports that wind gusts on Interstate 15 in the Cajon Pass frequently cause high-profile vehicles - trucks, RVs, trailers - to be diverted or stopped when gusts reach 55 mph. A truck driver who keeps going in those conditions, or a carrier that pressures a driver to, can be responsible for the crash that follows. Our [truck accident page](/truck-accident-lawyer) explains federal hours-of-service rules, black-box data and the other evidence that matters in these cases." },
+        { p: "Weather is a local factor too. Caltrans reports that wind gusts on Interstate 15 in the Cajon Pass frequently cause high profile vehicles - trucks, RVs, trailers - to be diverted or stopped when gusts reach 55 mph. A truck driver who keeps going in those conditions, or a carrier that pressures a driver to, can be responsible for the crash that follows. Our [truck accident page](/truck-accident-lawyer) explains federal hours of service rules, black box data and the other evidence that matters in these cases." },
         { p: "If a dangerous condition on a State highway - a broken barrier, poor signage in a work zone, a drainage problem - contributed to your crash, the State may share responsibility. See [claims against government entities](/government-claims-lawyer)." },
       ],
     },
@@ -64,7 +64,7 @@ const page: LocationContent = {
       heading: "Getting the collision report in Riverside and San Bernardino counties",
       blocks: [
         { p: "Crashes on freeways and on roads in unincorporated areas are generally investigated by the California Highway Patrol; you can request a CHP report with form [CHP 190](https://www.chp.ca.gov/notify-chp/collision-report-chp-190/). Crashes on city streets are usually handled by the city’s police agency." },
-        { p: "In the City of Riverside, the Riverside Police Department’s [collision report page](https://riversideca.gov/rpd/resources-forms/permit/get-copy-traffic-collision-report) says reports are generally available about 10 working days after the crash and can be bought online through LexisNexis eCrash, in person at the department’s Magnolia Avenue counter, or by mail. Reports involving a death or an on-duty emergency vehicle are available only directly from the department." },
+        { p: "In the City of Riverside, the Riverside Police Department’s [collision report page](https://riversideca.gov/rpd/resources-forms/permit/get-copy-traffic-collision-report) says reports are generally available about 10 working days after the crash and can be bought online through LexisNexis eCrash, in person at the department’s Magnolia Avenue counter, or by mail. Reports involving a death or an on duty emergency vehicle are available only directly from the department." },
         { p: "Whoever investigates, you must also file an SR-1 report with the DMV within 10 days if anyone was injured. Our [car accident page](/car-accident-lawyer) covers the rest of what to do after a crash." },
       ],
     },
@@ -81,7 +81,7 @@ const page: LocationContent = {
             "**Caltrans** - Caltrans’ [damage claim page](https://dot.ca.gov/online-services/submit-damage-claim) explains that larger claims go to the State’s Government Claims Program.",
           ],
         },
-        { callout: "**Two counties, two claim offices.** A crash on a county road near the Riverside–San Bernardino line can involve the wrong county by a few hundred feet. Each public entity needs its own timely claim. If six months have passed, ask about a late-claim application - it is available in limited situations, such as when the injured person was a minor." },
+        { callout: "**Two counties, two claim offices.** A crash on a county road near the Riverside–San Bernardino line can involve the wrong county by a few hundred feet. Each public entity needs its own timely claim. If six months have passed, ask about a late claim application - it is available in limited situations, such as when the injured person was a minor." },
       ],
     },
     {
@@ -102,8 +102,8 @@ const page: LocationContent = {
     { q: "My crash was in Ontario but I live in Riverside. Which court hears my case?", a: "Generally the Superior Court of the county where the crash happened or where a defendant lives - so a crash in Ontario would usually be filed in San Bernardino County. We confirm the right county and courthouse before filing." },
     { q: "Who do I file a claim with if an RTA or Omnitrans bus hit me?", a: "The transit agency itself - RTA in western Riverside County, Omnitrans in the San Bernardino Valley. They are separate public agencies from the cities and counties, and the claim is generally due within six months of the injury." },
     { q: "Does Riverside County require its claim form?", a: "No. Riverside County says a claim must be in writing but its form is optional; it must be signed and mailed or delivered in hard copy to the Clerk of the Board - email and fax filings are not accepted." },
-    { q: "How do I get a Riverside Police Department collision report?", a: "Most reports are available about 10 working days after the crash, online through LexisNexis eCrash, in person, or by mail. Reports involving a fatality or an on-duty emergency vehicle are only available from the department directly." },
-    { q: "A truck hit me in the Cajon Pass during high winds. Who is responsible?", a: "Possibly the driver, the trucking company, or both. Caltrans reports that high-profile vehicles in the pass are frequently diverted or stopped when gusts reach 55 mph; a carrier that ignores closures or pushes drivers beyond federal hours-of-service limits can be liable. Logbook and engine data should be preserved quickly." },
+    { q: "How do I get a Riverside Police Department collision report?", a: "Most reports are available about 10 working days after the crash, online through LexisNexis eCrash, in person, or by mail. Reports involving a fatality or an on duty emergency vehicle are only available from the department directly." },
+    { q: "A truck hit me in the Cajon Pass during high winds. Who is responsible?", a: "Possibly the driver, the trucking company, or both. Caltrans reports that high profile vehicles in the pass are frequently diverted or stopped when gusts reach 55 mph; a carrier that ignores closures or pushes drivers beyond federal hours of service limits can be liable. Logbook and engine data should be preserved quickly." },
     { q: "Do you charge for a consultation at the Inland Empire office?", a: "No. Consultations are free, and we work on a contingency fee - no attorney’s fee unless we win. We can meet at your home, in the hospital, or by video." },
   ],
   updated: "2026-10-02",
