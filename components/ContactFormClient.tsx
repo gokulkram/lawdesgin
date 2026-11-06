@@ -21,14 +21,17 @@ function isValid(el: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement)
 // empty underline. Sizes only change on load, when a dropdown changes and when the visitor leaves a
 // field - never while typing - so the sentence doesn't move under their fingers. A long answer scrolls
 // inside its field while typing, then the field widens to show it on leaving.
-let ruler: CanvasRenderingContext2D | null = null;
-function fitField(el: HTMLInputElement | HTMLSelectElement) {
+function fitField(el: HTMLInputElement | HTMLSelectElement, retry = true) {
   const isSelect = el instanceof HTMLSelectElement;
   const text = isSelect ? el.options[el.selectedIndex]?.text ?? "" : el.value || el.placeholder;
   const cs = getComputedStyle(el);
-  ruler ??= document.createElement("canvas").getContext("2d");
+  // a fresh canvas each time: a reused one can keep measurements made before the web font arrived
+  const ruler = document.createElement("canvas").getContext("2d");
   if (!ruler) return;
-  ruler.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  const font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  // the web font may not be downloaded yet (it would measure in a wider fallback): measure again once it is
+  if (retry && document.fonts && !document.fonts.check(font, text)) document.fonts.load(font, text).then(() => fitField(el, false), () => {});
+  ruler.font = font;
   const pad = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight) + 4;
   el.style.width = `${Math.ceil(Math.max(ruler.measureText(text).width, 48) + pad)}px`;
 }
@@ -50,8 +53,20 @@ export default function ContactFormClient({ variant, caseTypes, offices, phone: 
   const p = variant === "lead" ? "f" : "c";
   const sentenceRef = useRef<HTMLParagraphElement>(null);
   // size every blank to its text on load (also picks up browser autofill)
+  // and again whenever the sentence's width changes - e.g. the popup opening (it is hidden on load,
+  // so the first sizes can be off) or the screen crossing a breakpoint
   useEffect(() => {
-    sentenceRef.current?.querySelectorAll<HTMLInputElement | HTMLSelectElement>("input, select").forEach(fitField);
+    const line = sentenceRef.current;
+    if (!line) return;
+    const fitAll = () => line.querySelectorAll<HTMLInputElement | HTMLSelectElement>("input, select").forEach((el) => fitField(el));
+    fitAll();
+    let lastWidth = -1;
+    const ro = new ResizeObserver(([entry]) => {
+      const w = Math.round(entry.contentRect.width);
+      if (w !== lastWidth) { lastWidth = w; if (w > 0) fitAll(); }
+    });
+    ro.observe(line);
+    return () => ro.disconnect();
   }, []);
   const fit = (e: { currentTarget: HTMLInputElement | HTMLSelectElement }) => fitField(e.currentTarget);
   const telHref = `tel:${firmPhone.replace(/[^\d+]/g, "")}`;
@@ -140,14 +155,26 @@ export default function ContactFormClient({ variant, caseTypes, offices, phone: 
       </div>
 
       <div className="mad">
-        {/* one flowing paragraph; mad__keep only ties each blank to its lead-in word and punctuation,
-            so a line never starts with a lone blank or a stray comma */}
+        {/* the sentence is set in fixed lines (mad__row), one per clause; mad__keep ties each blank to
+            its lead-in word and punctuation, so a line never starts with a lone blank or a stray comma.
+            On wider screens the first two lines run edge to edge: the name and phone blanks (mad__keep--fill)
+            stretch to take up the rest of their line, so both lines are the same length. */}
         <p className="mad__line" ref={sentenceRef}>
-          My name <span className="mad__keep">is {name}<span className="mad__punct">,</span></span> and I need help{" "}
-          <span className="mad__keep">with {caseType}<span className="mad__punct">.</span></span> You can call{" "}
-          <span className="mad__keep">me at {phone}</span> or email{" "}
-          <span className="mad__keep">me at {email}<span className="mad__punct">.</span></span>
-          {variant === "page" && <> The office nearest <span className="mad__keep">me is {office}<span className="mad__punct">.</span></span></>}
+          <span className="mad__row mad__row--fill">My name <span className="mad__keep mad__keep--fill">is {name}<span className="mad__punct">,</span></span> and I need help</span>{" "}
+          <span className="mad__row mad__row--fill">
+            <span className="mad__keep">with {caseType}<span className="mad__punct">.</span></span> You can call{" "}
+            <span className="mad__keep mad__keep--fill">me at {phone}</span>
+          </span>{" "}
+          {variant === "page" ? (
+            // contact page: the office question shares the third line, and the email blank stretches
+            // so this line runs edge to edge like the two above
+            <span className="mad__row mad__row--fill">
+              or email <span className="mad__keep mad__keep--fill">me at {email}<span className="mad__punct">.</span></span> The office nearest{" "}
+              <span className="mad__keep">me is {office}<span className="mad__punct">.</span></span>
+            </span>
+          ) : (
+            <span className="mad__row">or email <span className="mad__keep">me at {email}<span className="mad__punct">.</span></span></span>
+          )}
         </p>
       </div>
 
